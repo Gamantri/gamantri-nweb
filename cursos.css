@@ -358,6 +358,7 @@
 /* ── RESPONSIVE MOBILE ── */
 @media (max-width: 768px) {
   #cursos-hero { padding: 64px 24px; }
+  .cursos-hero-img { background-position: 75% center; }
   .cursos-scroll-hint { display: none; }
   #por-que { padding: 72px 24px; }
   .porq-cols { grid-template-columns: 1fr; gap: 36px; }
