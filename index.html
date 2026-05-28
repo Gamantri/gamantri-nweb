@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GAMANTRI — Fine Art Photography</title>
+  <link rel="icon" type="image/png" href="shared/assets/logo-simbolo-blanco.png" />
+
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+
+  <link rel="stylesheet" href="shared/styles.css" />
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script src="shared/main.js" defer></script>
+</head>
+<body>
+
+  <!-- Loader -->
+  <div id="loader">
+    <img src="shared/assets/logo-simbolo-blanco.png" alt="Gamantri" />
+    <div id="loader-progress">
+      <div id="loader-bar"><div id="loader-bar-fill"></div></div>
+      <span id="loader-percent">0%</span>
+    </div>
+  </div>
+
+  <!-- Menú mobile -->
+  <div class="mobile-menu" id="mobile-menu">
+    <a onclick="scrollToSection('#obras'); closeMobileMenu()"
+       data-es="Obras" data-en="Fine Art">Obras</a>
+    <a onclick="scrollToSection('#cursos'); closeMobileMenu()"
+       data-es="Cursos" data-en="Courses">Cursos</a>
+    <a onclick="scrollToSection('#servicios'); closeMobileMenu()"
+       data-es="Servicios" data-en="Services">Servicios</a>
+    <button onclick="openOverlay('overlay-cris'); closeMobileMenu()"
+            data-es="Sobre Cris" data-en="About Cris">Sobre Cris</button>
+    <div class="lang-toggle mobile-lang" style="margin-top:40px">
+      <button class="lang-btn active" onclick="setLang('es')">ES</button>
+      <span class="lang-sep">·</span>
+      <button class="lang-btn" onclick="setLang('en')">EN</button>
+    </div>
+  </div>
+
+  <!-- ── HEADER ── -->
+  <header id="header">
+    <button class="logo-btn" onclick="scrollToTop()">
+      <img src="shared/assets/logo-simbolo-blanco.png" alt="Gamantri" />
+    </button>
+    <div style="display:flex;align-items:center;gap:0">
+      <nav class="nav-links">
+        <a onclick="scrollToSection('#obras')"
+           data-es="Obras" data-en="Fine Art">Obras</a>
+        <a onclick="scrollToSection('#cursos')"
+           data-es="Cursos" data-en="Courses">Cursos</a>
+        <a onclick="scrollToSection('#servicios')"
+           data-es="Servicios" data-en="Services">Servicios</a>
+      </nav>
+      <div class="lang-toggle">
+        <button class="lang-btn active" onclick="setLang('es')">ES</button>
+        <span class="lang-sep">·</span>
+        <button class="lang-btn" onclick="setLang('en')">EN</button>
+      </div>
+      <button class="hamburger" id="hamburger" onclick="toggleMobileMenu()" aria-label="Menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ══════════════ HERO ══════════════ -->
+  <section id="hero">
+    <video class="hero-img" autoplay muted loop playsinline preload="auto">
+      <source src="shared/assets/videos/HERO_3.mp4" type="video/mp4" />
+    </video>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <img class="hero-logo" src="shared/assets/logo-horizontal-blanco.png" alt="Gamantri" />
+      <p class="hero-tagline"
+         data-es="Fotografía de naturaleza · Ediciones limitadas"
+         data-en="Nature Photography · Limited Editions">
+        Fotografía de naturaleza · Ediciones limitadas
+      </p>
+    </div>
+    <div class="scroll-indicator">Scroll</div>
+  </section>
+
+  <!-- ══════════════ OBRAS ══════════════ -->
+  <section id="obras">
+
+    <div class="obras-hero">
+      <div class="obras-hero-img"></div>
+      <div class="obras-hero-overlay"></div>
+      <div class="obras-hero-text">
+        <div>
+          <p class="label reveal"
+             data-es="Ediciones limitadas" data-en="Limited editions">Ediciones limitadas</p>
+          <h2 class="obras-hero-title reveal reveal-d1"
+              data-es="Obras Seriadas" data-en="Fine Art Works">Obras Seriadas</h2>
+        </div>
+        <p class="obras-hero-copy reveal reveal-d2"
+           data-es="Fotografías impresas en papel Fine Art de máxima calidad, enmarcadas y editadas en series finales y exclusivas."
+           data-en="Fine Art photographs printed on premium archival paper, framed and released in exclusive limited editions.">
+          Fotografías impresas en papel Fine Art de máxima calidad, enmarcadas y editadas en series finales y exclusivas.
+        </p>
+      </div>
+    </div>
+
+    <div class="obras-grid">
+
+      <div class="obra-card" onclick="openObra(0)">
+        <div class="obra-celda">
+          <div class="obra-img-wrap">
+            <img class="obra-img-base" src="shared/assets/images/obras/1-O-Mu-F.jpg" alt="La Cárcel" />
+            <img class="obra-img-hover" src="shared/assets/images/obras/2-O-Mu-Z.jpg" alt="La Cárcel zoom" />
+            <div class="obra-label">
+              <div class="obra-card-title">La Cárcel</div>
+              <span class="obra-badge" data-es="3 disponibles" data-en="3 available">3 disponibles</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="obra-card" onclick="openObra(1)">
+        <div class="obra-celda">
+          <div class="obra-img-wrap">
+            <img class="obra-img-base" src="shared/assets/images/obras/4-O-Mu-F.jpg" alt="Llaima en Nubes" />
+            <img class="obra-img-hover" src="shared/assets/images/obras/5-O-Mu-Z.jpg" alt="Llaima en Nubes zoom" />
+            <div class="obra-label">
+              <div class="obra-card-title">Llaima en Nubes</div>
+              <span class="obra-badge" data-es="2 disponibles" data-en="2 available">2 disponibles</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="obra-card" onclick="openObra(2)">
+        <div class="obra-celda">
+          <div class="obra-img-wrap">
+            <img class="obra-img-base" src="shared/assets/images/obras/7-O-Mu-F.jpg" alt="Los Cuatro Elementos" />
+            <img class="obra-img-hover" src="shared/assets/images/obras/8-O-Mu-Z.jpg" alt="Los Cuatro Elementos zoom" />
+            <div class="obra-label">
+              <div class="obra-card-title">Los Cuatro Elementos</div>
+              <span class="obra-badge" data-es="2 disponibles" data-en="2 available">2 disponibles</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="obra-card obra-extra" onclick="openObra(3)">
+        <div class="obra-celda">
+          <div class="obra-img-wrap">
+            <img class="obra-img-base" src="shared/assets/images/obras/10-O-Mu-F.jpg" alt="Era Leo" />
+            <img class="obra-img-hover" src="shared/assets/images/obras/11-O-Mu-Z.jpg" alt="Era Leo zoom" />
+            <div class="obra-label">
+              <div class="obra-card-title">Era Leo</div>
+              <span class="obra-badge" data-es="3 disponibles" data-en="3 available">3 disponibles</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="obra-card obra-extra" onclick="openObra(4)">
+        <div class="obra-celda">
+          <div class="obra-img-wrap">
+            <img class="obra-img-base" src="shared/assets/images/obras/13-O-Mu-F.jpg" alt="Nodriza" />
+            <img class="obra-img-hover" src="shared/assets/images/obras/14-O-Mu-Z.jpg" alt="Nodriza zoom" />
+            <div class="obra-label">
+              <div class="obra-card-title">Nodriza</div>
+              <span class="obra-badge" data-es="3 disponibles" data-en="3 available">3 disponibles</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="obra-card obra-extra" onclick="openObra(5)">
+        <div class="obra-celda">
+          <div class="obra-img-wrap">
+            <img class="obra-img-base" src="shared/assets/images/obras/16-O-Mu-F.jpg" alt="Caminos" />
+            <img class="obra-img-hover" src="shared/assets/images/obras/17-O-Mu-Z.jpg" alt="Caminos zoom" />
+            <div class="obra-label">
+              <div class="obra-card-title">Caminos</div>
+              <span class="obra-badge" data-es="3 disponibles" data-en="3 available">3 disponibles</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="obra-card obra-extra" onclick="openObra(6)">
+        <div class="obra-celda">
+          <div class="obra-img-wrap">
+            <img class="obra-img-base" src="shared/assets/images/obras/19-O-Mu-F.jpg" alt="El Último Tango" />
+            <img class="obra-img-hover" src="shared/assets/images/obras/20-O-Mu-Z.jpg" alt="El Último Tango zoom" />
+            <div class="obra-label">
+              <div class="obra-card-title">El Último Tango</div>
+              <span class="obra-badge" data-es="1 disponible" data-en="1 available">1 disponible</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="obra-card obra-extra" onclick="openObra(7)">
+        <div class="obra-celda">
+          <div class="obra-img-wrap">
+            <img class="obra-img-base" src="shared/assets/images/obras/22-O-Mu-F.jpg" alt="Penitentes" />
+            <img class="obra-img-hover" src="shared/assets/images/obras/23-O-Mu-Z.jpg" alt="Penitentes zoom" />
+            <div class="obra-label">
+              <div class="obra-card-title">Penitentes</div>
+              <span class="obra-badge" data-es="3 disponibles" data-en="3 available">3 disponibles</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="obra-card obra-extra" onclick="openObra(8)">
+        <div class="obra-celda">
+          <div class="obra-img-wrap">
+            <img class="obra-img-base" src="shared/assets/images/obras/25-O-Mu-F.jpg" alt="Bloque Chileno" />
+            <img class="obra-img-hover" src="shared/assets/images/obras/26-O-Mu-Z.jpg" alt="Bloque Chileno zoom" />
+            <div class="obra-label">
+              <div class="obra-card-title">Bloque Chileno</div>
+              <span class="obra-badge" data-es="3 disponibles" data-en="3 available">3 disponibles</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="obras-footer-row">
+      <button class="btn-ver-mas" id="btn-ver-mas" onclick="toggleObras()"
+              data-es="VER MÁS OBRAS >>>" data-en="SEE MORE WORKS >>>">VER MÁS OBRAS >>></button>
+      <button class="btn-obra-personalizada" onclick="openOverlayEncargo('personalizada')"
+              data-es="OBRA PERSONALIZADA >>>" data-en="CUSTOM ARTWORK >>>">OBRA PERSONALIZADA >>></button>
+    </div>
+
+  </section>
+
+  <!-- ══════════════ CURSOS ══════════════ -->
+  <section id="cursos">
+
+    <div class="cursos-video">
+      <img src="shared/assets/images/cursos/0-C-P.jpg" alt="Cursos Gamantri" style="width:100%;height:100%;object-fit:cover;display:block;" />
+    </div>
+
+    <div class="cursos-text">
+      <p class="label reveal"
+         data-es="Aprende fotografía en todos los niveles"
+         data-en="Learn photography at every level">Aprende fotografía en todos los niveles</p>
+      <h2 class="cursos-title reveal reveal-d1" data-es="Cursos" data-en="Courses">Cursos</h2>
+      <p class="cursos-hook reveal reveal-d2"
+         data-es="&ldquo;Aprende a ver lo que los demás no ven&rdquo;"
+         data-en="&ldquo;Learn to see what others can&rsquo;t&rdquo;">
+        &ldquo;Aprende a ver lo que los demás no ven&rdquo;
+      </p>
+      <p class="cursos-copy reveal reveal-d2"
+         data-es="Clases personalizadas en tiempo real con Cris Posadas, on-line y presencial. Desde un celular o una cámara, desde cero o para perfeccionar tus habilidades."
+         data-en="Personalized real-time lessons with Cris Posadas, online and in person. From a phone or a camera, from scratch or to sharpen your skills.">
+        Clases personalizadas en tiempo real con Cris Posadas, online y presencial.<br>
+        Desde un celular o una cámara, desde cero o para perfeccionar tus habilidades.
+      </p>
+      <div class="reveal reveal-d3">
+        <a class="cursos-cta" href="cursos.html"
+           data-es="&rsaquo;&rsaquo; Ver Cursos"
+           data-en="&rsaquo;&rsaquo; View Courses">&rsaquo;&rsaquo; Ver Cursos</a>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ══════════════ SERVICIOS ══════════════ -->
+  <section id="servicios">
+    <video class="servicios-video" autoplay muted loop playsinline preload="auto">
+      <source src="shared/assets/videos/SERVICIOS.mp4" type="video/mp4" />
+    </video>
+    <div class="servicios-overlay"></div>
+    <div class="servicios-bottom-gradient"></div>
+    <div class="servicios-content">
+      <div class="servicios-left">
+        <p class="label reveal"
+           data-es="Para marcas y atletas" data-en="For brands &amp; athletes">Para marcas y atletas</p>
+        <h2 class="servicios-title reveal reveal-d1"
+            data-es="Servicios" data-en="Services">Servicios</h2>
+        <p class="servicios-subtitle reveal reveal-d2">
+          <span data-es="Expediciones – Documentales – Campañas digitales"
+                data-en="Expeditions – Documentaries – Digital campaigns">Expediciones – Documentales – Campañas digitales</span>
+        </p>
+        <p class="servicios-copy reveal reveal-d3"
+           data-es="Fotografía y video para proyectos outdoor y en el territorio. Desde registros de productos o atletas hasta producción, dirección y montaje de documentales."
+           data-en="Photography and video for outdoor and field projects. From product or athlete shoots to production, direction and editing of documentaries.">
+          Fotografía y video para proyectos outdoor y en el territorio. Desde registros de productos o atletas hasta producción, dirección y montaje de documentales.
+        </p>
+      </div>
+      <div class="servicios-right reveal reveal-d3">
+        <button class="btn-servicios" onclick="openOverlay('overlay-briefing')"
+                data-es="Hablemos de tu proyecto >>>" data-en="Let's talk about your project >>>">
+          Hablemos de tu proyecto >>>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════ CLIENTES ══════════════ -->
+  <section id="clientes">
+    <p class="label reveal" style="text-align:center"
+       data-es="Clientes &amp; Colaboraciones" data-en="Clients &amp; Collaborations">Clientes &amp; Colaboraciones</p>
+    <div class="marquee-track">
+      <div class="marquee-inner">
+        <img class="logo-client" src="shared/assets/logos-footer/1-TNF.png" alt="The North Face" loading="lazy" onclick="openFooterFoto('1-TNF')">
+        <img class="logo-client" src="shared/assets/logos-footer/2-M.png" alt="2-M" loading="lazy" onclick="openFooterFoto('2-M')">
+        <img class="logo-client" src="shared/assets/logos-footer/3-P.png" alt="3-P" loading="lazy" onclick="openFooterFoto('3-P')">
+        <img class="logo-client" src="shared/assets/logos-footer/4-LS.png" alt="4-LS" loading="lazy" onclick="openFooterFoto('4-LS')">
+        <img class="logo-client" src="shared/assets/logos-footer/5-MT.png" alt="5-MT" loading="lazy" onclick="openFooterFoto('5-MT')">
+        <img class="logo-client" src="shared/assets/logos-footer/6-AG.png" alt="6-AG" loading="lazy" onclick="openFooterFoto('6-AG')">
+        <img class="logo-client" src="shared/assets/logos-footer/7-A.png" alt="7-A" loading="lazy" onclick="openFooterFoto('7-A')">
+        <img class="logo-client" src="shared/assets/logos-footer/8-C.png" alt="8-C" loading="lazy" onclick="openFooterFoto('8-C')">
+        <img class="logo-client" src="shared/assets/logos-footer/9-R.png" alt="9-R" loading="lazy" onclick="openFooterFoto('9-R')">
+        <img class="logo-client" src="shared/assets/logos-footer/10-DC.png" alt="10-DC" loading="lazy" onclick="openFooterFoto('10-DC')">
+        <img class="logo-client" src="shared/assets/logos-footer/11-DA.png" alt="11-DA" loading="lazy" onclick="openFooterFoto('11-DA')">
+        <img class="logo-client" src="shared/assets/logos-footer/12-S.png" alt="12-S" loading="lazy" onclick="openFooterFoto('12-S')">
+        <img class="logo-client" src="shared/assets/logos-footer/13-G.png" alt="13-G" loading="lazy" onclick="openFooterFoto('13-G')">
+        <img class="logo-client" src="shared/assets/logos-footer/14-CC.png" alt="14-CC" loading="lazy" onclick="openFooterFoto('14-CC')">
+        <img class="logo-client" src="shared/assets/logos-footer/15-G.png" alt="15-G" loading="lazy" onclick="openFooterFoto('15-G')">
+        <img class="logo-client" src="shared/assets/logos-footer/16-OC.png" alt="16-OC" loading="lazy" onclick="openFooterFoto('16-OC')">
+        <img class="logo-client" src="shared/assets/logos-footer/17-TCH.png" alt="17-TCH" loading="lazy" onclick="openFooterFoto('17-TCH')">
+        <img class="logo-client" src="shared/assets/logos-footer/18-S.png" alt="18-S" loading="lazy" onclick="openFooterFoto('18-S')">
+        <img class="logo-client" src="shared/assets/logos-footer/19-M.png" alt="19-M" loading="lazy" onclick="openFooterFoto('19-M')">
+        <img class="logo-client" src="shared/assets/logos-footer/20-RM.png" alt="20-RM" loading="lazy" onclick="openFooterFoto('20-RM')">
+        <!-- Duplicado para loop continuo -->
+        <img class="logo-client" src="shared/assets/logos-footer/1-TNF.png" alt="The North Face" loading="lazy" onclick="openFooterFoto('1-TNF')">
+        <img class="logo-client" src="shared/assets/logos-footer/2-M.png" alt="2-M" loading="lazy" onclick="openFooterFoto('2-M')">
+        <img class="logo-client" src="shared/assets/logos-footer/3-P.png" alt="3-P" loading="lazy" onclick="openFooterFoto('3-P')">
+        <img class="logo-client" src="shared/assets/logos-footer/4-LS.png" alt="4-LS" loading="lazy" onclick="openFooterFoto('4-LS')">
+        <img class="logo-client" src="shared/assets/logos-footer/5-MT.png" alt="5-MT" loading="lazy" onclick="openFooterFoto('5-MT')">
+        <img class="logo-client" src="shared/assets/logos-footer/6-AG.png" alt="6-AG" loading="lazy" onclick="openFooterFoto('6-AG')">
+        <img class="logo-client" src="shared/assets/logos-footer/7-A.png" alt="7-A" loading="lazy" onclick="openFooterFoto('7-A')">
+        <img class="logo-client" src="shared/assets/logos-footer/8-C.png" alt="8-C" loading="lazy" onclick="openFooterFoto('8-C')">
+        <img class="logo-client" src="shared/assets/logos-footer/9-R.png" alt="9-R" loading="lazy" onclick="openFooterFoto('9-R')">
+        <img class="logo-client" src="shared/assets/logos-footer/10-DC.png" alt="10-DC" loading="lazy" onclick="openFooterFoto('10-DC')">
+        <img class="logo-client" src="shared/assets/logos-footer/11-DA.png" alt="11-DA" loading="lazy" onclick="openFooterFoto('11-DA')">
+        <img class="logo-client" src="shared/assets/logos-footer/12-S.png" alt="12-S" loading="lazy" onclick="openFooterFoto('12-S')">
+        <img class="logo-client" src="shared/assets/logos-footer/13-G.png" alt="13-G" loading="lazy" onclick="openFooterFoto('13-G')">
+        <img class="logo-client" src="shared/assets/logos-footer/14-CC.png" alt="14-CC" loading="lazy" onclick="openFooterFoto('14-CC')">
+        <img class="logo-client" src="shared/assets/logos-footer/15-G.png" alt="15-G" loading="lazy" onclick="openFooterFoto('15-G')">
+        <img class="logo-client" src="shared/assets/logos-footer/16-OC.png" alt="16-OC" loading="lazy" onclick="openFooterFoto('16-OC')">
+        <img class="logo-client" src="shared/assets/logos-footer/17-TCH.png" alt="17-TCH" loading="lazy" onclick="openFooterFoto('17-TCH')">
+        <img class="logo-client" src="shared/assets/logos-footer/18-S.png" alt="18-S" loading="lazy" onclick="openFooterFoto('18-S')">
+        <img class="logo-client" src="shared/assets/logos-footer/19-M.png" alt="19-M" loading="lazy" onclick="openFooterFoto('19-M')">
+        <img class="logo-client" src="shared/assets/logos-footer/20-RM.png" alt="20-RM" loading="lazy" onclick="openFooterFoto('20-RM')">
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════ FOOTER ══════════════ -->
+  <footer>
+    <div class="footer-logo">
+      <img src="shared/assets/logo-simbolo-blanco.png" alt="Gamantri" loading="lazy" />
+    </div>
+    <div class="footer-links">
+      <button onclick="openOverlay('overlay-cris')" data-es="Sobre Cris" data-en="About Cris">Sobre Cris</button>
+      <a href="https://www.instagram.com/gamantri/" target="_blank">Instagram</a>
+      <a href="mailto:crisposadas@gamantri.com">Email</a>
+    </div>
+    <span class="footer-copy">© 2026 Gamantri</span>
+  </footer>
+
+
+  <!-- ══════════════════════════════════════
+       OVERLAYS
+  ══════════════════════════════════════ -->
+
+  <!-- Obra detalle -->
+  <div class="overlay" id="overlay-obra">
+    <div class="overlay-close-wrap"><button class="overlay-close" onclick="closeOverlay('overlay-obra')">×</button></div>
+    <div class="obra-modal-grid">
+
+      <div class="obra-modal-fotos">
+        <img id="obra-foto-sola" class="obra-modal-foto-item" src="" alt="" loading="lazy" />
+        <img id="obra-foto-zoom" class="obra-modal-foto-item" src="" alt="" loading="lazy" />
+        <img id="obra-foto-full" class="obra-modal-foto-item" src="" alt="" loading="lazy" />
+      </div>
+
+      <div class="obra-modal-panel">
+        <p class="label" style="margin-bottom:8px">Edición Limitada</p>
+        <h2 class="obra-modal-titulo" id="obra-modal-titulo"></h2>
+        <p class="obra-modal-desc" id="obra-modal-desc"></p>
+
+        <div class="obra-series" id="obra-modal-series"></div>
+
+        <div class="obra-modal-sep"></div>
+
+        <div class="obra-modal-specs">
+          <div class="spec-row">
+            <span class="spec-key">Piezas</span>
+            <span class="spec-val" id="obra-modal-piezas"></span>
+          </div>
+          <div class="spec-row">
+            <span class="spec-key">Impresión</span>
+            <span class="spec-val">Fine Art</span>
+          </div>
+          <div class="spec-row">
+            <span class="spec-key">Enmarcado</span>
+            <span class="spec-val">A elección</span>
+          </div>
+        </div>
+
+        <p class="obra-ref-label">Referencia imagen:</p>
+        <p class="obra-ref-text" id="obra-modal-ref"></p>
+
+        <p class="obra-precio-grande" id="obra-modal-precio"></p>
+
+        <button class="btn-encargar"
+                onclick="closeOverlay('overlay-obra'); openOverlayEncargo('catalogo')">
+          Encargar ahora
+        </button>
+      </div>
+
+    </div><!-- /obra-modal-grid -->
+  </div><!-- /overlay-obra -->
+
+  <!-- Formulario de encargo -->
+  <div class="overlay" id="overlay-encargo">
+    <button class="overlay-close" onclick="closeOverlay('overlay-encargo')">×</button>
+    <div class="form-overlay-inner">
+      <p class="form-step" data-es="Obras · Encargo" data-en="Works · Order">Obras · Encargo</p>
+      <h2 class="form-title"
+          data-es="Encarga una obra." data-en="Order a work.">Encarga una obra.</h2>
+      <p style="font-size:13px;color:var(--muted);line-height:1.8;margin-bottom:40px;margin-top:-32px"
+         data-es="Personaliza el enmarcado de una fotografía existente o solicita un trabajo comisionado."
+         data-en="Customize the framing of an existing photograph or request a commissioned work.">
+        Personaliza el enmarcado de una fotografía existente o solicita un trabajo comisionado.
+      </p>
+      <form onsubmit="event.preventDefault(); closeOverlay('overlay-encargo'); openOverlay('overlay-ok-obras')">
+        <div class="form-group">
+          <label class="form-label" data-es="Nombre" data-en="Name">Nombre</label>
+          <input class="form-input" type="text" required />
+        </div>
+        <div class="form-group">
+          <label class="form-label">Email</label>
+          <input class="form-input" type="email" required />
+        </div>
+        <div class="form-group">
+          <label class="form-label" data-es="Teléfono / WhatsApp" data-en="Phone / WhatsApp">Teléfono / WhatsApp</label>
+          <input class="form-input" type="tel" />
+        </div>
+        <div class="form-group">
+          <label class="form-label" data-es="Tipo de encargo" data-en="Order type">Tipo de encargo</label>
+          <select class="form-select" id="encargo-tipo">
+            <option value="catalogo">Encargar obra del catálogo</option>
+            <option value="personalizada">Personalizar obra existente</option>
+            <option value="comision">Fotografía comisionada</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label" data-es="Descripción del encargo" data-en="Order description">Descripción del encargo</label>
+          <textarea class="form-textarea" rows="4"></textarea>
+        </div>
+        <button class="btn-outline btn-accent-outline" type="submit"
+                style="font-family:'Jura',sans-serif;font-size:11px;letter-spacing:0.2em;text-transform:uppercase"
+                data-es="Enviar" data-en="Send">Enviar</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Sobre Cris -->
+  <div class="overlay" id="overlay-cris">
+    <button class="overlay-close" onclick="closeOverlay('overlay-cris')">×</button>
+    <div class="modal-cris">
+      <div class="modal-foto"></div>
+      <div class="modal-body">
+        <p class="label">Fundador · Director</p>
+        <h2 class="modal-name">Cris Posadas</h2>
+        <p class="modal-role">Photographer · Filmmaker · Civil Engineer</p>
+        <p class="modal-bio"
+           data-es="Fotógrafo, editor digital y filmmaker. Fundador y director de Gamantri, una marca dedicada a rescatar el valor patrimonial de los espacios naturales y fomentar su protección a través de las imágenes. La escalada y el montañismo son el medio para llegar a esos lugares y acercar a las personas a ellos. Trabaja con marcas internacionales, atletas y expediciones en los entornos más exigentes del planeta."
+           data-en="Photographer, digital editor and filmmaker. Founder and director of Gamantri, a brand dedicated to capturing the heritage value of natural spaces and fostering their protection through imagery. Climbing and mountaineering are the means to reach those places and connect people with them. Works with international brands, athletes and expeditions in the planet's most demanding environments.">
+          Fotógrafo, editor digital y filmmaker. Fundador y director de Gamantri, una marca dedicada a rescatar el valor patrimonial de los espacios naturales y fomentar su protección a través de las imágenes. La escalada y el montañismo son el medio para llegar a esos lugares y acercar a las personas a ellos. Trabaja con marcas internacionales, atletas y expediciones en los entornos más exigentes del planeta.
+        </p>
+        <div class="modal-actions">
+          <a class="btn-outline" href="https://www.instagram.com/gamantri/" target="_blank">Instagram</a>
+          <a class="btn-outline" href="mailto:crisposadas@gamantri.com">Email</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Briefing Servicios -->
+  <div class="overlay" id="overlay-briefing">
+    <button class="overlay-close" onclick="closeOverlay('overlay-briefing')">×</button>
+    <div class="form-overlay-inner">
+      <p class="form-step" data-es="Servicios · Briefing" data-en="Services · Briefing">Servicios · Briefing</p>
+      <h2 class="form-title" data-es="Tu proyecto" data-en="Your project">Tu proyecto</h2>
+      <form onsubmit="event.preventDefault(); closeOverlay('overlay-briefing'); openOverlay('overlay-ok-servicios')">
+        <div class="form-group">
+          <label class="form-label" data-es="Nombre / Empresa" data-en="Name / Company">Nombre / Empresa</label>
+          <input class="form-input" type="text" required />
+        </div>
+        <div class="form-group">
+          <label class="form-label" data-es="Tipo de proyecto" data-en="Project type">Tipo de proyecto</label>
+          <select class="form-select">
+            <option>Expedición / Documental</option>
+            <option>Campaña de marca</option>
+            <option>Contenido para redes</option>
+            <option>Atleta / Deportista</option>
+            <option>Otro</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label" data-es="Locación / Contexto" data-en="Location / Context">Locación / Contexto</label>
+          <input class="form-input" type="text" />
+        </div>
+        <div class="form-group">
+          <label class="form-label" data-es="Fechas estimadas" data-en="Estimated dates">Fechas estimadas</label>
+          <input class="form-input" type="text" />
+        </div>
+        <div class="form-group">
+          <label class="form-label" data-es="Referentes visuales" data-en="Visual references">Referentes visuales</label>
+          <textarea class="form-textarea" rows="3"></textarea>
+        </div>
+        <div class="form-group">
+          <label class="form-label" data-es="Presupuesto aproximado (opcional)" data-en="Approximate budget (optional)">Presupuesto aproximado (opcional)</label>
+          <input class="form-input" type="text" />
+        </div>
+        <button class="btn-outline btn-accent-outline" type="submit"
+                style="font-family:'Jura',sans-serif;font-size:11px;letter-spacing:0.2em;text-transform:uppercase"
+                data-es="Enviar briefing" data-en="Send briefing">Enviar briefing</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Confirmación Obras (FM-02) -->
+  <div class="overlay" id="overlay-ok-obras">
+    <button class="overlay-close" onclick="closeOverlay('overlay-ok-obras')">×</button>
+    <div class="confirm-screen">
+      <div>
+        <img src="shared/assets/logo-simbolo-blanco.png" alt="Gamantri" class="confirm-logo" />
+        <p class="label" style="text-align:center;margin-bottom:16px">Mensaje recibido</p>
+        <h2 class="confirm-title">Gracias</h2>
+        <p class="confirm-copy">Recibimos tu pedido. Nos comunicaremos contigo a la brevedad para coordinar la producción de tu obra.</p>
+        <button class="btn-outline" onclick="closeOverlay('overlay-ok-obras')"
+                style="font-family:'Jura',sans-serif;font-size:11px;letter-spacing:0.2em;text-transform:uppercase">
+          Cerrar
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Confirmación Servicios (FM-03) -->
+  <div class="overlay" id="overlay-ok-servicios">
+    <button class="overlay-close" onclick="closeOverlay('overlay-ok-servicios')">×</button>
+    <div class="confirm-screen">
+      <div>
+        <img src="shared/assets/logo-simbolo-blanco.png" alt="Gamantri" class="confirm-logo" />
+        <p class="label" style="text-align:center;margin-bottom:16px">Mensaje recibido</p>
+        <h2 class="confirm-title">Gracias</h2>
+        <p class="confirm-copy">Recibimos tu propuesta. Nos comunicaremos contigo a la brevedad para coordinar los detalles del proyecto.</p>
+        <button class="btn-outline" onclick="closeOverlay('overlay-ok-servicios')"
+                style="font-family:'Jura',sans-serif;font-size:11px;letter-spacing:0.2em;text-transform:uppercase">
+          Cerrar
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal foto de cliente/colaborador (FT-02) -->
+  <div class="overlay" id="footer-foto-modal">
+    <button class="overlay-close" onclick="closeOverlay('footer-foto-modal')">×</button>
+    <div class="footer-modal-inner">
+      <div class="footer-modal-passe">
+        <img id="footer-modal-foto" src="" alt="" />
+      </div>
+    </div>
+  </div>
+
+  <!-- Scroll hint obras (fuera del overlay para evitar backdrop-filter) -->
+  <div class="obra-scroll-hint" id="obra-scroll-hint" aria-hidden="true">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="6 9 12 15 18 9"></polyline>
+    </svg>
+    <span>Scroll</span>
+  </div>
+
+</body>
+</html>

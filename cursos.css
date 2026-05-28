@@ -1,0 +1,425 @@
+/* ── CURSOS.CSS — Gamantri Landing Cursos ── */
+
+/* ── NAV LANDING ── */
+#cursos-header {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 500;
+  padding: 24px 40px;
+  display: flex; align-items: center; justify-content: space-between;
+  background: linear-gradient(to bottom, rgba(8,8,8,0.4) 0%, transparent 100%);
+  transition: background 0.4s;
+}
+#cursos-header.scrolled {
+  background: rgba(8,8,8,0.72);
+  backdrop-filter: blur(14px);
+}
+#cursos-header .logo-btn img { height: 32px; }
+.cursos-nav-back {
+  font-family: 'Jura', sans-serif;
+  font-size: 14px; letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--muted); text-decoration: none;
+  transition: color 0.3s;
+}
+.cursos-nav-back:hover { color: var(--text); }
+
+/* ── HERO ── */
+#cursos-hero {
+  height: 100vh; min-height: 600px;
+  position: relative; overflow: hidden;
+  display: flex; align-items: flex-end;
+  padding: 80px 56px;
+}
+.cursos-hero-img {
+  position: absolute; inset: -15% 0;
+  background-size: cover; background-position: center;
+  will-change: transform;
+}
+.cursos-hero-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(to top, rgba(8,8,8,0.80) 0%, rgba(8,8,8,0.18) 50%, rgba(8,8,8,0.04) 100%);
+}
+.cursos-hero-content {
+  position: relative; z-index: 2; max-width: 640px;
+}
+.cursos-hero-content .label { margin-bottom: 20px; display: block; }
+.cursos-hero-content h1 {
+  font-family: 'Play', sans-serif;
+  font-size: clamp(32px, 5vw, 58px);
+  font-weight: 400; color: var(--text);
+  line-height: 1.1; letter-spacing: -0.015em;
+  margin-bottom: 20px;
+}
+.cursos-hero-content h1 em {
+  font-style: normal; color: var(--accent);
+}
+.cursos-hero-sub {
+  font-size: 15px; letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--muted); margin-bottom: 36px;
+}
+.cursos-scroll-hint {
+  position: absolute; right: 56px; bottom: 80px;
+  writing-mode: vertical-rl;
+  font-size: 9px; letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--muted);
+  display: flex; align-items: center; gap: 12px;
+}
+.cursos-scroll-hint::after {
+  content: ''; width: 1px; height: 48px;
+  background: var(--muted); opacity: 0.35;
+}
+
+/* ── BOTONES ── */
+.btn-cursos {
+  display: inline-block;
+  background: var(--accent); color: var(--text);
+  font-family: 'Jura', sans-serif;
+  font-size: 14px; font-weight: 600;
+  letter-spacing: 0.2em; text-transform: uppercase;
+  padding: 14px 32px;
+  border: none; cursor: pointer; text-decoration: none;
+  transition: opacity 0.3s;
+}
+.btn-cursos:hover { opacity: 0.82; }
+.btn-ghost {
+  font-family: 'Jura', sans-serif;
+  font-size: 13px; font-weight: 600;
+  letter-spacing: 0.16em; text-transform: uppercase;
+  color: var(--text); text-decoration: none;
+  border: 1px solid rgba(242,237,232,0.2);
+  padding: 9px 18px;
+  transition: border-color 0.3s, color 0.3s;
+}
+.btn-ghost:hover { border-color: var(--accent); color: var(--accent); }
+
+/* ── POR QUÉ ── */
+#por-que {
+  background: var(--surface);
+  padding: 96px 56px;
+  border-top: 1px solid rgba(242,237,232,0.06);
+}
+#por-que .label { display: block; margin-bottom: 52px; }
+.porq-cols {
+  display: grid; grid-template-columns: repeat(3,1fr); gap: 48px;
+}
+.porq-col { border-top: 1px solid rgba(242,237,232,0.1); padding-top: 28px; }
+.porq-line {
+  width: 24px; height: 2px;
+  background: var(--accent); margin-bottom: 20px;
+}
+.porq-col h3 {
+  font-family: 'Play', sans-serif;
+  font-size: 21px; font-weight: 400;
+  color: var(--text); margin-bottom: 12px;
+}
+.porq-col p { font-size: 18px; color: var(--muted); line-height: 1.85; }
+
+/* ── CÓMO FUNCIONA ── */
+#como-funciona {
+  background: var(--base);
+  padding: 96px 56px;
+  border-top: 1px solid rgba(242,237,232,0.06);
+}
+.como-inner { max-width: 960px; margin: 0 auto; }
+#como-funciona .label { display: block; margin-bottom: 16px; }
+#como-funciona h2 {
+  font-family: 'Play', sans-serif;
+  font-size: clamp(22px, 3vw, 34px);
+  font-weight: 400; color: var(--text);
+  letter-spacing: -0.01em; margin-bottom: 64px;
+}
+.como-steps {
+  display: grid; grid-template-columns: repeat(3,1fr);
+  gap: 0; position: relative;
+}
+.como-steps::before {
+  content: '';
+  position: absolute; top: 15px;
+  left: calc(16.66% + 24px); right: calc(16.66% + 24px);
+  height: 1px; background: rgba(242,237,232,0.07);
+}
+.como-step { text-align: center; }
+.como-num {
+  width: 30px; height: 30px;
+  border: 1px solid var(--accent); color: var(--accent);
+  font-family: 'Jura', sans-serif;
+  font-size: 15px; font-weight: 600; letter-spacing: 0.08em;
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 24px;
+  background: var(--base); position: relative; z-index: 1;
+}
+.como-step h4 {
+  font-family: 'Play', sans-serif;
+  font-size: 18px; font-weight: 400;
+  color: var(--text); margin-bottom: 12px;
+}
+.como-step p {
+  font-size: 17px; color: var(--muted);
+  line-height: 1.85; max-width: 200px; margin: 0 auto;
+}
+
+/* ── TALLERES ── */
+#talleres {
+  background: var(--base);
+  padding: 96px 56px;
+  border-top: 1px solid rgba(242,237,232,0.06);
+}
+.talleres-header { margin-bottom: 56px; }
+.talleres-header .label { display: block; margin-bottom: 16px; }
+.talleres-header h2 {
+  font-family: 'Play', sans-serif;
+  font-size: clamp(26px, 3.5vw, 40px);
+  font-weight: 400; color: var(--text);
+  letter-spacing: -0.015em; margin-bottom: 14px; line-height: 1.1;
+}
+.talleres-sub {
+  font-size: 18px; color: var(--muted);
+  line-height: 1.8; max-width: 500px;
+}
+.talleres-grid {
+  display: grid; grid-template-columns: repeat(3,1fr);
+  gap: 2px; background: var(--stone);
+}
+.taller-card {
+  background: var(--surface);
+  display: flex; flex-direction: column;
+  transition: background 0.3s;
+}
+.taller-card:hover { background: #141412; }
+.taller-img {
+  width: 100%; aspect-ratio: 16/9;
+  background-size: cover; background-position: center;
+}
+.taller-body {
+  padding: 24px 24px 28px;
+  display: flex; flex-direction: column; flex: 1; gap: 10px;
+}
+.taller-tag {
+  font-size: 13px; font-weight: 700;
+  letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--accent);
+}
+.taller-card h4 {
+  font-family: 'Play', sans-serif;
+  font-size: 20px; font-weight: 400;
+  color: var(--text); line-height: 1.35;
+}
+.taller-card p {
+  font-size: 17px; color: var(--muted);
+  line-height: 1.8; flex: 1;
+}
+.taller-includes {
+  border-top: 1px solid rgba(242,237,232,0.07);
+  padding-top: 14px;
+  font-size: 14px; letter-spacing: 0.04em;
+  color: rgba(122,122,118,0.55); line-height: 1.9;
+}
+.taller-footer {
+  display: flex; align-items: center; justify-content: space-between;
+  padding-top: 16px;
+}
+.taller-price {
+  font-family: 'Play', sans-serif;
+  font-size: 16px; font-weight: 700;
+  color: var(--text); letter-spacing: -0.01em;
+}
+
+/* ── CURSOS A MEDIDA ── */
+#cursos-custom {
+  background: var(--surface);
+  border-top: 1px solid rgba(242,237,232,0.06);
+  padding: 96px 56px;
+}
+.cursos-custom-inner {
+  display: grid; grid-template-columns: 1fr 400px;
+  gap: 80px; align-items: center;
+}
+.cursos-custom-left .label { display: block; margin-bottom: 20px; }
+.cursos-custom-left h2 {
+  font-family: 'Play', sans-serif;
+  font-size: clamp(24px, 3vw, 38px);
+  font-weight: 400; color: var(--text);
+  line-height: 1.15; letter-spacing: -0.015em; margin-bottom: 20px;
+}
+.cursos-custom-left p {
+  font-size: 18px; color: var(--muted);
+  line-height: 1.85; margin-bottom: 36px; max-width: 400px;
+}
+.cursos-custom-panel {
+  border: 1px solid rgba(242,237,232,0.1);
+  padding: 32px; background: rgba(242,237,232,0.02);
+}
+.cursos-custom-panel .label { display: block; margin-bottom: 20px; }
+.combo-list {
+  list-style: none; display: flex; flex-direction: column;
+  gap: 2px; margin-bottom: 28px;
+}
+.combo-list li {
+  background: rgba(242,237,232,0.04);
+  border: 1px solid rgba(242,237,232,0.06);
+  padding: 12px 16px;
+  font-size: 15px; color: var(--muted);
+  letter-spacing: 0.04em;
+  display: flex; align-items: center; gap: 8px;
+}
+.combo-t {
+  color: var(--accent); font-weight: 700;
+  font-size: 13px; letter-spacing: 0.1em; min-width: 20px;
+}
+.combo-plus {
+  color: var(--accent); font-size: 14px;
+  font-weight: 700; min-width: 12px;
+}
+
+/* ── FORMULARIO ── */
+#contacto {
+  background: var(--base);
+  padding: 96px 56px;
+  border-top: 1px solid rgba(242,237,232,0.06);
+}
+.form-wrap { max-width: 640px; margin: 0 auto; }
+.form-wrap .label { display: block; margin-bottom: 16px; }
+.form-wrap h2 {
+  font-family: 'Play', sans-serif;
+  font-size: clamp(26px, 3.5vw, 40px);
+  font-weight: 400; color: var(--text);
+  line-height: 1.15; letter-spacing: -0.015em; margin-bottom: 14px;
+}
+.form-sub {
+  font-size: 18px; color: var(--muted);
+  line-height: 1.8; margin-bottom: 52px;
+}
+.cursos-form { display: flex; flex-direction: column; gap: 24px; }
+.form-row {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 16px;
+}
+.form-field { display: flex; flex-direction: column; gap: 8px; }
+.form-field label {
+  font-size: 13px; font-weight: 600;
+  letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--muted);
+}
+.form-field input,
+.form-field textarea {
+  background: rgba(242,237,232,0.04);
+  border: 1px solid rgba(242,237,232,0.1);
+  padding: 13px 16px;
+  font-family: 'Jura', sans-serif;
+  font-size: 18px; font-weight: 300;
+  color: var(--text); outline: none;
+  transition: border-color 0.3s;
+  width: 100%;
+}
+.form-field input::placeholder,
+.form-field textarea::placeholder { color: var(--stone); }
+.form-field input:focus,
+.form-field textarea:focus { border-color: var(--accent); }
+.form-field textarea { height: 110px; resize: none; }
+
+/* Radio buttons estilo Gamantri */
+.radio-group {
+  display: flex; gap: 8px; flex-wrap: wrap;
+}
+.radio-opt { cursor: pointer; }
+.radio-opt input[type="radio"] { display: none; }
+.radio-opt span {
+  display: inline-block;
+  border: 1px solid rgba(242,237,232,0.15);
+  padding: 10px 18px;
+  font-family: 'Jura', sans-serif;
+  font-size: 15px; font-weight: 400;
+  letter-spacing: 0.1em; color: var(--muted);
+  transition: all 0.25s; cursor: pointer;
+}
+.radio-opt input[type="radio"]:checked + span {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: rgba(212,87,30,0.07);
+}
+.radio-opt span:hover {
+  border-color: rgba(242,237,232,0.3);
+  color: var(--text);
+}
+.btn-submit {
+  width: 100%; padding: 18px;
+  font-size: 15px; margin-top: 4px;
+}
+
+/* ── FOOTER ── */
+.cursos-footer {
+  background: var(--base);
+  border-top: 1px solid rgba(242,237,232,0.06);
+  padding: 32px 56px;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.cursos-footer p {
+  font-size: 14px; letter-spacing: 0.12em;
+  text-transform: uppercase; color: var(--muted);
+}
+
+/* ── RESPONSIVE MOBILE ── */
+@media (max-width: 768px) {
+  #cursos-hero { padding: 64px 24px; }
+  .cursos-scroll-hint { display: none; }
+  #por-que { padding: 72px 24px; }
+  .porq-cols { grid-template-columns: 1fr; gap: 36px; }
+  #como-funciona { padding: 72px 24px; }
+  .como-steps { grid-template-columns: 1fr; gap: 40px; }
+  .como-steps::before { display: none; }
+  .como-step { text-align: left; }
+  .como-num { margin: 0 0 16px 0; }
+  .como-step p { margin: 0; max-width: none; }
+  #talleres { padding: 72px 24px; }
+  .talleres-grid { grid-template-columns: 1fr; }
+  #cursos-custom { padding: 72px 24px; }
+  .cursos-custom-inner { grid-template-columns: 1fr; gap: 48px; }
+  #contacto { padding: 72px 24px; }
+  .form-row { grid-template-columns: 1fr; }
+  .cursos-footer { padding: 24px; flex-direction: column; gap: 16px; text-align: center; }
+  #cursos-header { padding: 20px 24px; }
+}
+
+@media (max-width: 480px) {
+  .talleres-grid { grid-template-columns: 1fr; }
+}
+
+/* ── GRACIAS OVERLAY ── */
+#gracias-overlay {
+  position: fixed; inset: 0; z-index: 9000;
+  background: rgba(8,8,8,0.82);
+  backdrop-filter: blur(12px);
+  display: flex; align-items: center; justify-content: center;
+  padding: 24px;
+  opacity: 0; pointer-events: none;
+  transition: opacity 0.4s var(--ease);
+}
+#gracias-overlay.visible {
+  opacity: 1; pointer-events: all;
+}
+#gracias-card {
+  background: var(--surface);
+  border: 1px solid rgba(242,237,232,0.1);
+  padding: 52px 48px;
+  max-width: 480px; width: 100%;
+  text-align: center;
+  transform: translateY(24px);
+  transition: transform 0.5s var(--ease);
+  display: flex; flex-direction: column;
+  align-items: center; gap: 16px;
+}
+#gracias-overlay.visible #gracias-card {
+  transform: translateY(0);
+}
+.gracias-logo {
+  height: 40px; opacity: 0.5; margin-bottom: 8px;
+}
+#gracias-card .label { color: var(--accent); }
+#gracias-card h3 {
+  font-family: 'Play', sans-serif;
+  font-size: clamp(20px, 3vw, 26px);
+  font-weight: 400; color: var(--text);
+  letter-spacing: -0.01em; line-height: 1.2;
+}
+.gracias-text {
+  font-size: 18px; color: var(--muted);
+  line-height: 1.85; max-width: 360px;
+}
+#gracias-close { margin-top: 8px; }
