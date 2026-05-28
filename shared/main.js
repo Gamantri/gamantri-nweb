@@ -399,12 +399,19 @@ function scrollToSection(selector) {
 function scrollToTop() { window.scrollTo({ top: 0, behavior: 'smooth' }); }
 
 // ── IDIOMA ──
-let lang = 'es';
+let lang = localStorage.getItem('gamantri-lang') || 'es';
 function setLang(l) {
   lang = l;
+  localStorage.setItem('gamantri-lang', l);
   document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
   document.querySelectorAll(`.lang-btn[onclick="setLang('${l}')"]`).forEach(b => b.classList.add('active'));
   document.querySelectorAll(`[data-${l}]`).forEach(el => {
     el.textContent = el.getAttribute(`data-${l}`);
   });
+  document.documentElement.lang = l;
 }
+// Aplicar idioma guardado al cargar
+document.addEventListener('DOMContentLoaded', () => {
+  const saved = localStorage.getItem('gamantri-lang');
+  if (saved && saved !== 'es') setLang(saved);
+});

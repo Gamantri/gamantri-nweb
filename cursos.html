@@ -6,7 +6,7 @@
   <meta name="description" content="Cursos y talleres de fotografía personalizados con Cris Posadas — Gamantri" />
   <title>Cursos & Talleres — Gamantri</title>
 
-  <link rel="preload" href="shared/assets/images/gamantri_22_01.jpg" as="image" />
+  <link rel="preload" href="shared/assets/images/cursos/portada-nueva-landing.jpg" as="image" />
   <link rel="stylesheet" href="shared/styles.css" />
   <link rel="stylesheet" href="cursos.css" />
 </head>
@@ -19,6 +19,11 @@
     <a href="index.html" class="logo-btn" aria-label="Volver al inicio">
       <img src="shared/assets/logo-simbolo-blanco.png" alt="Gamantri" />
     </a>
+    <div class="lang-toggle" style="margin-left:auto">
+      <button class="lang-btn active" onclick="setLang('es')">ES</button>
+      <span class="lang-sep">·</span>
+      <button class="lang-btn" onclick="setLang('en')">EN</button>
+    </div>
   </header>
 
   <!-- ── ① HERO ── -->
@@ -26,36 +31,45 @@
     <div class="cursos-hero-img" style="background-image:url('shared/assets/images/cursos/portada-nueva-landing.jpg')"></div>
     <div class="cursos-hero-overlay"></div>
     <div class="cursos-hero-content">
-      <p class="label reveal">Cursos & Talleres</p>
+      <p class="label reveal"
+         data-es="Cursos & Talleres"
+         data-en="Courses & Workshops">Cursos & Talleres</p>
       <h1 class="reveal reveal-d1">
-        Cursos de fotografía<br>
-        tan personalizados<br>
-        como <em>tu mirada</em>
+        <span data-es="Cursos de fotografía<br>tan personalizados<br>como " data-en="Photography courses<br>as personal as<br>">Cursos de fotografía<br>tan personalizados<br>como </span><em data-es="tu mirada" data-en="your vision">tu mirada</em>
       </h1>
-      <p class="cursos-hero-sub reveal reveal-d2">Celular · Cámara · Drone &nbsp;·&nbsp; Online o presencial</p>
-      <a href="#contacto" class="btn-cursos reveal reveal-d3">Quiero empezar →</a>
+      <p class="cursos-hero-sub reveal reveal-d2"
+         data-es="Celular · Cámara · Drone &nbsp;·&nbsp; Online o presencial"
+         data-en="Phone · Camera · Drone &nbsp;·&nbsp; Online or in-person">Celular · Cámara · Drone &nbsp;·&nbsp; Online o presencial</p>
+      <a href="#contacto" class="btn-cursos reveal reveal-d3"
+         data-es="Quiero empezar →"
+         data-en="Get started →">Quiero empezar →</a>
     </div>
     <div class="cursos-scroll-hint">Scroll</div>
   </section>
 
   <!-- ── ② POR QUÉ ES DISTINTO ── -->
   <section id="por-que">
-    <p class="label reveal">¿Por qué es distinto?</p>
+    <p class="label reveal"
+       data-es="¿Por qué es distinto?"
+       data-en="Why is it different?">¿Por qué es distinto?</p>
     <div class="porq-cols">
       <div class="porq-col reveal">
         <div class="porq-line"></div>
-        <h3>100% personalizado</h3>
-        <p>Cada taller se adapta a tu nivel, interés y dispositivo. No hay un grupo ni un ritmo impuesto.</p>
+        <h3 data-es="100% personalizado" data-en="100% personalized">100% personalizado</h3>
+        <p data-es="Cada taller se adapta a tu nivel, interés y dispositivo. No hay un grupo ni un ritmo impuesto."
+           data-en="Each workshop adapts to your level, interests and device. No group, no imposed pace.">Cada taller se adapta a tu nivel, interés y dispositivo. No hay un grupo ni un ritmo impuesto.</p>
       </div>
       <div class="porq-col reveal reveal-d1">
         <div class="porq-line"></div>
-        <h3>Real y en tiempo real</h3>
-        <p>Clases individuales con Cristóbal. No grabaciones, no tutoriales. Feedback inmediato.</p>
+        <h3 data-es="Real y en tiempo real" data-en="Real and in real time">Real y en tiempo real</h3>
+        <p data-es="Clases individuales con Cristóbal. No grabaciones, no tutoriales. Feedback inmediato."
+           data-en="Individual sessions with Cristóbal. No recordings, no tutorials. Immediate feedback.">Clases individuales con Cristóbal. No grabaciones, no tutoriales. Feedback inmediato.</p>
       </div>
       <div class="porq-col reveal reveal-d2">
         <div class="porq-line"></div>
-        <h3>Cualquier dispositivo</h3>
-        <p>Celular, cámara réflex, mirrorless, drone. Si sacas fotos con eso, lo trabajamos.</p>
+        <h3 data-es="Cualquier dispositivo" data-en="Any device">Cualquier dispositivo</h3>
+        <p data-es="Celular, cámara réflex, mirrorless, drone. Si sacas fotos con eso, lo trabajamos."
+           data-en="Phone, DSLR, mirrorless, drone. If you shoot with it, we work with it.">Celular, cámara réflex, mirrorless, drone. Si sacas fotos con eso, lo trabajamos.</p>
       </div>
     </div>
   </section>
@@ -63,23 +77,30 @@
   <!-- ── ③ CÓMO FUNCIONA ── -->
   <section id="como-funciona">
     <div class="como-inner">
-      <p class="label reveal">Cómo funciona</p>
-      <h2 class="reveal reveal-d1">Tres pasos para empezar</h2>
+      <p class="label reveal"
+         data-es="Cómo funciona"
+         data-en="How it works">Cómo funciona</p>
+      <h2 class="reveal reveal-d1"
+          data-es="Tres pasos para empezar"
+          data-en="Three steps to get started">Tres pasos para empezar</h2>
       <div class="como-steps">
         <div class="como-step reveal">
           <div class="como-num">01</div>
-          <h4>Completas el formulario</h4>
-          <p>Cuentas tu nivel, tu dispositivo y qué quieres lograr. Sin compromiso.</p>
+          <h4 data-es="Completas el formulario" data-en="Fill out the form">Completas el formulario</h4>
+          <p data-es="Cuentas tu nivel, tu dispositivo y qué quieres lograr. Sin compromiso."
+             data-en="Tell us your level, device and what you want to achieve. No commitment.">Cuentas tu nivel, tu dispositivo y qué quieres lograr. Sin compromiso.</p>
         </div>
         <div class="como-step reveal reveal-d1">
           <div class="como-num">02</div>
-          <h4>Evaluación inicial</h4>
-          <p>Coordinamos una llamada corta para recomendarte el taller o curso que más te conviene.</p>
+          <h4 data-es="Evaluación inicial" data-en="Initial assessment">Evaluación inicial</h4>
+          <p data-es="Coordinamos una llamada corta para recomendarte el taller o curso que más te conviene."
+             data-en="We schedule a short call to recommend the best workshop or course for you.">Coordinamos una llamada corta para recomendarte el taller o curso que más te conviene.</p>
         </div>
         <div class="como-step reveal reveal-d2">
           <div class="como-num">03</div>
-          <h4>Empezamos</h4>
-          <p>Definimos días y modalidad — online o mixta con presencial — y empezamos.</p>
+          <h4 data-es="Empezamos" data-en="We begin">Empezamos</h4>
+          <p data-es="Definimos días y modalidad — online o mixta con presencial — y empezamos."
+             data-en="We set the schedule and format — online or in-person — and get started.">Definimos días y modalidad — online o mixta con presencial — y empezamos.</p>
         </div>
       </div>
     </div>
@@ -88,9 +109,15 @@
   <!-- ── ④ TALLERES ── -->
   <section id="talleres">
     <div class="talleres-header">
-      <p class="label reveal">Talleres</p>
-      <h2 class="reveal reveal-d1">El espectro completo<br>de la fotografía</h2>
-      <p class="talleres-sub reveal reveal-d2">Cada taller es una unidad completa sobre un tema específico.<br>Puedes tomar uno solo o combinarlos en un curso.</p>
+      <p class="label reveal"
+         data-es="Talleres"
+         data-en="Workshops">Talleres</p>
+      <h2 class="reveal reveal-d1"
+          data-es="El espectro completo de la fotografía"
+          data-en="The full spectrum of photography">El espectro completo<br>de la fotografía</h2>
+      <p class="talleres-sub reveal reveal-d2"
+         data-es="Cada taller es una unidad completa sobre un tema específico. Puedes tomar uno solo o combinarlos en un curso."
+         data-en="Each workshop is a self-contained unit on a specific topic. Take one or combine them into a course.">Cada taller es una unidad completa sobre un tema específico.<br>Puedes tomar uno solo o combinarlos en un curso.</p>
     </div>
 
     <div class="talleres-grid">
@@ -99,12 +126,15 @@
         <div class="taller-img" style="background-image:url('shared/assets/images/cursos/1-C-I.jpg')"></div>
         <div class="taller-body">
           <span class="taller-tag">T1</span>
-          <h4>Introducción a la Fotografía</h4>
-          <p>Ideal para interiorizarse con los conceptos básicos, algo de historia y los diferentes dispositivos de fotografía. Conceptos básicos para la ejecución.</p>
+          <h4 data-es="Introducción a la Fotografía" data-en="Introduction to Photography">Introducción a la Fotografía</h4>
+          <p data-es="Ideal para interiorizarse con los conceptos básicos, algo de historia y los diferentes dispositivos de fotografía. Conceptos básicos para la ejecución."
+             data-en="Perfect for getting familiar with the basics, some history and different photography devices. Core concepts for execution.">Ideal para interiorizarse con los conceptos básicos, algo de historia y los diferentes dispositivos de fotografía. Conceptos básicos para la ejecución.</p>
           <div class="taller-includes">1 clase teórico-práctica &nbsp;·&nbsp; Guía PDF</div>
           <div class="taller-footer">
             <span class="taller-price">$45 USD</span>
-            <a href="#contacto" class="btn-ghost">Me interesa</a>
+            <a href="#contacto" class="btn-ghost"
+               data-es="Me interesa"
+               data-en="I'm interested">Me interesa</a>
           </div>
         </div>
       </article>
@@ -113,12 +143,15 @@
         <div class="taller-img" style="background-image:url('shared/assets/images/cursos/2-C-B.jpg')"></div>
         <div class="taller-body">
           <span class="taller-tag">T2</span>
-          <h4>Fotografía Básica</h4>
-          <p>El salto a aprender la técnica de la fotografía. Exposición, velocidad, apertura. Aprenderás todo lo necesario para aprender los fundamentos y técnicas de la disciplina.</p>
+          <h4 data-es="Fotografía Básica" data-en="Basic Photography">Fotografía Básica</h4>
+          <p data-es="El salto a aprender la técnica de la fotografía. Exposición, velocidad, apertura. Aprenderás todo lo necesario para aprender los fundamentos y técnicas de la disciplina."
+             data-en="The leap into photographic technique. Exposure, shutter speed, aperture. Everything you need to master the fundamentals.">El salto a aprender la técnica de la fotografía. Exposición, velocidad, apertura. Aprenderás todo lo necesario para aprender los fundamentos y técnicas de la disciplina.</p>
           <div class="taller-includes">2 clases teóricas &nbsp;·&nbsp; 1 práctica &nbsp;·&nbsp; Guía PDF</div>
           <div class="taller-footer">
             <span class="taller-price">$100 USD</span>
-            <a href="#contacto" class="btn-ghost">Me interesa</a>
+            <a href="#contacto" class="btn-ghost"
+               data-es="Me interesa"
+               data-en="I'm interested">Me interesa</a>
           </div>
         </div>
       </article>
@@ -127,12 +160,15 @@
         <div class="taller-img" style="background-image:url('shared/assets/images/cursos/3-C-A.jpg')"></div>
         <div class="taller-body">
           <span class="taller-tag">T3</span>
-          <h4>Fotografía Avanzada y Específica</h4>
-          <p>Para quien ya maneja lo básico y quiere profundizar en un género o técnica particular: naturaleza, retrato, urbana, acción. Técnicas y herramientas específicas de cada estilo.</p>
+          <h4 data-es="Fotografía Avanzada y Específica" data-en="Advanced & Specific Photography">Fotografía Avanzada y Específica</h4>
+          <p data-es="Para quien ya maneja lo básico y quiere profundizar en un género o técnica particular: naturaleza, retrato, urbana, acción. Técnicas y herramientas específicas de cada estilo."
+             data-en="For those who already know the basics and want to go deeper into a genre or specific technique: nature, portrait, urban, action.">Para quien ya maneja lo básico y quiere profundizar en un género o técnica particular: naturaleza, retrato, urbana, acción. Técnicas y herramientas específicas de cada estilo.</p>
           <div class="taller-includes">2 clases teóricas &nbsp;·&nbsp; 1 práctica &nbsp;·&nbsp; Guía PDF</div>
           <div class="taller-footer">
             <span class="taller-price">$95 USD</span>
-            <a href="#contacto" class="btn-ghost">Me interesa</a>
+            <a href="#contacto" class="btn-ghost"
+               data-es="Me interesa"
+               data-en="I'm interested">Me interesa</a>
           </div>
         </div>
       </article>
@@ -141,12 +177,15 @@
         <div class="taller-img" style="background-image:url('shared/assets/images/cursos/4-C-CI.jpg')"></div>
         <div class="taller-body">
           <span class="taller-tag">T4</span>
-          <h4>Composición e Iluminación</h4>
-          <p>El arte de la fotografía. La diferencia entre sacar una foto correcta o una fotografía que genera un sentimiento y cuenta una historia. No importa con qué dispositivo trabajes.</p>
+          <h4 data-es="Composición e Iluminación" data-en="Composition & Lighting">Composición e Iluminación</h4>
+          <p data-es="El arte de la fotografía. La diferencia entre sacar una foto correcta o una fotografía que genera un sentimiento y cuenta una historia. No importa con qué dispositivo trabajes."
+             data-en="The art of photography. The difference between a correct photo and one that tells a story. Works with any device.">El arte de la fotografía. La diferencia entre sacar una foto correcta o una fotografía que genera un sentimiento y cuenta una historia. No importa con qué dispositivo trabajes.</p>
           <div class="taller-includes">2 clases teóricas &nbsp;·&nbsp; 1 práctica &nbsp;·&nbsp; Guía PDF</div>
           <div class="taller-footer">
             <span class="taller-price">$115 USD</span>
-            <a href="#contacto" class="btn-ghost">Me interesa</a>
+            <a href="#contacto" class="btn-ghost"
+               data-es="Me interesa"
+               data-en="I'm interested">Me interesa</a>
           </div>
         </div>
       </article>
@@ -155,12 +194,15 @@
         <div class="taller-img" style="background-image:url('shared/assets/images/cursos/5-C-EP.jpg')"></div>
         <div class="taller-body">
           <span class="taller-tag">T5</span>
-          <h4>Edición y Post-producción Digital</h4>
-          <p>Sin importar el origen de la fotografía ni el software que utilices, llevarás una fotografía a su mejor versión. Aprenderás teoría del color, Ps, Lr y cualquier otro software de elección.</p>
+          <h4 data-es="Edición y Post-producción Digital" data-en="Digital Editing & Post-production">Edición y Post-producción Digital</h4>
+          <p data-es="Sin importar el origen de la fotografía ni el software que utilices, llevarás una fotografía a su mejor versión. Aprenderás teoría del color, Ps, Lr y cualquier otro software de elección."
+             data-en="Regardless of your camera or software, you'll take any photo to its best version. Color theory, Ps, Lr and more.">Sin importar el origen de la fotografía ni el software que utilices, llevarás una fotografía a su mejor versión. Aprenderás teoría del color, Ps, Lr y cualquier otro software de elección.</p>
           <div class="taller-includes">2 clases teóricas &nbsp;·&nbsp; 1 práctica &nbsp;·&nbsp; Guía PDF</div>
           <div class="taller-footer">
             <span class="taller-price">$100 USD</span>
-            <a href="#contacto" class="btn-ghost">Me interesa</a>
+            <a href="#contacto" class="btn-ghost"
+               data-es="Me interesa"
+               data-en="I'm interested">Me interesa</a>
           </div>
         </div>
       </article>
@@ -169,12 +211,15 @@
         <div class="taller-img" style="background-image:url('shared/assets/images/cursos/6-C-EA.jpg')"></div>
         <div class="taller-body">
           <span class="taller-tag">T6</span>
-          <h4>Fotografía de Escalada y Altura</h4>
-          <p>Fotografía en entornos verticales y de montaña. Técnica, seguridad y mirada para capturar lo que pasa donde pocos llegan.</p>
+          <h4 data-es="Fotografía de Escalada y Altura" data-en="Climbing & High-Altitude Photography">Fotografía de Escalada y Altura</h4>
+          <p data-es="Fotografía en entornos verticales y de montaña. Técnica, seguridad y mirada para capturar lo que pasa donde pocos llegan."
+             data-en="Photography in vertical and mountain environments. Technique, safety and vision to capture what few get to see.">Fotografía en entornos verticales y de montaña. Técnica, seguridad y mirada para capturar lo que pasa donde pocos llegan.</p>
           <div class="taller-includes">1 clase teórico-práctica &nbsp;·&nbsp; Guía PDF</div>
           <div class="taller-footer">
             <span class="taller-price">$65 USD</span>
-            <a href="#contacto" class="btn-ghost">Me interesa</a>
+            <a href="#contacto" class="btn-ghost"
+               data-es="Me interesa"
+               data-en="I'm interested">Me interesa</a>
           </div>
         </div>
       </article>
@@ -186,19 +231,29 @@
   <section id="cursos-custom">
     <div class="cursos-custom-inner">
       <div class="cursos-custom-left">
-        <p class="label reveal">Cursos</p>
-        <h2 class="reveal reveal-d1">¿Quieres ir más lejos?<br>Armamos un curso<br>a medida</h2>
-        <p class="reveal reveal-d2">Los cursos combinan varios talleres en una secuencia progresiva diseñada para tu objetivo. El precio varía según los módulos que elijas.</p>
+        <p class="label reveal"
+           data-es="Cursos"
+           data-en="Courses">Cursos</p>
+        <h2 class="reveal reveal-d1"
+            data-es="¿Quieres ir más lejos? Armamos un curso a medida"
+            data-en="Want to go further? We build a custom course">¿Quieres ir más lejos?<br>Armamos un curso<br>a medida</h2>
+        <p class="reveal reveal-d2"
+           data-es="Los cursos combinan varios talleres en una secuencia progresiva diseñada para tu objetivo. El precio varía según los módulos que elijas."
+           data-en="Courses combine several workshops into a progressive sequence designed around your goal. Price varies by modules chosen.">Los cursos combinan varios talleres en una secuencia progresiva diseñada para tu objetivo. El precio varía según los módulos que elijas.</p>
       </div>
       <div class="cursos-custom-panel reveal reveal-d2">
-        <p class="label">Ejemplo de combinación</p>
+        <p class="label"
+           data-es="Ejemplo de combinación"
+           data-en="Example combination">Ejemplo de combinación</p>
         <ul class="combo-list">
-          <li><span class="combo-t">T1</span>Introducción a la Fotografía</li>
-          <li><span class="combo-plus">+</span><span class="combo-t">T2</span>Fotografía Básica</li>
-          <li><span class="combo-plus">+</span><span class="combo-t">T4</span>Composición e Iluminación</li>
-          <li><span class="combo-plus">+</span><span class="combo-t">T5</span>Edición y Post-producción</li>
+          <li><span class="combo-t">T1</span><span data-es="Introducción a la Fotografía" data-en="Introduction to Photography">Introducción a la Fotografía</span></li>
+          <li><span class="combo-plus">+</span><span class="combo-t">T2</span><span data-es="Fotografía Básica" data-en="Basic Photography">Fotografía Básica</span></li>
+          <li><span class="combo-plus">+</span><span class="combo-t">T4</span><span data-es="Composición e Iluminación" data-en="Composition & Lighting">Composición e Iluminación</span></li>
+          <li><span class="combo-plus">+</span><span class="combo-t">T5</span><span data-es="Edición y Post-producción" data-en="Editing & Post-production">Edición y Post-producción</span></li>
         </ul>
-        <a href="#contacto" class="btn-cursos" style="display:block;text-align:center;">Armar mi curso →</a>
+        <a href="#contacto" class="btn-cursos" style="display:block;text-align:center;"
+           data-es="Armar mi curso →"
+           data-en="Build my course →">Armar mi curso →</a>
       </div>
     </div>
   </section>
@@ -206,9 +261,15 @@
   <!-- ── ⑥ FORMULARIO ── -->
   <section id="contacto">
     <div class="form-wrap">
-      <p class="label reveal">Contacto</p>
-      <h2 class="reveal reveal-d1">Cuéntanos dónde estás.<br>Nosotros te decimos<br>por dónde empezar.</h2>
-      <p class="form-sub reveal reveal-d2">Completa el formulario y te respondemos en menos de 24hs para coordinar una evaluación gratuita.</p>
+      <p class="label reveal"
+         data-es="Contacto"
+         data-en="Contact">Contacto</p>
+      <h2 class="reveal reveal-d1"
+          data-es="Cuéntanos dónde estás. Nosotros te decimos por dónde empezar."
+          data-en="Tell us where you are. We'll tell you where to start.">Cuéntanos dónde estás.<br>Nosotros te decimos<br>por dónde empezar.</h2>
+      <p class="form-sub reveal reveal-d2"
+         data-es="Completa el formulario y te respondemos en menos de 24hs para coordinar una evaluación gratuita."
+         data-en="Fill out the form and we'll get back to you within 24hs to schedule a free assessment.">Completa el formulario y te respondemos en menos de 24hs para coordinar una evaluación gratuita.</p>
 
       <form class="cursos-form reveal reveal-d2" action="https://api.web3forms.com/submit" method="POST">
 
@@ -218,7 +279,7 @@
 
         <div class="form-row">
           <div class="form-field">
-            <label for="f-nombre">Nombre</label>
+            <label for="f-nombre" data-es="Nombre" data-en="Name">Nombre</label>
             <input type="text" id="f-nombre" name="nombre" placeholder="Tu nombre" required />
           </div>
           <div class="form-field">
@@ -228,43 +289,48 @@
         </div>
 
         <div class="form-field">
-          <label for="f-telefono">Teléfono / WhatsApp</label>
+          <label for="f-telefono" data-es="Teléfono / WhatsApp" data-en="Phone / WhatsApp">Teléfono / WhatsApp</label>
           <input type="tel" id="f-telefono" name="telefono" placeholder="+54 9 11 xxxx xxxx" />
         </div>
 
         <div class="form-field">
-          <label>¿Qué dispositivo usas?</label>
+          <label data-es="¿Qué dispositivo usas?" data-en="What device do you use?">¿Qué dispositivo usas?</label>
           <div class="radio-group" role="group">
-            <label class="radio-opt"><input type="radio" name="dispositivo" value="Celular" /><span>Celular</span></label>
-            <label class="radio-opt"><input type="radio" name="dispositivo" value="Cámara" /><span>Cámara</span></label>
+            <label class="radio-opt"><input type="radio" name="dispositivo" value="Celular" /><span data-es="Celular" data-en="Phone">Celular</span></label>
+            <label class="radio-opt"><input type="radio" name="dispositivo" value="Cámara" /><span data-es="Cámara" data-en="Camera">Cámara</span></label>
             <label class="radio-opt"><input type="radio" name="dispositivo" value="Drone" /><span>Drone</span></label>
-            <label class="radio-opt"><input type="radio" name="dispositivo" value="Varios" /><span>Varios</span></label>
+            <label class="radio-opt"><input type="radio" name="dispositivo" value="Varios" /><span data-es="Varios" data-en="Multiple">Varios</span></label>
           </div>
         </div>
 
         <div class="form-field">
-          <label>¿Cómo te defines?</label>
+          <label data-es="¿Cómo te defines?" data-en="How would you describe yourself?">¿Cómo te defines?</label>
           <div class="radio-group" role="group">
-            <label class="radio-opt"><input type="radio" name="nivel" value="Principiante" /><span>Principiante</span></label>
-            <label class="radio-opt"><input type="radio" name="nivel" value="Intermedio" /><span>Intermedio</span></label>
-            <label class="radio-opt"><input type="radio" name="nivel" value="Avanzado" /><span>Avanzado</span></label>
+            <label class="radio-opt"><input type="radio" name="nivel" value="Principiante" /><span data-es="Principiante" data-en="Beginner">Principiante</span></label>
+            <label class="radio-opt"><input type="radio" name="nivel" value="Intermedio" /><span data-es="Intermedio" data-en="Intermediate">Intermedio</span></label>
+            <label class="radio-opt"><input type="radio" name="nivel" value="Avanzado" /><span data-es="Avanzado" data-en="Advanced">Avanzado</span></label>
           </div>
         </div>
 
         <div class="form-field">
-          <label>¿Qué modalidad prefieres?</label>
+          <label data-es="¿Qué modalidad prefieres?" data-en="What format do you prefer?">¿Qué modalidad prefieres?</label>
           <div class="radio-group" role="group">
             <label class="radio-opt"><input type="radio" name="modalidad" value="Online" /><span>Online</span></label>
-            <label class="radio-opt"><input type="radio" name="modalidad" value="Mixta con presencial" /><span>Mixta con presencial</span></label>
+            <label class="radio-opt"><input type="radio" name="modalidad" value="Mixta con presencial" /><span data-es="Mixta con presencial" data-en="Mixed with in-person">Mixta con presencial</span></label>
           </div>
         </div>
 
         <div class="form-field">
-          <label for="f-mensaje">¿Qué quieres lograr?</label>
-          <textarea id="f-mensaje" name="mensaje" placeholder="Cuéntanos brevemente qué te interesa de la fotografía o qué resultado estás buscando..."></textarea>
+          <label for="f-mensaje" data-es="¿Qué quieres lograr?" data-en="What do you want to achieve?">¿Qué quieres lograr?</label>
+          <textarea id="f-mensaje" name="mensaje"
+            data-placeholder-es="Cuéntanos brevemente qué te interesa de la fotografía o qué resultado estás buscando..."
+            data-placeholder-en="Tell us briefly what interests you about photography or what result you're looking for..."
+            placeholder="Cuéntanos brevemente qué te interesa de la fotografía o qué resultado estás buscando..."></textarea>
         </div>
 
-        <button type="submit" class="btn-cursos btn-submit">Enviar →</button>
+        <button type="submit" class="btn-cursos btn-submit"
+                data-es="Enviar →"
+                data-en="Send →">Enviar →</button>
       </form>
     </div>
   </section>
@@ -273,10 +339,14 @@
   <div id="gracias-overlay" aria-hidden="true">
     <div id="gracias-card">
       <img src="shared/assets/logo-simbolo-blanco.png" alt="Gamantri" class="gracias-logo" />
-      <p class="label">Mensaje recibido</p>
-      <h3>¡Gracias por escribirnos!</h3>
-      <p class="gracias-text">Recibimos tu consulta. Nos comunicaremos contigo a la brevedad para coordinar tu evaluación gratuita.</p>
-      <button id="gracias-close" class="btn-cursos">Cerrar →</button>
+      <p class="label" data-es="Mensaje recibido" data-en="Message received">Mensaje recibido</p>
+      <h3 data-es="¡Gracias por escribirnos!" data-en="Thanks for reaching out!">¡Gracias por escribirnos!</h3>
+      <p class="gracias-text"
+         data-es="Recibimos tu consulta. Nos comunicaremos contigo a la brevedad para coordinar tu evaluación gratuita."
+         data-en="We received your message. We'll be in touch shortly to schedule your free assessment.">Recibimos tu consulta. Nos comunicaremos contigo a la brevedad para coordinar tu evaluación gratuita.</p>
+      <button id="gracias-close" class="btn-cursos"
+              data-es="Cerrar →"
+              data-en="Close →">Cerrar →</button>
     </div>
   </div>
 

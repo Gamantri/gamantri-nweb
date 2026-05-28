@@ -1,5 +1,38 @@
 // ── CURSOS.JS — Gamantri Landing Cursos ──
 
+// ── IDIOMA — lee preferencia del index via localStorage ──
+let lang = localStorage.getItem('gamantri-lang') || 'es';
+
+function setLang(l) {
+  lang = l;
+  localStorage.setItem('gamantri-lang', l);
+
+  // Botones activos
+  document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+  document.querySelectorAll(`.lang-btn[onclick="setLang('${l}')"]`).forEach(b => b.classList.add('active'));
+
+  // Textos con data-es / data-en
+  document.querySelectorAll(`[data-${l}]`).forEach(el => {
+    const val = el.getAttribute(`data-${l}`);
+    if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+      el.placeholder = val;
+    } else {
+      el.innerHTML = val;
+    }
+  });
+
+  // Placeholders especiales (textarea)
+  document.querySelectorAll('[data-placeholder-es]').forEach(el => {
+    el.placeholder = el.getAttribute(`data-placeholder-${l}`);
+  });
+
+  // html lang attr
+  document.documentElement.lang = l;
+}
+
+// Aplicar idioma al cargar
+document.addEventListener('DOMContentLoaded', () => setLang(lang));
+
 // Header scroll
 const cursosHeader = document.getElementById('cursos-header');
 window.addEventListener('scroll', () => {
