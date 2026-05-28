@@ -728,7 +728,7 @@ footer {
   .cursos-video { aspect-ratio: 1 / 1; width: 100%; padding: 24px 0; background-image: url('../assets/images/cursos/1-C-I.jpg'); background-size: cover; background-position: center; }
   .cursos-video video { display: none; }
   .obras-grid { grid-template-columns: 1fr 1fr; }
-  .obras-hero-text { flex-direction: column; gap: 24px; }
+  .obras-hero-text { flex-direction: column; gap: 24px; align-items: flex-start; }
   .obras-hero-copy { text-align: left; }
   .obra-modal-grid { grid-template-columns: 1fr; }
   .obra-modal-foto-item { height: 60vw; }
