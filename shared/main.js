@@ -369,7 +369,7 @@ function playHeroSound() {
   if (!audio) return;
 
   const FADE_IN_MS  = 1200;   // duración del fade-in
-  const HOLD_MS     = 8000;   // tiempo total antes del fade-out
+  const HOLD_MS     = 16300;  // hold hasta ~20s totales (1.2 + 16.3 + 2.5 = 20s)
   const FADE_OUT_MS = 2500;   // duración del fade-out
   const MAX_VOL     = 0.55;   // volumen máximo (0–1)
 
