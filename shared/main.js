@@ -363,6 +363,49 @@ function initHeroAnimations() {
   };
 })();
 
+// ── HERO AMBIENT SOUND ──────────────────────────────────────────
+function playHeroSound() {
+  const audio = document.getElementById('hero-sound');
+  if (!audio) return;
+
+  const FADE_IN_MS  = 1200;   // duración del fade-in
+  const HOLD_MS     = 8000;   // tiempo total antes del fade-out
+  const FADE_OUT_MS = 2500;   // duración del fade-out
+  const MAX_VOL     = 0.55;   // volumen máximo (0–1)
+
+  audio.volume = 0;
+  const playPromise = audio.play();
+
+  if (!playPromise) return; // browser muy viejo
+
+  playPromise.then(() => {
+    // ── Fade-in ──
+    const fadeInStart = performance.now();
+    function stepIn(now) {
+      const t = Math.min((now - fadeInStart) / FADE_IN_MS, 1);
+      audio.volume = t * MAX_VOL;
+      if (t < 1) requestAnimationFrame(stepIn);
+    }
+    requestAnimationFrame(stepIn);
+
+    // ── Fade-out tras HOLD_MS ──
+    setTimeout(() => {
+      const fadeOutStart = performance.now();
+      const volAtStart = audio.volume;
+      function stepOut(now) {
+        const t = Math.min((now - fadeOutStart) / FADE_OUT_MS, 1);
+        audio.volume = volAtStart * (1 - t);
+        if (t < 1) requestAnimationFrame(stepOut);
+        else { audio.pause(); audio.currentTime = 0; }
+      }
+      requestAnimationFrame(stepOut);
+    }, HOLD_MS);
+
+  }).catch(() => {
+    // Browser bloqueó el autoplay → silencio total, sin errores
+  });
+}
+
 window.addEventListener('load', () => {
   const REVEAL_MS = 2000;
   const wait = Math.max(0, REVEAL_MS - performance.now());
@@ -371,9 +414,9 @@ window.addEventListener('load', () => {
     const loader = document.getElementById('loader');
     if (loader) {
       loader.classList.add('fade-out');
-      setTimeout(() => { loader.remove(); initHeroAnimations(); }, 700);
+      setTimeout(() => { loader.remove(); initHeroAnimations(); playHeroSound(); }, 700);
     } else {
-      initHeroAnimations();
+      initHeroAnimations(); playHeroSound();
     }
   }, wait);
 });
