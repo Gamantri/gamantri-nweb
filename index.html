@@ -239,7 +239,9 @@
   <section id="cursos">
 
     <div class="cursos-video">
-      <img src="shared/assets/images/cursos/0-C-P.jpg" alt="Cursos Gamantri" style="width:100%;height:100%;object-fit:cover;display:block;" />
+      <video autoplay muted loop playsinline preload="auto" poster="shared/assets/images/cursos/1-C-I.jpg">
+        <source src="shared/assets/videos/CURSOS_2.mp4" type="video/mp4" />
+      </video>
     </div>
 
     <div class="cursos-text">
@@ -429,22 +431,25 @@
          data-en="Customize the framing of an existing photograph or request a commissioned work.">
         Personaliza el enmarcado de una fotografía existente o solicita un trabajo comisionado.
       </p>
-      <form onsubmit="event.preventDefault(); closeOverlay('overlay-encargo'); openOverlay('overlay-ok-obras')">
+      <form onsubmit="event.preventDefault(); submitOverlayForm(this, 'overlay-encargo', 'overlay-ok-obras')">
+        <input type="hidden" name="access_key" value="ec87737e-e001-455d-88c3-e32409b6b2d0" />
+        <input type="hidden" name="to" value="crisposadas@gamantri.com" />
+        <input type="hidden" name="subject" value="Nueva consulta — Encargo de Obra · Gamantri" />
         <div class="form-group">
           <label class="form-label" data-es="Nombre" data-en="Name">Nombre</label>
-          <input class="form-input" type="text" required />
+          <input class="form-input" type="text" name="nombre" required />
         </div>
         <div class="form-group">
           <label class="form-label">Email</label>
-          <input class="form-input" type="email" required />
+          <input class="form-input" type="email" name="email" required />
         </div>
         <div class="form-group">
           <label class="form-label" data-es="Teléfono / WhatsApp" data-en="Phone / WhatsApp">Teléfono / WhatsApp</label>
-          <input class="form-input" type="tel" />
+          <input class="form-input" type="tel" name="telefono" />
         </div>
         <div class="form-group">
           <label class="form-label" data-es="Tipo de encargo" data-en="Order type">Tipo de encargo</label>
-          <select class="form-select" id="encargo-tipo">
+          <select class="form-select" id="encargo-tipo" name="tipo_encargo">
             <option value="catalogo">Encargar obra del catálogo</option>
             <option value="personalizada">Personalizar obra existente</option>
             <option value="comision">Fotografía comisionada</option>
@@ -452,7 +457,7 @@
         </div>
         <div class="form-group">
           <label class="form-label" data-es="Descripción del encargo" data-en="Order description">Descripción del encargo</label>
-          <textarea class="form-textarea" rows="4"></textarea>
+          <textarea class="form-textarea" name="descripcion" rows="4"></textarea>
         </div>
         <button class="btn-outline btn-accent-outline" type="submit"
                 style="font-family:'Jura',sans-serif;font-size:11px;letter-spacing:0.2em;text-transform:uppercase"
@@ -489,14 +494,17 @@
     <div class="form-overlay-inner">
       <p class="form-step" data-es="Servicios · Briefing" data-en="Services · Briefing">Servicios · Briefing</p>
       <h2 class="form-title" data-es="Tu proyecto" data-en="Your project">Tu proyecto</h2>
-      <form onsubmit="event.preventDefault(); closeOverlay('overlay-briefing'); openOverlay('overlay-ok-servicios')">
+      <form onsubmit="event.preventDefault(); submitOverlayForm(this, 'overlay-briefing', 'overlay-ok-servicios')">
+        <input type="hidden" name="access_key" value="ec87737e-e001-455d-88c3-e32409b6b2d0" />
+        <input type="hidden" name="to" value="crisposadas@gamantri.com" />
+        <input type="hidden" name="subject" value="Nueva consulta — Briefing Servicios · Gamantri" />
         <div class="form-group">
           <label class="form-label" data-es="Nombre / Empresa" data-en="Name / Company">Nombre / Empresa</label>
-          <input class="form-input" type="text" required />
+          <input class="form-input" type="text" name="nombre" required />
         </div>
         <div class="form-group">
           <label class="form-label" data-es="Tipo de proyecto" data-en="Project type">Tipo de proyecto</label>
-          <select class="form-select">
+          <select class="form-select" name="tipo_proyecto">
             <option>Expedición / Documental</option>
             <option>Campaña de marca</option>
             <option>Contenido para redes</option>
@@ -506,19 +514,19 @@
         </div>
         <div class="form-group">
           <label class="form-label" data-es="Locación / Contexto" data-en="Location / Context">Locación / Contexto</label>
-          <input class="form-input" type="text" />
+          <input class="form-input" type="text" name="locacion" />
         </div>
         <div class="form-group">
           <label class="form-label" data-es="Fechas estimadas" data-en="Estimated dates">Fechas estimadas</label>
-          <input class="form-input" type="text" />
+          <input class="form-input" type="text" name="fechas" />
         </div>
         <div class="form-group">
           <label class="form-label" data-es="Referentes visuales" data-en="Visual references">Referentes visuales</label>
-          <textarea class="form-textarea" rows="3"></textarea>
+          <textarea class="form-textarea" name="referentes" rows="3"></textarea>
         </div>
         <div class="form-group">
           <label class="form-label" data-es="Presupuesto aproximado (opcional)" data-en="Approximate budget (optional)">Presupuesto aproximado (opcional)</label>
-          <input class="form-input" type="text" />
+          <input class="form-input" type="text" name="presupuesto" />
         </div>
         <button class="btn-outline btn-accent-outline" type="submit"
                 style="font-family:'Jura',sans-serif;font-size:11px;letter-spacing:0.2em;text-transform:uppercase"
