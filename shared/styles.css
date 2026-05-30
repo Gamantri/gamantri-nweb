@@ -613,9 +613,9 @@ footer {
 
 /* ── Modal Nosotros ── */
 .modal-nosotros {
-  max-width: 840px;
+  max-width: 1080px;
   margin: 0 auto;
-  padding-bottom: 80px;
+  padding: 72px 48px 100px;
 }
 
 /* Parte 1 — Marca */
@@ -658,7 +658,7 @@ footer {
   transform: scaleX(-1);
 }
 .nosotros-nombre { font-family: 'Play', sans-serif; font-size: 36px; font-weight: 400; margin-bottom: 6px; }
-.nosotros-rol { font-size: 13px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--accent); margin-bottom: 28px; }
+.nosotros-rol { font-family: 'Jura', sans-serif; font-size: 13px; letter-spacing: 0.32em; text-transform: uppercase; color: #E06030; font-weight: 700; margin-bottom: 28px; }
 .nosotros-bio-cris { font-size: 18px; line-height: 1.95; color: rgba(242,237,232,0.72); margin-bottom: 36px; }
 .nosotros-actions { display: flex; gap: 16px; flex-wrap: wrap; }
 
@@ -773,6 +773,8 @@ footer {
   .nosotros-lower { grid-template-columns: 1fr; }
   .nosotros-foto { width: 140px; }
   .nosotros-logo { height: 38px; }
+  .modal-nosotros { padding: 56px 28px 80px; }
+  .nosotros-bio-brand, .nosotros-bio-cris { text-align: justify; }
   header { padding: 20px 24px; }
   .nav-links { display: none; }
   footer { flex-direction: column; gap: 24px; text-align: center; }
