@@ -41,7 +41,7 @@
     <a onclick="scrollToSection('#servicios'); closeMobileMenu()"
        data-es="Servicios" data-en="Services">Servicios</a>
     <button onclick="openOverlay('overlay-cris'); closeMobileMenu()"
-            data-es="Sobre Cris" data-en="About Cris">Sobre Cris</button>
+            data-es="Nosotros" data-en="About">Nosotros</button>
     <div class="lang-toggle mobile-lang" style="margin-top:40px">
       <button class="lang-btn active" onclick="setLang('es')">ES</button>
       <span class="lang-sep">·</span>
@@ -363,7 +363,7 @@
       <img src="shared/assets/logo-simbolo-blanco.png" alt="Gamantri" loading="lazy" />
     </div>
     <div class="footer-links">
-      <button onclick="openOverlay('overlay-cris')" data-es="Sobre Cris" data-en="About Cris">Sobre Cris</button>
+      <button onclick="openOverlay('overlay-cris')" data-es="Nosotros" data-en="About">Nosotros</button>
       <a href="https://www.instagram.com/gamantri/" target="_blank">Instagram</a>
       <a href="mailto:crisposadas@gamantri.com">Email</a>
     </div>
@@ -472,25 +472,44 @@
     </div>
   </div>
 
-  <!-- Sobre Cris -->
+  <!-- Nosotros / About -->
   <div class="overlay" id="overlay-cris">
     <button class="overlay-close" onclick="closeOverlay('overlay-cris')">×</button>
-    <div class="modal-cris">
-      <div class="modal-foto"></div>
-      <div class="modal-body">
-        <p class="label">Fundador · Director</p>
-        <h2 class="modal-name">Cris Posadas</h2>
-        <p class="modal-role">Photographer · Filmmaker · Civil Engineer</p>
-        <p class="modal-bio"
-           data-es="Fotógrafo, editor digital y filmmaker. Fundador y director de Gamantri, una marca dedicada a rescatar el valor patrimonial de los espacios naturales y fomentar su protección a través de las imágenes. La escalada y el montañismo son el medio para llegar a esos lugares y acercar a las personas a ellos. Trabaja con marcas internacionales, atletas y expediciones en los entornos más exigentes del planeta."
-           data-en="Photographer, digital editor and filmmaker. Founder and director of Gamantri, a brand dedicated to capturing the heritage value of natural spaces and fostering their protection through imagery. Climbing and mountaineering are the means to reach those places and connect people with them. Works with international brands, athletes and expeditions in the planet's most demanding environments.">
-          Fotógrafo, editor digital y filmmaker. Fundador y director de Gamantri, una marca dedicada a rescatar el valor patrimonial de los espacios naturales y fomentar su protección a través de las imágenes. La escalada y el montañismo son el medio para llegar a esos lugares y acercar a las personas a ellos. Trabaja con marcas internacionales, atletas y expediciones en los entornos más exigentes del planeta.
+    <div class="modal-nosotros">
+
+      <!-- ① MARCA -->
+      <div class="nosotros-brand">
+        <p class="label nosotros-tag"
+           data-es="¿Qué significa?" data-en="What does it mean?">¿Qué significa?</p>
+        <img class="nosotros-logo" src="shared/assets/logo-horizontal-blanco.png" alt="Gamantri" />
+        <p class="nosotros-subtag"
+           data-es="Viajes · Escalada · Naturaleza"
+           data-en="Travel · Climbing · Nature">Viajes · Escalada · Naturaleza</p>
+        <p class="nosotros-bio-brand"
+           data-es='«gamantri» es un neologismo creado a partir de los conceptos «gaman», que en japonés significa «capacidad de resistir a la adversidad estoicamente», y «yatri», que en Nepalí es un nombre de mujer y significa «viajera».<br><br>Es una marca dedicada a rescatar el valor de los espacios naturales y fomentar su protección a través de las imágenes. La escalada y el montañismo son el medio para llegar a esos lugares y acercar a las personas a ellos, con admiración y respeto.'
+           data-en='«gamantri» is a neologism coined from «gaman», which in Japanese means «the ability to endure adversity with stoic patience», and «yatri», a feminine name in Nepali meaning «traveler».<br><br>It is a brand dedicated to capturing the value of natural spaces and fostering their protection through imagery. Climbing and mountaineering are the means to reach those places and connect people with them, with admiration and respect.'>
+          «gamantri» es un neologismo creado a partir de los conceptos «gaman», que en japonés significa «capacidad de resistir a la adversidad estoicamente», y «yatri», que en Nepalí es un nombre de mujer y significa «viajera».<br><br>Es una marca dedicada a rescatar el valor de los espacios naturales y fomentar su protección a través de las imágenes. La escalada y el montañismo son el medio para llegar a esos lugares y acercar a las personas a ellos, con admiración y respeto.
         </p>
-        <div class="modal-actions">
-          <a class="btn-outline" href="https://www.instagram.com/gamantri/" target="_blank">Instagram</a>
-          <a class="btn-outline" href="mailto:crisposadas@gamantri.com">Email</a>
+      </div>
+
+      <!-- ② FOTO + ③ CRIS -->
+      <div class="nosotros-lower">
+        <div class="nosotros-foto"></div>
+        <div class="nosotros-cris">
+          <h2 class="nosotros-nombre">Cris Posadas</h2>
+          <p class="nosotros-rol">Photographer · Filmmaker · Civil Engineer</p>
+          <p class="nosotros-bio-cris"
+             data-es="Fundador y director de Gamantri. Viajero por excelencia, escalador y fotógrafo por pasión y profesión; artista por consecuencia. Trabaja con grandes marcas, atletas e instituciones alrededor del mundo, fomentando el desarrollo del deporte outdoor y el activismo natural."
+             data-en="Founder and director of Gamantri. Traveler at heart, climber and photographer by passion and profession; artist by consequence. Works with major brands, athletes and institutions around the world, fostering the development of outdoor sports and nature activism.">
+            Fundador y director de Gamantri. Viajero por excelencia, escalador y fotógrafo por pasión y profesión; artista por consecuencia. Trabaja con grandes marcas, atletas e instituciones alrededor del mundo, fomentando el desarrollo del deporte outdoor y el activismo natural.
+          </p>
+          <div class="nosotros-actions">
+            <a class="btn-outline" href="https://www.instagram.com/gamantri/" target="_blank">Instagram</a>
+            <a class="btn-outline" href="mailto:crisposadas@gamantri.com">Email</a>
+          </div>
         </div>
       </div>
+
     </div>
   </div>
 

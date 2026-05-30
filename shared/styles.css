@@ -611,20 +611,56 @@ footer {
 }
 .btn-encargar:hover { background: rgba(201,79,31,0.1); }
 
-/* ── Modal Sobre Cris ── */
-.modal-cris {
-  display: grid; grid-template-columns: 500px 1fr;
-  min-height: 100vh;
+/* ── Modal Nosotros ── */
+.modal-nosotros {
+  max-width: 840px;
+  margin: 0 auto;
+  padding-bottom: 80px;
 }
-.modal-foto {
+
+/* Parte 1 — Marca */
+.nosotros-brand {
+  padding-bottom: 64px;
+  border-bottom: 1px solid rgba(242,237,232,0.08);
+  margin-bottom: 64px;
+}
+.nosotros-tag { color: var(--text) !important; }
+.nosotros-logo {
+  height: 50px;
+  display: block;
+  margin: 18px 0 16px;
+}
+.nosotros-subtag {
+  font-family: 'Jura', sans-serif;
+  font-size: 13px; letter-spacing: 0.32em; text-transform: uppercase;
+  color: #E06030; font-weight: 700;
+  margin-bottom: 40px;
+}
+.nosotros-bio-brand {
+  font-size: 18px; line-height: 2;
+  color: rgba(242,237,232,0.72);
+  max-width: 680px;
+  padding-left: 24px;
+  border-left: 2px solid var(--accent);
+}
+
+/* Parte 2+3 — Foto + Cris */
+.nosotros-lower {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 56px;
+  align-items: start;
+}
+.nosotros-foto {
+  width: 200px;
+  aspect-ratio: 3/4;
   background: url('assets/images/gamantri_01_02.jpg') center/cover;
   transform: scaleX(-1);
 }
-.modal-body { padding: 100px 80px; display: flex; flex-direction: column; justify-content: center; gap: 20px; }
-.modal-name { font-family: 'Play', sans-serif; font-size: 40px; font-weight: 400; }
-.modal-role { font-size: 15px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent); }
-.modal-bio { font-size: 20px; line-height: 1.95; color: var(--muted); max-width: 520px; }
-.modal-actions { display: flex; gap: 16px; flex-wrap: wrap; margin-top: 8px; }
+.nosotros-nombre { font-family: 'Play', sans-serif; font-size: 36px; font-weight: 400; margin-bottom: 6px; }
+.nosotros-rol { font-size: 13px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--accent); margin-bottom: 28px; }
+.nosotros-bio-cris { font-size: 18px; line-height: 1.95; color: rgba(242,237,232,0.72); margin-bottom: 36px; }
+.nosotros-actions { display: flex; gap: 16px; flex-wrap: wrap; }
 
 /* Formularios overlay */
 .form-overlay-inner {
@@ -734,8 +770,9 @@ footer {
   .obra-modal-grid { grid-template-columns: 1fr; }
   .obra-modal-foto-item { height: 60vw; }
   .obra-modal-panel { position: static; height: auto; }
-  .modal-cris { grid-template-columns: 1fr; }
-  .modal-foto { display: none; }
+  .nosotros-lower { grid-template-columns: 1fr; }
+  .nosotros-foto { width: 140px; }
+  .nosotros-logo { height: 38px; }
   header { padding: 20px 24px; }
   .nav-links { display: none; }
   footer { flex-direction: column; gap: 24px; text-align: center; }
