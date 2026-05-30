@@ -53,7 +53,7 @@
 }
 .cursos-hero-sub {
   font-size: 15px; letter-spacing: 0.2em; text-transform: uppercase;
-  color: var(--accent); margin-bottom: 36px;
+  color: #E06030; font-weight: 700; margin-bottom: 36px;
 }
 .cursos-scroll-hint {
   position: absolute; right: 56px; bottom: 80px;

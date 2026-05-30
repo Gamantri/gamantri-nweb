@@ -28,6 +28,7 @@ const obras = [
     imgZoom: 'shared/assets/images/obras/2-O-Mu-Z.jpg',
     imgFull: 'shared/assets/images/obras/1-O-Mu-F.jpg',
     descripcion: 'Como si la naturaleza tuviera un segmento diseñado y construido por el hombre. La cárcel muestra un sector de columnas perfectas de basalto en el Valle de los Cóndores en Chile, uno de los sectores de escalada más imponentes del mundo.',
+    descripcion_en: 'As if nature had a segment designed and built by man. La Cárcel reveals a sector of perfect basalt columns in Valle de los Cóndores, Chile — one of the most imposing climbing destinations in the world.',
     series: [
       { precio: '350 USD', copia: '1/5', vendida: true },
       { precio: '620 USD', copia: '2/5', vendida: true },
@@ -35,8 +36,9 @@ const obras = [
       { precio: '1.050 USD', copia: '4/5', vendida: false },
       { precio: '1.350 USD', copia: '5/5', vendida: false },
     ],
-    piezas: 'Unidad',
+    piezas: 'Unidad', piezas_en: 'Single print',
     referencia: '90×120 cm, marco de madera, con paspartú',
+    referencia_en: '90×120 cm, wooden frame, with mat',
     precioDestacado: '$840 USD',
   },
   {
@@ -45,13 +47,15 @@ const obras = [
     imgZoom: 'shared/assets/images/obras/5-O-Mu-Z.jpg',
     imgFull: 'shared/assets/images/obras/4-O-Mu-F.jpg',
     descripcion: 'Episodio único y poético de un volcán icónico, que luego de muchas visitas se mostró de una manera irrepetible: vestido de nubes por tan solo unos breves minutos.',
+    descripcion_en: 'A unique and poetic episode of an iconic volcano, which after many visits revealed itself in an unrepeatable way — dressed in clouds for just a few brief minutes.',
     series: [
       { precio: '350 USD', copia: '1/3', vendida: true },
       { precio: '680 USD', copia: '2/3', vendida: false, destacada: true },
       { precio: '1.100 USD', copia: '3/3', vendida: false },
     ],
-    piezas: 'Unidad',
+    piezas: 'Unidad', piezas_en: 'Single print',
     referencia: '60×90 cm, marco de aluminio, con paspartú',
+    referencia_en: '60×90 cm, aluminum frame, with mat',
     precioDestacado: '$680 USD',
   },
   {
@@ -60,13 +64,15 @@ const obras = [
     imgZoom: 'shared/assets/images/obras/8-O-Mu-Z.jpg',
     imgFull: 'shared/assets/images/obras/7-O-Mu-F.jpg',
     descripcion: 'Un recorrido a lo largo de la cordillera chilena. Cuatro imágenes tomadas a distintas horas del día en diferentes regiones del país, simbolizando los cuatro elementos. El fuego del norte, el agua de los volcanes araucanos, la tierra en Cochamó, y el aire con los vientos patagónicos de Aysén.',
+    descripcion_en: 'A journey along the Chilean Andes. Four images taken at different hours of the day across different regions of the country, symbolizing the four elements — fire from the north, water from the Araucanian volcanoes, earth in Cochamó, and wind with the Patagonian gales of Aysén.',
     series: [
       { precio: '320 USD', copia: '1/3', vendida: true },
       { precio: '540 USD', copia: '2/3', vendida: false, destacada: true },
       { precio: '950 USD', copia: '3/3', vendida: false },
     ],
-    piezas: 'Cuatro unificadas',
+    piezas: 'Cuatro unificadas', piezas_en: 'Four unified',
     referencia: '42×84 cm, marco de madera, con paspartú',
+    referencia_en: '42×84 cm, wooden frame, with mat',
     precioDestacado: '$540 USD',
   },
   {
@@ -75,6 +81,7 @@ const obras = [
     imgZoom: 'shared/assets/images/obras/11-O-Mu-Z.jpg',
     imgFull: 'shared/assets/images/obras/10-O-Mu-F.jpg',
     descripcion: 'Leo Cea con 11 años colgando del paso más difícil de Era Vella, en Margalef, Catalunya. Simboliza un momento único de la escalada mundial: el encadene del 9a (5.14d) más joven de la historia. Noviembre de 2024.',
+    descripcion_en: 'Leo Cea at 11 years old hanging on the crux of Era Vella in Margalef, Catalonia. It captures a unique moment in world climbing history — the youngest 9a (5.14d) ascent ever recorded. November 2024.',
     series: [
       { precio: '350 USD', copia: '1/5', vendida: true },
       { precio: '460 USD', copia: '2/5', vendida: true },
@@ -82,8 +89,9 @@ const obras = [
       { precio: '1.100 USD', copia: '4/5', vendida: false },
       { precio: '1.500 USD', copia: '5/5', vendida: false },
     ],
-    piezas: 'Unidad',
+    piezas: 'Unidad', piezas_en: 'Single print',
     referencia: '60×110 cm, marco de madera, con paspartú',
+    referencia_en: '60×110 cm, wooden frame, with mat',
     precioDestacado: '$670 USD',
   },
   {
@@ -92,13 +100,15 @@ const obras = [
     imgZoom: 'shared/assets/images/obras/14-O-Mu-Z.jpg',
     imgFull: 'shared/assets/images/obras/13-O-Mu-F.jpg',
     descripcion: 'Entre las magias meteorológicas de las montañas aparecen las nubes lenticulares. La magnitud y perfección de esta sobre el blanco puro del Volcán Llaima se muestra como una nave nodriza acechando.',
+    descripcion_en: 'Among the meteorological wonders of the mountains appear lenticular clouds. The magnitude and perfection of this one hovering over the pure white of Llaima Volcano resembles a mothership looming overhead.',
     series: [
       { precio: '320 USD', copia: '1/3', vendida: false, destacada: true },
       { precio: '580 USD', copia: '2/3', vendida: false },
       { precio: '950 USD', copia: '3/3', vendida: false },
     ],
-    piezas: 'Unidad',
+    piezas: 'Unidad', piezas_en: 'Single print',
     referencia: '50×80 cm, marco de acero, con paspartú',
+    referencia_en: '50×80 cm, steel frame, with mat',
     precioDestacado: '$320 USD',
   },
   {
@@ -107,13 +117,15 @@ const obras = [
     imgZoom: 'shared/assets/images/obras/17-O-Mu-Z.jpg',
     imgFull: 'shared/assets/images/obras/16-O-Mu-F.jpg',
     descripcion: 'En la máxima expresión del minimalismo en la naturaleza aparece seguido un paisaje de nieve. Cuando se suman nubes blancas bajas y apenas unos senderos que nos muestran ínfimos, se hace poesía.',
+    descripcion_en: 'In the highest expression of minimalism in nature, a snow landscape often appears. When low white clouds drift in and only a few trails remind us of our smallness, it becomes poetry.',
     series: [
       { precio: '450 USD', copia: '1/3', vendida: false, destacada: true },
       { precio: '830 USD', copia: '2/3', vendida: false },
       { precio: '1.150 USD', copia: '3/3', vendida: false },
     ],
-    piezas: 'Unidad',
+    piezas: 'Unidad', piezas_en: 'Single print',
     referencia: '80×110 cm, marco de aluminio, con paspartú',
+    referencia_en: '80×110 cm, aluminum frame, with mat',
     precioDestacado: '$450 USD',
   },
   {
@@ -122,13 +134,15 @@ const obras = [
     imgZoom: 'shared/assets/images/obras/20-O-Mu-Z.jpg',
     imgFull: 'shared/assets/images/obras/19-O-Mu-F.jpg',
     descripcion: 'Entre las paredes de la mina en el Cajón del Maipo aparece este icónico multilargo. Captura del primer ascenso masculino, de dos de los mejores escaladores de Chile, Ronny Escobar y Benja Vargas para el Documental homónimo.',
+    descripcion_en: 'Between the walls of the mine in Cajón del Maipo stands this iconic multi-pitch route. A capture of the first male ascent by two of Chile\'s best climbers, Ronny Escobar and Benja Vargas, for the documentary of the same name.',
     series: [
       { precio: '250 USD', copia: '1/3', vendida: true },
       { precio: '380 USD', copia: '2/3', vendida: true },
       { precio: '650 USD', copia: '3/3', vendida: false, destacada: true },
     ],
-    piezas: 'Unidad',
+    piezas: 'Unidad', piezas_en: 'Single print',
     referencia: '60×90 cm, marco de aluminio, con paspartú',
+    referencia_en: '60×90 cm, aluminum frame, with mat',
     precioDestacado: '$650 USD',
   },
   {
@@ -137,13 +151,15 @@ const obras = [
     imgZoom: 'shared/assets/images/obras/23-O-Mu-Z.jpg',
     imgFull: 'shared/assets/images/obras/22-O-Mu-F.jpg',
     descripcion: 'El cerro El Plomo, el más alto de la región de Santiago, con su historia Inca y su cumbre de 5424 msnm. Esta imagen muestra unos penitentes casi diseñados en su campamento base, el Federación.',
+    descripcion_en: 'Cerro El Plomo, the highest peak in the Santiago region, with its Inca history and 5,424 m summit. This image shows the nearly sculpted penitentes at its base camp, the Federación.',
     series: [
       { precio: '350 USD', copia: '1/3', vendida: false, destacada: true },
       { precio: '680 USD', copia: '2/3', vendida: false },
       { precio: '920 USD', copia: '3/3', vendida: false },
     ],
-    piezas: 'Unidad',
+    piezas: 'Unidad', piezas_en: 'Single print',
     referencia: '50×90 cm, marco de aluminio, con paspartú',
+    referencia_en: '50×90 cm, aluminum frame, with mat',
     precioDestacado: '$350 USD',
   },
   {
@@ -152,13 +168,15 @@ const obras = [
     imgZoom: 'shared/assets/images/obras/26-O-Mu-Z.jpg',
     imgFull: 'shared/assets/images/obras/25-O-Mu-F.jpg',
     descripcion: 'Composición meticulosamente diseñada de 4 sectores icónicos de Chile (Cajón del Maipo, Valle de los Cóndores, Cerro Castillo y Cochamó) en una formación armónica que unifica a las rocas y a los escaladores en una diagonal ascendente.',
+    descripcion_en: 'A meticulously designed composition of 4 iconic Chilean sectors (Cajón del Maipo, Valle de los Cóndores, Cerro Castillo and Cochamó) in a harmonious formation that unifies rocks and climbers in an ascending diagonal.',
     series: [
       { precio: '480 USD', copia: '1/3', vendida: false, destacada: true },
       { precio: '760 USD', copia: '2/3', vendida: false },
       { precio: '1.250 USD', copia: '3/3', vendida: false },
     ],
-    piezas: 'Cuatro individuales',
+    piezas: 'Cuatro individuales', piezas_en: 'Four individual',
     referencia: '40×60 cm cada pieza, marco de madera, con paspartú',
+    referencia_en: '40×60 cm each piece, wooden frame, with mat',
     precioDestacado: '$480 USD',
   },
 ];
@@ -171,9 +189,9 @@ function openObra(i) {
   document.getElementById('obra-foto-zoom').src = o.imgZoom;
   document.getElementById('obra-foto-full').src = o.imgFull;
   document.getElementById('obra-modal-titulo').textContent = o.titulo;
-  document.getElementById('obra-modal-desc').textContent = o.descripcion;
-  document.getElementById('obra-modal-piezas').textContent = o.piezas;
-  document.getElementById('obra-modal-ref').textContent = o.referencia;
+  document.getElementById('obra-modal-desc').textContent = lang === 'en' ? (o.descripcion_en || o.descripcion) : o.descripcion;
+  document.getElementById('obra-modal-piezas').textContent = lang === 'en' ? (o.piezas_en || o.piezas) : o.piezas;
+  document.getElementById('obra-modal-ref').textContent = lang === 'en' ? (o.referencia_en || o.referencia) : o.referencia;
   document.getElementById('obra-modal-precio').textContent = o.precioDestacado;
 
   const seriesEl = document.getElementById('obra-modal-series');
