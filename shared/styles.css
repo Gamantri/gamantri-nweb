@@ -330,6 +330,7 @@ header.scrolled {
   font-size: clamp(38px, 5.6vw, 74px); font-weight: 400;
   line-height: 0.9; margin-bottom: 12px; letter-spacing: 0.02em;
 }
+#servicios .label { color: var(--text); }
 .servicios-subtitle {
   font-size: 15px; letter-spacing: 0.18em; text-transform: uppercase;
   color: #E06030; font-weight: 700; margin-bottom: 20px;
