@@ -31,7 +31,7 @@ window.addEventListener('scroll', () => {
   else oexHeader.classList.remove('scrolled');
 }, { passive: true });
 
-// ── SMOOTH SCROLL LINKS INTERNOS ──
+// ── SMOOTH SCROLL ──
 document.querySelectorAll('a[href^="#"]').forEach(a => {
   a.addEventListener('click', e => {
     e.preventDefault();
@@ -42,12 +42,47 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
 
 // ══════════════════════════════════════
 // DATOS OBRAS EXCLUSIVAS
-// (4 B&W actuales repetidas hasta 9 — reemplazar con imágenes definitivas)
+// Base: Llaima en Nubes, Nodriza, Caminos, Penitentes
+// Repetidas hasta completar 9 (reemplazar con imágenes definitivas)
 // ══════════════════════════════════════
 const obrasExclusivas = [
   {
+    titulo: 'Llaima en Nubes',
+    imgFoto: 'shared/assets/images/obras/4-O-Mu-F.jpg',
+    imgZoom: 'shared/assets/images/obras/5-O-Mu-Z.jpg',
+    imgFull: 'shared/assets/images/obras/4-O-Mu-F.jpg',
+    descripcion: 'Episodio único y poético de un volcán icónico, que luego de muchas visitas se mostró de una manera irrepetible: vestido de nubes por tan solo unos breves minutos.',
+    descripcion_en: 'A unique and poetic episode of an iconic volcano, which after many visits revealed itself in an unrepeatable way — dressed in clouds for just a few brief minutes.',
+    series: [
+      { precio: '350 USD', copia: '1/3', vendida: true },
+      { precio: '680 USD', copia: '2/3', vendida: false, destacada: true },
+      { precio: '1.100 USD', copia: '3/3', vendida: false },
+    ],
+    piezas: 'Unidad', piezas_en: 'Single print',
+    referencia: '60×90 cm, marco de aluminio, con paspartú',
+    referencia_en: '60×90 cm, aluminum frame, with mat',
+    precioDestacado: '$680 USD',
+  },
+  {
+    titulo: 'Nodriza',
+    imgFoto: 'shared/assets/images/obras/13-O-Mu-F.jpg',
+    imgZoom: 'shared/assets/images/obras/14-O-Mu-Z.jpg',
+    imgFull: 'shared/assets/images/obras/13-O-Mu-F.jpg',
+    descripcion: 'Entre las magias meteorológicas de las montañas aparecen las nubes lenticulares. La magnitud y perfección de esta sobre el blanco puro del Volcán Llaima se muestra como una nave nodriza acechando.',
+    descripcion_en: 'Among the meteorological wonders of the mountains appear lenticular clouds. The magnitude and perfection of this one hovering over the pure white of Llaima Volcano resembles a mothership looming overhead.',
+    series: [
+      { precio: '320 USD', copia: '1/3', vendida: false, destacada: true },
+      { precio: '580 USD', copia: '2/3', vendida: false },
+      { precio: '950 USD', copia: '3/3', vendida: false },
+    ],
+    piezas: 'Unidad', piezas_en: 'Single print',
+    referencia: '50×80 cm, marco de acero, con paspartú',
+    referencia_en: '50×80 cm, steel frame, with mat',
+    precioDestacado: '$320 USD',
+  },
+  {
     titulo: 'Caminos',
-    imgFoto: 'shared/assets/images/obras/18-O-O.jpg',
+    imgFoto: 'shared/assets/images/obras/16-O-Mu-F.jpg',
     imgZoom: 'shared/assets/images/obras/17-O-Mu-Z.jpg',
     imgFull: 'shared/assets/images/obras/16-O-Mu-F.jpg',
     descripcion: 'En la máxima expresión del minimalismo en la naturaleza aparece seguido un paisaje de nieve. Cuando se suman nubes blancas bajas y apenas unos senderos que nos muestran ínfimos, se hace poesía.',
@@ -63,25 +98,8 @@ const obrasExclusivas = [
     precioDestacado: '$450 USD',
   },
   {
-    titulo: 'El Último Tango',
-    imgFoto: 'shared/assets/images/obras/21-O-O.jpg',
-    imgZoom: 'shared/assets/images/obras/20-O-Mu-Z.jpg',
-    imgFull: 'shared/assets/images/obras/19-O-Mu-F.jpg',
-    descripcion: 'Entre las paredes de la mina en el Cajón del Maipo aparece este icónico multilargo. Captura del primer ascenso masculino, de dos de los mejores escaladores de Chile, Ronny Escobar y Benja Vargas para el Documental homónimo.',
-    descripcion_en: 'Between the walls of the mine in Cajón del Maipo stands this iconic multi-pitch route. A capture of the first male ascent by two of Chile\'s best climbers, Ronny Escobar and Benja Vargas, for the documentary of the same name.',
-    series: [
-      { precio: '250 USD', copia: '1/3', vendida: true },
-      { precio: '380 USD', copia: '2/3', vendida: true },
-      { precio: '650 USD', copia: '3/3', vendida: false, destacada: true },
-    ],
-    piezas: 'Unidad', piezas_en: 'Single print',
-    referencia: '60×90 cm, marco de aluminio, con paspartú',
-    referencia_en: '60×90 cm, aluminum frame, with mat',
-    precioDestacado: '$650 USD',
-  },
-  {
     titulo: 'Penitentes',
-    imgFoto: 'shared/assets/images/obras/24-O-O.jpg',
+    imgFoto: 'shared/assets/images/obras/22-O-Mu-F.jpg',
     imgZoom: 'shared/assets/images/obras/23-O-Mu-Z.jpg',
     imgFull: 'shared/assets/images/obras/22-O-Mu-F.jpg',
     descripcion: 'El cerro El Plomo, el más alto de la región de Santiago, con su historia Inca y su cumbre de 5424 msnm. Esta imagen muestra unos penitentes casi diseñados en su campamento base, el Federación.',
@@ -96,31 +114,40 @@ const obrasExclusivas = [
     referencia_en: '50×90 cm, aluminum frame, with mat',
     precioDestacado: '$350 USD',
   },
+  // ── Slots 5–9: repeticiones placeholder (reemplazar con imágenes definitivas) ──
   {
-    titulo: 'Bloque Chileno',
-    imgFoto: 'shared/assets/images/obras/27-O-O.jpg',
-    imgZoom: 'shared/assets/images/obras/26-O-Mu-Z.jpg',
-    imgFull: 'shared/assets/images/obras/25-O-Mu-F.jpg',
-    descripcion: 'Composición meticulosamente diseñada de 4 sectores icónicos de Chile en una formación armónica que unifica a las rocas y a los escaladores en una diagonal ascendente.',
-    descripcion_en: 'A meticulously designed composition of 4 iconic Chilean sectors in a harmonious formation that unifies rocks and climbers in an ascending diagonal.',
-    series: [
-      { precio: '480 USD', copia: '1/3', vendida: false, destacada: true },
-      { precio: '760 USD', copia: '2/3', vendida: false },
-      { precio: '1.250 USD', copia: '3/3', vendida: false },
-    ],
-    piezas: 'Cuatro individuales', piezas_en: 'Four individual',
-    referencia: '40×60 cm cada pieza, marco de madera, con paspartú',
-    referencia_en: '40×60 cm each piece, wooden frame, with mat',
-    precioDestacado: '$480 USD',
+    titulo: 'Llaima en Nubes II',
+    imgFoto: 'shared/assets/images/obras/4-O-Mu-F.jpg',
+    imgZoom: 'shared/assets/images/obras/5-O-Mu-Z.jpg',
+    imgFull: 'shared/assets/images/obras/4-O-Mu-F.jpg',
+    descripcion: 'Episodio único y poético de un volcán icónico.',
+    descripcion_en: 'A unique and poetic episode of an iconic volcano.',
+    series: [{ precio: '680 USD', copia: '2/3', vendida: false, destacada: true }],
+    piezas: 'Unidad', piezas_en: 'Single print',
+    referencia: '60×90 cm, marco de aluminio, con paspartú',
+    referencia_en: '60×90 cm, aluminum frame, with mat',
+    precioDestacado: '$680 USD',
   },
-  // ── Slots 5–9: repeticiones placeholder hasta tener imágenes definitivas ──
+  {
+    titulo: 'Nodriza II',
+    imgFoto: 'shared/assets/images/obras/13-O-Mu-F.jpg',
+    imgZoom: 'shared/assets/images/obras/14-O-Mu-Z.jpg',
+    imgFull: 'shared/assets/images/obras/13-O-Mu-F.jpg',
+    descripcion: 'La magnitud y perfección de esta nube lenticular sobre el Volcán Llaima.',
+    descripcion_en: 'The magnitude and perfection of this lenticular cloud over Llaima Volcano.',
+    series: [{ precio: '320 USD', copia: '1/3', vendida: false, destacada: true }],
+    piezas: 'Unidad', piezas_en: 'Single print',
+    referencia: '50×80 cm, marco de acero, con paspartú',
+    referencia_en: '50×80 cm, steel frame, with mat',
+    precioDestacado: '$320 USD',
+  },
   {
     titulo: 'Caminos II',
-    imgFoto: 'shared/assets/images/obras/18-O-O.jpg',
+    imgFoto: 'shared/assets/images/obras/16-O-Mu-F.jpg',
     imgZoom: 'shared/assets/images/obras/17-O-Mu-Z.jpg',
     imgFull: 'shared/assets/images/obras/16-O-Mu-F.jpg',
-    descripcion: 'En la máxima expresión del minimalismo en la naturaleza aparece seguido un paisaje de nieve.',
-    descripcion_en: 'In the highest expression of minimalism in nature, a snow landscape often appears.',
+    descripcion: 'Minimalismo puro. Un paisaje de nieve, nubes bajas y senderos ínfimos.',
+    descripcion_en: 'Pure minimalism. A snow landscape, low clouds and faint trails.',
     series: [{ precio: '450 USD', copia: '1/3', vendida: false, destacada: true }],
     piezas: 'Unidad', piezas_en: 'Single print',
     referencia: '80×110 cm, marco de aluminio, con paspartú',
@@ -128,25 +155,12 @@ const obrasExclusivas = [
     precioDestacado: '$450 USD',
   },
   {
-    titulo: 'El Último Tango II',
-    imgFoto: 'shared/assets/images/obras/21-O-O.jpg',
-    imgZoom: 'shared/assets/images/obras/20-O-Mu-Z.jpg',
-    imgFull: 'shared/assets/images/obras/19-O-Mu-F.jpg',
-    descripcion: 'Entre las paredes de la mina en el Cajón del Maipo aparece este icónico multilargo.',
-    descripcion_en: 'Between the walls of the mine in Cajón del Maipo stands this iconic multi-pitch route.',
-    series: [{ precio: '650 USD', copia: '3/3', vendida: false, destacada: true }],
-    piezas: 'Unidad', piezas_en: 'Single print',
-    referencia: '60×90 cm, marco de aluminio, con paspartú',
-    referencia_en: '60×90 cm, aluminum frame, with mat',
-    precioDestacado: '$650 USD',
-  },
-  {
     titulo: 'Penitentes II',
-    imgFoto: 'shared/assets/images/obras/24-O-O.jpg',
+    imgFoto: 'shared/assets/images/obras/22-O-Mu-F.jpg',
     imgZoom: 'shared/assets/images/obras/23-O-Mu-Z.jpg',
     imgFull: 'shared/assets/images/obras/22-O-Mu-F.jpg',
-    descripcion: 'El cerro El Plomo, el más alto de la región de Santiago.',
-    descripcion_en: 'Cerro El Plomo, the highest peak in the Santiago region.',
+    descripcion: 'El cerro El Plomo y sus penitentes en el campamento base Federación.',
+    descripcion_en: 'Cerro El Plomo and its penitentes at the Federación base camp.',
     series: [{ precio: '350 USD', copia: '1/3', vendida: false, destacada: true }],
     piezas: 'Unidad', piezas_en: 'Single print',
     referencia: '50×90 cm, marco de aluminio, con paspartú',
@@ -154,47 +168,34 @@ const obrasExclusivas = [
     precioDestacado: '$350 USD',
   },
   {
-    titulo: 'Bloque Chileno II',
-    imgFoto: 'shared/assets/images/obras/27-O-O.jpg',
-    imgZoom: 'shared/assets/images/obras/26-O-Mu-Z.jpg',
-    imgFull: 'shared/assets/images/obras/25-O-Mu-F.jpg',
-    descripcion: 'Composición meticulosamente diseñada de 4 sectores icónicos de Chile.',
-    descripcion_en: 'A meticulously designed composition of 4 iconic Chilean sectors.',
-    series: [{ precio: '480 USD', copia: '1/3', vendida: false, destacada: true }],
-    piezas: 'Cuatro individuales', piezas_en: 'Four individual',
-    referencia: '40×60 cm cada pieza, marco de madera, con paspartú',
-    referencia_en: '40×60 cm each piece, wooden frame, with mat',
-    precioDestacado: '$480 USD',
-  },
-  {
-    titulo: 'Caminos III',
-    imgFoto: 'shared/assets/images/obras/18-O-O.jpg',
-    imgZoom: 'shared/assets/images/obras/17-O-Mu-Z.jpg',
-    imgFull: 'shared/assets/images/obras/16-O-Mu-F.jpg',
-    descripcion: 'En la máxima expresión del minimalismo en la naturaleza.',
-    descripcion_en: 'In the highest expression of minimalism in nature.',
-    series: [{ precio: '450 USD', copia: '1/3', vendida: false, destacada: true }],
+    titulo: 'Llaima en Nubes III',
+    imgFoto: 'shared/assets/images/obras/4-O-Mu-F.jpg',
+    imgZoom: 'shared/assets/images/obras/5-O-Mu-Z.jpg',
+    imgFull: 'shared/assets/images/obras/4-O-Mu-F.jpg',
+    descripcion: 'Un volcán icónico vestido de nubes por tan solo unos breves minutos.',
+    descripcion_en: 'An iconic volcano dressed in clouds for just a few brief minutes.',
+    series: [{ precio: '1.100 USD', copia: '3/3', vendida: false, destacada: true }],
     piezas: 'Unidad', piezas_en: 'Single print',
-    referencia: '80×110 cm, marco de aluminio, con paspartú',
-    referencia_en: '80×110 cm, aluminum frame, with mat',
-    precioDestacado: '$450 USD',
+    referencia: '60×90 cm, marco de aluminio, con paspartú',
+    referencia_en: '60×90 cm, aluminum frame, with mat',
+    precioDestacado: '$1.100 USD',
   },
 ];
 
-// ── GENERAR GRID ──
+// ── GENERAR GRID (misma estructura que index) ──
 function buildGrid() {
   const grid = document.getElementById('oex-grid');
   if (!grid) return;
   grid.innerHTML = obrasExclusivas.map((o, i) => `
-    <div class="oex-obra-card reveal" onclick="openOexObra(${i})">
-      <div class="oex-obra-celda">
-        <div class="oex-img-wrap">
-          <img class="oex-img-base" src="${o.imgFoto}" alt="${o.titulo}" loading="lazy" />
-          <img class="oex-img-hover" src="${o.imgZoom}" alt="${o.titulo} zoom" loading="lazy" />
-        </div>
-        <div class="oex-obra-info">
-          <p class="oex-obra-name">${o.titulo}</p>
-          <span class="oex-obra-badge">${o.precioDestacado}</span>
+    <div class="obra-card" onclick="openOexObra(${i})">
+      <div class="obra-celda">
+        <div class="obra-img-wrap">
+          <img class="obra-img-base" src="${o.imgFoto}" alt="${o.titulo}" loading="lazy" />
+          <img class="obra-img-hover" src="${o.imgZoom}" alt="${o.titulo} zoom" loading="lazy" />
+          <div class="obra-label">
+            <div class="obra-card-title">${o.titulo}</div>
+            <span class="obra-badge">${o.precioDestacado}</span>
+          </div>
         </div>
       </div>
     </div>
@@ -208,9 +209,9 @@ function openOexObra(i) {
   document.getElementById('oex-foto-zoom').src = o.imgZoom;
   document.getElementById('oex-foto-full').src = o.imgFull;
   document.getElementById('oex-modal-titulo').textContent = o.titulo;
-  document.getElementById('oex-modal-desc').textContent = lang === 'en' ? (o.descripcion_en || o.descripcion) : o.descripcion;
+  document.getElementById('oex-modal-desc').textContent   = lang === 'en' ? (o.descripcion_en || o.descripcion) : o.descripcion;
   document.getElementById('oex-modal-piezas').textContent = lang === 'en' ? (o.piezas_en || o.piezas) : o.piezas;
-  document.getElementById('oex-modal-ref').textContent = lang === 'en' ? (o.referencia_en || o.referencia) : o.referencia;
+  document.getElementById('oex-modal-ref').textContent    = lang === 'en' ? (o.referencia_en || o.referencia) : o.referencia;
   document.getElementById('oex-modal-precio').textContent = o.precioDestacado;
 
   const seriesEl = document.getElementById('oex-modal-series');
@@ -228,8 +229,6 @@ function openOexObra(i) {
   overlay.scrollTop = 0;
   overlay.classList.add('open');
   document.body.style.overflow = 'hidden';
-
-  // Aplicar idioma al overlay recién poblado
   setLang(lang);
 }
 
@@ -246,10 +245,8 @@ document.addEventListener('keydown', e => {
 async function submitOexForm(e) {
   e.preventDefault();
   const btn = document.querySelector('.btn-oex-submit');
-  const original = btn.textContent;
   btn.textContent = lang === 'en' ? 'Sending...' : 'Enviando...';
   btn.disabled = true;
-
   try {
     const res  = await fetch('https://api.web3forms.com/submit', {
       method: 'POST', body: new FormData(e.target)
@@ -260,7 +257,7 @@ async function submitOexForm(e) {
       document.getElementById('oex-gracias').style.display = 'block';
       setLang(lang);
     } else {
-      btn.textContent = lang === 'en' ? 'Error. Try again.' : 'Error al enviar. Intentá de nuevo.';
+      btn.textContent = lang === 'en' ? 'Error. Try again.' : 'Error al enviar. Intente de nuevo.';
       btn.disabled = false;
     }
   } catch {
@@ -275,7 +272,7 @@ document.addEventListener('DOMContentLoaded', () => {
   setLang(lang);
 });
 
-// ── GSAP REVEALS ──
+// ── GSAP REVEALS + PARALLAX ──
 window.addEventListener('load', () => {
   if (typeof gsap === 'undefined') return;
   gsap.registerPlugin(ScrollTrigger);
@@ -291,13 +288,17 @@ window.addEventListener('load', () => {
     });
   });
 
-  // Parallax hero
-  gsap.to('.oex-hero-img', {
-    yPercent: 20, ease: 'none',
-    scrollTrigger: {
-      trigger: '#oex-hero',
-      start: 'top top', end: 'bottom top',
-      scrub: true
+  // Parallax portada (igual que obras-hero en index)
+  gsap.fromTo('.oex-portada-img',
+    { yPercent: -18 },
+    {
+      yPercent: 18,
+      ease: 'none',
+      scrollTrigger: {
+        trigger: '.oex-portada',
+        start: 'top bottom', end: 'bottom top',
+        scrub: true
+      }
     }
-  });
+  );
 });

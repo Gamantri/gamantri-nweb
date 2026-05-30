@@ -1,30 +1,25 @@
 /* ══════════════════════════════════════════════════════
    OBRAS EXCLUSIVAS — Gamantri Fine Art Landing
+   Tipografías: Jura + Play (mismas que Gamantri)
    Paleta: negro, blanco, grises · naranja solo en detalles
 ══════════════════════════════════════════════════════ */
 
 /* ── Variables locales ── */
 :root {
-  --oex-black: #080808;
-  --oex-white: #F2EDE8;
   --oex-gray1: rgba(242,237,232,0.70);
   --oex-gray2: rgba(242,237,232,0.35);
-  --oex-gray3: rgba(242,237,232,0.10);
   --oex-line:  rgba(242,237,232,0.08);
-  --oex-serif: 'Cormorant Garamond', serif;
 }
 
-/* ── Tipografía base exclusiva ── */
-.oex-label-white { color: var(--oex-white) !important; }
+.oex-label-white { color: var(--text) !important; }
 
 .oex-section-title {
-  font-family: var(--oex-serif);
-  font-size: clamp(36px, 5vw, 68px);
-  font-weight: 300;
-  line-height: 1.1;
-  letter-spacing: 0.01em;
-  color: var(--oex-white);
-  margin: 16px 0 36px;
+  font-family: 'Play', sans-serif;
+  font-size: clamp(28px, 4vw, 52px);
+  font-weight: 400;
+  line-height: 1.15;
+  color: var(--text);
+  margin: 14px 0 32px;
 }
 .oex-centered { text-align: center; }
 
@@ -45,134 +40,117 @@
 #oex-header .logo-btn img { height: 36px; }
 
 /* ══════════════════════════════════════
-   ① HERO
+   ① HERO PANEL (centrado, sin imagen de fondo)
 ══════════════════════════════════════ */
-#oex-hero {
-  height: 100vh; min-height: 640px;
-  position: relative; overflow: hidden;
-  display: flex; align-items: flex-end;
-  padding: 80px 72px;
+#oex-hero-panel {
+  min-height: 100vh;
+  display: flex; align-items: center; justify-content: center;
+  text-align: center;
+  padding: 120px 48px 80px;
+  background: var(--base);
 }
-.oex-hero-img {
-  position: absolute; inset: -15% 0;
-  background: url('shared/assets/images/obras/22-O-Mu-F.jpg') center 40% / cover no-repeat;
-  filter: grayscale(100%) contrast(1.05);
-  will-change: transform;
+.oex-hero-panel-content {
+  display: flex; flex-direction: column; align-items: center;
+  gap: 0;
 }
-.oex-hero-overlay {
-  position: absolute; inset: 0;
-  background:
-    linear-gradient(to top, rgba(8,8,8,0.90) 0%, rgba(8,8,8,0.30) 50%, rgba(8,8,8,0.15) 100%);
+.oex-hero-logo {
+  height: 56px;
+  margin-bottom: 36px;
 }
-.oex-hero-content {
-  position: relative; z-index: 2;
-  max-width: 700px;
-}
-.oex-hero-tag {
-  font-family: 'Jura', sans-serif;
-  font-size: 12px; letter-spacing: 0.36em; text-transform: uppercase;
-  color: var(--oex-gray1); margin-bottom: 20px; display: block;
-}
-.oex-hero-title {
-  font-family: var(--oex-serif);
-  font-size: clamp(64px, 10vw, 130px);
-  font-weight: 300; line-height: 0.92;
-  letter-spacing: -0.01em;
-  color: var(--oex-white); margin-bottom: 28px;
-}
-.oex-hero-title em {
-  font-style: italic; color: var(--oex-white);
+.oex-hero-panel-title {
+  font-family: 'Play', sans-serif;
+  font-size: clamp(32px, 5.5vw, 68px);
+  font-weight: 400; line-height: 1.15;
+  color: var(--text);
+  margin-bottom: 28px;
 }
 .oex-hero-sub {
   font-family: 'Jura', sans-serif;
   font-size: 13px; letter-spacing: 0.28em; text-transform: uppercase;
-  color: var(--oex-gray1); margin-bottom: 40px; display: block;
+  color: var(--oex-gray2); margin-bottom: 48px; display: block;
 }
 .btn-oex {
   display: inline-block;
   font-family: 'Jura', sans-serif;
   font-size: 12px; letter-spacing: 0.3em; text-transform: uppercase;
-  color: var(--oex-white); text-decoration: none;
-  border: 1px solid var(--oex-gray2);
+  color: var(--text); text-decoration: none;
+  border: 1px solid rgba(242,237,232,0.25);
   padding: 14px 36px;
-  transition: border-color 0.3s, background 0.3s, letter-spacing 0.3s;
+  transition: border-color 0.3s, background 0.3s;
 }
 .btn-oex:hover {
-  border-color: var(--oex-white);
-  background: rgba(242,237,232,0.07);
-  letter-spacing: 0.36em;
+  border-color: var(--text);
+  background: rgba(242,237,232,0.06);
 }
 
 /* ══════════════════════════════════════
-   ② MANIFIESTO
+   ② PORTADA CON PARALLAX (como obras-hero en index)
+══════════════════════════════════════ */
+.oex-portada {
+  position: relative;
+  width: 100%;
+  height: min(calc(100vw * 0.75), 92vh);
+  overflow: hidden;
+}
+.oex-portada-img {
+  position: absolute; inset: -25% 0;
+  background: url('shared/assets/images/obras/0-O-P.jpg') center 40% / cover no-repeat;
+  filter: grayscale(100%) contrast(1.05);
+  will-change: transform;
+}
+.oex-portada-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(to top, rgba(8,8,8,0.25) 0%, transparent 60%);
+}
+
+/* ══════════════════════════════════════
+   ③ MANIFIESTO
 ══════════════════════════════════════ */
 #oex-manifiesto {
-  padding: 112px 72px;
+  padding: 96px 72px;
   border-top: 1px solid var(--oex-line);
+  max-width: 860px;
+  margin: 0 auto;
 }
-.oex-manifiesto-inner {
-  display: grid;
-  grid-template-columns: 1fr 280px;
-  gap: 80px;
-  align-items: start;
-  max-width: 1200px; margin: 0 auto;
-}
+.oex-manifiesto-inner { }
 .oex-manifiesto-copy {
   font-size: 18px; line-height: 1.95;
   color: var(--oex-gray1);
-  max-width: 560px;
-}
-.oex-manifiesto-stats {
-  display: flex; flex-direction: column; gap: 40px;
-  padding-top: 80px;
-}
-.oex-stat { border-top: 1px solid var(--oex-line); padding-top: 20px; }
-.oex-stat-num {
-  display: block;
-  font-family: var(--oex-serif);
-  font-size: 52px; font-weight: 300; line-height: 1;
-  color: var(--oex-white); margin-bottom: 8px;
-}
-.oex-stat-label {
-  font-family: 'Jura', sans-serif;
-  font-size: 11px; letter-spacing: 0.28em; text-transform: uppercase;
-  color: var(--oex-gray2);
+  max-width: 640px;
 }
 
 /* ══════════════════════════════════════
-   ③ PROCESO
+   ④ PROCESO
 ══════════════════════════════════════ */
 #oex-proceso {
-  padding: 112px 72px;
-  background: rgba(242,237,232,0.025);
+  padding: 96px 72px;
   border-top: 1px solid var(--oex-line);
   border-bottom: 1px solid var(--oex-line);
+  background: rgba(242,237,232,0.02);
 }
-.oex-proceso-inner {
-  max-width: 1200px; margin: 0 auto;
-}
+.oex-proceso-inner { max-width: 1200px; margin: 0 auto; }
 .oex-steps {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 2px;
-  margin-top: 64px;
+  margin-top: 56px;
 }
 .oex-step {
-  padding: 40px 32px;
+  padding: 36px 28px;
   border-left: 1px solid var(--oex-line);
   transition: background 0.3s;
 }
 .oex-step:hover { background: rgba(242,237,232,0.03); }
 .oex-step-num {
   display: block;
-  font-family: var(--oex-serif);
-  font-size: 42px; font-weight: 300;
-  color: var(--accent); margin-bottom: 20px; line-height: 1;
+  font-family: 'Play', sans-serif;
+  font-size: 36px; font-weight: 400;
+  color: var(--accent); margin-bottom: 16px; line-height: 1;
 }
 .oex-step-title {
-  font-family: var(--oex-serif);
-  font-size: 22px; font-weight: 400;
-  color: var(--oex-white); margin-bottom: 14px;
+  font-family: 'Play', sans-serif;
+  font-size: 18px; font-weight: 400;
+  color: var(--text); margin-bottom: 12px;
 }
 .oex-step-desc {
   font-size: 14px; line-height: 1.85;
@@ -180,205 +158,91 @@
 }
 
 /* ══════════════════════════════════════
-   ④ LAS OBRAS
+   ⑤ LAS OBRAS — misma estructura que index
+   .obras-grid ya viene de shared/styles.css
+   Solo añadimos el filtro B&W
 ══════════════════════════════════════ */
 #oex-obras {
-  padding: 112px 0 0;
+  padding: 96px 0 0;
   border-top: 1px solid var(--oex-line);
 }
 .oex-obras-header {
-  padding: 0 72px 64px;
-  max-width: 1200px; margin: 0 auto;
+  padding: 0 56px 56px;
 }
-.oex-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2px;
-  margin-top: 2px;
-}
-/* Las imágenes en B&W */
-.oex-obra-card { cursor: pointer; position: relative; }
-.oex-obra-celda {
-  position: relative;
-  aspect-ratio: 4/5;
-  overflow: hidden;
-  background: #111;
-}
-.oex-img-wrap {
-  position: absolute; inset: 0;
-}
-.oex-img-base,
-.oex-img-hover {
-  position: absolute; inset: 0;
-  width: 100%; height: 100%;
-  object-fit: cover;
-  filter: grayscale(100%) contrast(1.05);
-  transition: opacity 0.55s var(--ease), transform 0.7s var(--ease);
-}
-.oex-img-hover { opacity: 0; }
-.oex-obra-card:hover .oex-img-base  { opacity: 0; }
-.oex-obra-card:hover .oex-img-hover { opacity: 1; }
-.oex-obra-card:hover .oex-img-base  { transform: scale(1.04); }
 
-.oex-obra-info {
-  position: absolute; bottom: 0; left: 0; right: 0;
-  padding: 48px 24px 24px;
-  background: linear-gradient(to top, rgba(0,0,0,0.72) 0%, transparent 100%);
-  opacity: 0; transition: opacity 0.4s;
-}
-.oex-obra-card:hover .oex-obra-info { opacity: 1; }
-.oex-obra-name {
-  font-family: var(--oex-serif);
-  font-size: 22px; font-weight: 300;
-  color: var(--oex-white); margin-bottom: 4px;
-}
-.oex-obra-badge {
-  font-family: 'Jura', sans-serif;
-  font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase;
-  color: var(--oex-gray2);
+/* Filtro B&W sobre todas las imágenes del grid */
+.oex-grid-bw .obra-img-base,
+.oex-grid-bw .obra-img-hover {
+  filter: grayscale(100%) contrast(1.05);
 }
 
 /* ══════════════════════════════════════
-   ⑤ FORMULARIO
+   ⑥ FORMULARIO
 ══════════════════════════════════════ */
 #oex-contacto {
-  padding: 112px 72px;
+  padding: 96px 72px;
   border-top: 1px solid var(--oex-line);
 }
-.oex-form-wrap {
-  max-width: 800px; margin: 0 auto;
-}
+.oex-form-wrap { max-width: 800px; margin: 0 auto; }
 .oex-form-intro {
   font-size: 16px; line-height: 1.8;
   color: var(--oex-gray1);
-  margin-bottom: 56px;
-}
-.oex-form { }
-.oex-form .form-input,
-.oex-form .form-textarea,
-.oex-form .form-select {
-  border-bottom-color: rgba(242,237,232,0.15);
+  margin-bottom: 48px;
 }
 .btn-oex-submit {
   font-family: 'Jura', sans-serif;
   font-size: 12px; letter-spacing: 0.3em; text-transform: uppercase;
-  color: var(--oex-white);
+  color: var(--text);
   background: transparent;
-  border: 1px solid rgba(242,237,232,0.3);
-  padding: 16px 48px; cursor: pointer;
-  transition: all 0.3s var(--ease);
+  border: 1px solid rgba(242,237,232,0.25);
+  padding: 14px 44px; cursor: pointer;
+  transition: all 0.3s;
   margin-top: 8px;
 }
 .btn-oex-submit:hover {
-  border-color: var(--oex-white);
-  background: rgba(242,237,232,0.07);
-  letter-spacing: 0.36em;
+  border-color: var(--text);
+  background: rgba(242,237,232,0.06);
 }
 .oex-gracias {
   display: none;
-  text-align: center; padding: 80px 40px;
+  text-align: center; padding: 80px 0;
 }
 .oex-gracias img {
-  height: 44px; opacity: 0.4; margin-bottom: 28px; display: block; margin-left: auto; margin-right: auto;
+  height: 40px; opacity: 0.4;
+  margin: 0 auto 24px; display: block;
 }
 .oex-gracias h3 {
-  font-family: var(--oex-serif);
-  font-size: 48px; font-weight: 300;
-  color: var(--oex-white); margin-bottom: 16px;
+  font-family: 'Play', sans-serif;
+  font-size: 42px; font-weight: 400;
+  color: var(--text); margin-bottom: 14px;
 }
-.oex-gracias p {
-  font-size: 16px; color: var(--oex-gray1);
-}
+.oex-gracias p { font-size: 16px; color: var(--oex-gray1); }
 
 /* ── FOOTER ── */
 .oex-footer {
   display: flex; justify-content: space-between; align-items: center;
-  padding: 32px 72px;
+  padding: 32px 56px;
   border-top: 1px solid var(--oex-line);
 }
 .oex-footer img { height: 28px; opacity: 0.5; }
 
 /* ══════════════════════════════════════
-   CTA EN INDEX — .oex-cta
-══════════════════════════════════════ */
-.oex-cta {
-  display: block; position: relative;
-  height: 520px; overflow: hidden;
-  text-decoration: none; cursor: pointer;
-}
-.oex-cta-bg {
-  position: absolute; inset: -15% 0;
-  background: url('shared/assets/images/obras/22-O-Mu-F.jpg') center 40% / cover no-repeat;
-  filter: grayscale(100%) contrast(1.1);
-  transition: transform 1.4s var(--ease);
-  will-change: transform;
-}
-.oex-cta:hover .oex-cta-bg { transform: scale(1.06); }
-.oex-cta-veil {
-  position: absolute; inset: 0;
-  background:
-    linear-gradient(to right, rgba(0,0,0,0.88) 35%, rgba(0,0,0,0.45) 100%);
-}
-.oex-cta-body {
-  position: relative; z-index: 2;
-  height: 100%;
-  display: flex; flex-direction: column;
-  justify-content: center;
-  padding: 0 80px;
-}
-.oex-cta-tag {
-  font-family: 'Jura', sans-serif;
-  font-size: 12px; letter-spacing: 0.36em; text-transform: uppercase;
-  color: rgba(255,255,255,0.45);
-  margin-bottom: 20px; display: block;
-}
-.oex-cta-title {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(72px, 11vw, 140px);
-  font-weight: 300; line-height: 0.9; letter-spacing: 0.01em;
-  color: #fff; margin-bottom: 44px;
-}
-.oex-cta-btn {
-  display: inline-block;
-  font-family: 'Jura', sans-serif;
-  font-size: 12px; letter-spacing: 0.3em; text-transform: uppercase;
-  color: #fff;
-  border: 1px solid rgba(255,255,255,0.3);
-  padding: 14px 40px;
-  transition: all 0.4s var(--ease);
-  width: fit-content;
-}
-.oex-cta:hover .oex-cta-btn {
-  border-color: rgba(255,255,255,0.8);
-  background: rgba(255,255,255,0.08);
-  letter-spacing: 0.38em;
-}
-
-/* ══════════════════════════════════════
    RESPONSIVE
 ══════════════════════════════════════ */
 @media (max-width: 1024px) {
-  .oex-steps { grid-template-columns: repeat(3, 1fr); gap: 2px; }
-  .oex-manifiesto-inner { grid-template-columns: 1fr; gap: 48px; }
-  .oex-manifiesto-stats { flex-direction: row; padding-top: 0; gap: 24px; }
+  .oex-steps { grid-template-columns: repeat(3, 1fr); }
 }
-
 @media (max-width: 768px) {
   #oex-header { padding: 20px 24px; }
-  #oex-hero { padding: 64px 24px; }
-  .oex-hero-title { font-size: clamp(52px, 14vw, 80px); }
-  #oex-manifiesto, #oex-proceso, #oex-contacto { padding: 80px 24px; }
-  .oex-obras-header { padding: 0 24px 48px; }
+  #oex-hero-panel { padding: 100px 28px 64px; }
+  .oex-hero-logo { height: 40px; }
+  #oex-manifiesto, #oex-proceso, #oex-contacto { padding: 72px 24px; }
+  .oex-obras-header { padding: 0 24px 40px; }
   .oex-steps { grid-template-columns: 1fr; }
   .oex-step { border-left: none; border-top: 1px solid var(--oex-line); }
-  .oex-grid { grid-template-columns: 1fr 1fr; }
-  .oex-manifiesto-stats { flex-direction: column; }
   .oex-footer { flex-direction: column; gap: 16px; padding: 28px 24px; text-align: center; }
-  .oex-cta-body { padding: 0 28px; }
-  .oex-cta-title { font-size: clamp(56px, 14vw, 80px); }
-  .oex-cta { height: 420px; }
+  #oex-obras .obras-footer-row { padding: 24px; }
 }
-
 @media (max-width: 480px) {
-  .oex-grid { grid-template-columns: 1fr; }
+  #oex-obras .obras-grid { grid-template-columns: 1fr; }
 }
