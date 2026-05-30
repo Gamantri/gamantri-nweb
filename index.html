@@ -13,6 +13,9 @@
   <meta name="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/svg+xml" href="shared/assets/favicon.svg" />
 
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
   <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
 
   <link rel="stylesheet" href="shared/styles.css?v=3" />
@@ -153,7 +156,7 @@
         </div>
       </div>
 
-      <div class="obra-card obra-extra" onclick="openObra(3)">
+      <div class="obra-card" onclick="openObra(3)">
         <div class="obra-celda">
           <div class="obra-img-wrap">
             <img class="obra-img-base" src="shared/assets/images/obras/10-O-Mu-F.jpg" alt="Era Leo" />
@@ -166,7 +169,7 @@
         </div>
       </div>
 
-      <div class="obra-card obra-extra" onclick="openObra(4)">
+      <div class="obra-card" onclick="openObra(4)">
         <div class="obra-celda">
           <div class="obra-img-wrap">
             <img class="obra-img-base" src="shared/assets/images/obras/13-O-Mu-F.jpg" alt="Nodriza" />
@@ -179,52 +182,14 @@
         </div>
       </div>
 
-      <div class="obra-card obra-extra" onclick="openObra(5)">
+      <!-- Obra 6 — placeholder color (repite La Cárcel hasta tener imagen definitiva) -->
+      <div class="obra-card" onclick="openObra(0)">
         <div class="obra-celda">
           <div class="obra-img-wrap">
-            <img class="obra-img-base" src="shared/assets/images/obras/16-O-Mu-F.jpg" alt="Caminos" />
-            <img class="obra-img-hover" src="shared/assets/images/obras/17-O-Mu-Z.jpg" alt="Caminos zoom" />
+            <img class="obra-img-base" src="shared/assets/images/obras/1-O-Mu-F.jpg" alt="La Cárcel" />
+            <img class="obra-img-hover" src="shared/assets/images/obras/2-O-Mu-Z.jpg" alt="La Cárcel zoom" />
             <div class="obra-label">
-              <div class="obra-card-title">Caminos</div>
-              <span class="obra-badge" data-es="3 disponibles" data-en="3 available">3 disponibles</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="obra-card obra-extra" onclick="openObra(6)">
-        <div class="obra-celda">
-          <div class="obra-img-wrap">
-            <img class="obra-img-base" src="shared/assets/images/obras/19-O-Mu-F.jpg" alt="El Último Tango" />
-            <img class="obra-img-hover" src="shared/assets/images/obras/20-O-Mu-Z.jpg" alt="El Último Tango zoom" />
-            <div class="obra-label">
-              <div class="obra-card-title">El Último Tango</div>
-              <span class="obra-badge" data-es="1 disponible" data-en="1 available">1 disponible</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="obra-card obra-extra" onclick="openObra(7)">
-        <div class="obra-celda">
-          <div class="obra-img-wrap">
-            <img class="obra-img-base" src="shared/assets/images/obras/22-O-Mu-F.jpg" alt="Penitentes" />
-            <img class="obra-img-hover" src="shared/assets/images/obras/23-O-Mu-Z.jpg" alt="Penitentes zoom" />
-            <div class="obra-label">
-              <div class="obra-card-title">Penitentes</div>
-              <span class="obra-badge" data-es="3 disponibles" data-en="3 available">3 disponibles</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="obra-card obra-extra" onclick="openObra(8)">
-        <div class="obra-celda">
-          <div class="obra-img-wrap">
-            <img class="obra-img-base" src="shared/assets/images/obras/25-O-Mu-F.jpg" alt="Bloque Chileno" />
-            <img class="obra-img-hover" src="shared/assets/images/obras/26-O-Mu-Z.jpg" alt="Bloque Chileno zoom" />
-            <div class="obra-label">
-              <div class="obra-card-title">Bloque Chileno</div>
+              <div class="obra-card-title">La Cárcel</div>
               <span class="obra-badge" data-es="3 disponibles" data-en="3 available">3 disponibles</span>
             </div>
           </div>
@@ -234,13 +199,28 @@
     </div>
 
     <div class="obras-footer-row">
-      <button class="btn-ver-mas" id="btn-ver-mas" onclick="toggleObras()"
-              data-es="VER MÁS OBRAS >>>" data-en="SEE MORE WORKS >>>">VER MÁS OBRAS >>></button>
       <button class="btn-obra-personalizada" onclick="openOverlayEncargo('personalizada')"
               data-es="OBRA PERSONALIZADA >>>" data-en="CUSTOM ARTWORK >>>">OBRA PERSONALIZADA >>></button>
     </div>
 
   </section>
+
+  <!-- ══════════════ CTA OBRAS EXCLUSIVAS ══════════════ -->
+  <a class="oex-cta" href="obras-exclusivas.html">
+    <div class="oex-cta-bg"></div>
+    <div class="oex-cta-veil"></div>
+    <div class="oex-cta-body">
+      <p class="oex-cta-tag reveal"
+         data-es="Colección Premium · Envío mundial"
+         data-en="Premium Collection · Worldwide shipping">Colección Premium · Envío mundial</p>
+      <h2 class="oex-cta-title reveal reveal-d1"
+          data-es="Obras<br>Exclusivas"
+          data-en="Exclusive<br>Works">Obras<br>Exclusivas</h2>
+      <span class="oex-cta-btn reveal reveal-d2"
+            data-es="Ver colección →"
+            data-en="View collection →">Ver colección →</span>
+    </div>
+  </a>
 
   <!-- ══════════════ CURSOS ══════════════ -->
   <section id="cursos">
