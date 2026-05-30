@@ -451,7 +451,12 @@ function setLang(l) {
   document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
   document.querySelectorAll(`.lang-btn[onclick="setLang('${l}')"]`).forEach(b => b.classList.add('active'));
   document.querySelectorAll(`[data-${l}]`).forEach(el => {
-    el.textContent = el.getAttribute(`data-${l}`);
+    const val = el.getAttribute(`data-${l}`);
+    if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+      el.placeholder = val;
+    } else {
+      el.innerHTML = val;
+    }
   });
   document.documentElement.lang = l;
   // Refrescar botón ver más/menos si obras están expandidas
