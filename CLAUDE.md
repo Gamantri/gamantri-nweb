@@ -7,6 +7,7 @@ Objetivo: Web update
 
 ## EQUIPO
 - RODRIGO [PM] · Project Manager
+- Patricio [DSGN] · UI Visual Designer — tipografía, escala visual, jerarquía, paleta
 - Camilo [DSGN] · Motion Designer
 - Lucía [DSGN] · UX Designer
 - Valentina [CREAT] · Copywriter & Content

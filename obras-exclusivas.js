@@ -186,12 +186,13 @@ const obrasExclusivas = [
 function buildGrid() {
   const grid = document.getElementById('oex-grid');
   if (!grid) return;
+  // Base = O-Mu-Z (B&W, default) | Hover = O-Mu-F (color)
   grid.innerHTML = obrasExclusivas.map((o, i) => `
     <div class="obra-card" onclick="openOexObra(${i})">
       <div class="obra-celda">
         <div class="obra-img-wrap">
-          <img class="obra-img-base" src="${o.imgFoto}" alt="${o.titulo}" loading="lazy" />
-          <img class="obra-img-hover" src="${o.imgZoom}" alt="${o.titulo} zoom" loading="lazy" />
+          <img class="obra-img-base" src="${o.imgZoom}" alt="${o.titulo}" loading="lazy" />
+          <img class="obra-img-hover" src="${o.imgFoto}" alt="${o.titulo} color" loading="lazy" />
           <div class="obra-label">
             <div class="obra-card-title">${o.titulo}</div>
             <span class="obra-badge">${o.precioDestacado}</span>
