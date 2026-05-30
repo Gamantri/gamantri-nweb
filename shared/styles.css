@@ -332,7 +332,7 @@ header.scrolled {
 }
 .servicios-subtitle {
   font-size: 15px; letter-spacing: 0.18em; text-transform: uppercase;
-  color: rgba(242,237,232,0.9); margin-bottom: 20px;
+  color: var(--accent); margin-bottom: 20px;
 }
 .servicios-copy {
   font-size: 18px; line-height: 1.85; color: rgba(242,237,232,0.9); max-width: 420px;

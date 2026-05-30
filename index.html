@@ -4,6 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>GAMANTRI — Outdoor Photography</title>
+  <meta name="description" content="Fotografía de escalada y naturaleza. Ediciones limitadas, cursos y servicios audiovisuales en los entornos más exigentes del planeta." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://gamantri.com/" />
+  <meta property="og:title" content="GAMANTRI — Climbing and Outdoor Photography" />
+  <meta property="og:description" content="Fotografía de escalada y naturaleza. Ediciones limitadas, cursos y servicios audiovisuales en los entornos más exigentes del planeta." />
+  <meta property="og:image" content="https://gamantri.com/shared/assets/images/obras/1-O-Mu-F.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/svg+xml" href="shared/assets/favicon.svg" />
 
   <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
@@ -76,9 +83,9 @@
     <div class="hero-content">
       <img class="hero-logo" src="shared/assets/logo-horizontal-blanco.png" alt="Gamantri" />
       <p class="hero-tagline"
-         data-es="Fotografía de naturaleza · Ediciones limitadas"
-         data-en="Nature Photography · Limited Editions">
-        Fotografía de naturaleza · Ediciones limitadas
+         data-es="Fotografía de escalada y naturaleza"
+         data-en="Climbing and Outdoor Photography">
+        Fotografía de escalada y naturaleza
       </p>
     </div>
     <div class="scroll-indicator">Scroll</div>
@@ -380,7 +387,7 @@
       </div>
 
       <div class="obra-modal-panel">
-        <p class="label" style="margin-bottom:8px">Edición Limitada</p>
+        <p class="label" style="margin-bottom:8px" data-es="Edición Limitada" data-en="Limited Edition">Edición Limitada</p>
         <h2 class="obra-modal-titulo" id="obra-modal-titulo"></h2>
         <p class="obra-modal-desc" id="obra-modal-desc"></p>
 
@@ -390,16 +397,16 @@
 
         <div class="obra-modal-specs">
           <div class="spec-row">
-            <span class="spec-key">Piezas</span>
+            <span class="spec-key" data-es="Piezas" data-en="Pieces">Piezas</span>
             <span class="spec-val" id="obra-modal-piezas"></span>
           </div>
           <div class="spec-row">
-            <span class="spec-key">Impresión</span>
+            <span class="spec-key" data-es="Impresión" data-en="Print">Impresión</span>
             <span class="spec-val">Fine Art</span>
           </div>
           <div class="spec-row">
-            <span class="spec-key">Enmarcado</span>
-            <span class="spec-val">A elección</span>
+            <span class="spec-key" data-es="Enmarcado" data-en="Framing">Enmarcado</span>
+            <span class="spec-val" data-es="A elección" data-en="Custom">A elección</span>
           </div>
         </div>
 
@@ -409,7 +416,8 @@
         <p class="obra-precio-grande" id="obra-modal-precio"></p>
 
         <button class="btn-encargar"
-                onclick="closeOverlay('overlay-obra'); openOverlayEncargo('catalogo')">
+                onclick="closeOverlay('overlay-obra'); openOverlayEncargo('catalogo')"
+                data-es="Encargar ahora" data-en="Order now">
           Encargar ahora
         </button>
       </div>
@@ -448,9 +456,9 @@
         <div class="form-group">
           <label class="form-label" data-es="Tipo de encargo" data-en="Order type">Tipo de encargo</label>
           <select class="form-select" id="encargo-tipo" name="tipo_encargo">
-            <option value="catalogo">Encargar obra del catálogo</option>
-            <option value="personalizada">Personalizar obra existente</option>
-            <option value="comision">Fotografía comisionada</option>
+            <option value="catalogo" data-es="Encargar obra del catálogo" data-en="Order from catalog">Encargar obra del catálogo</option>
+            <option value="personalizada" data-es="Personalizar obra existente" data-en="Customize existing work">Personalizar obra existente</option>
+            <option value="comision" data-es="Fotografía comisionada" data-en="Commissioned photography">Fotografía comisionada</option>
           </select>
         </div>
         <div class="form-group">
@@ -501,13 +509,21 @@
           <input class="form-input" type="text" name="nombre" required />
         </div>
         <div class="form-group">
+          <label class="form-label" data-es="Email" data-en="Email">Email</label>
+          <input class="form-input" type="email" name="email" required />
+        </div>
+        <div class="form-group">
+          <label class="form-label" data-es="Teléfono / WhatsApp" data-en="Phone / WhatsApp">Teléfono / WhatsApp</label>
+          <input class="form-input" type="tel" name="telefono" />
+        </div>
+        <div class="form-group">
           <label class="form-label" data-es="Tipo de proyecto" data-en="Project type">Tipo de proyecto</label>
           <select class="form-select" name="tipo_proyecto">
-            <option>Expedición / Documental</option>
-            <option>Campaña de marca</option>
-            <option>Contenido para redes</option>
-            <option>Atleta / Deportista</option>
-            <option>Otro</option>
+            <option data-es="Expedición / Documental" data-en="Expedition / Documentary">Expedición / Documental</option>
+            <option data-es="Campaña de marca" data-en="Brand campaign">Campaña de marca</option>
+            <option data-es="Contenido para redes" data-en="Social media content">Contenido para redes</option>
+            <option data-es="Atleta / Deportista" data-en="Athlete / Sports">Atleta / Deportista</option>
+            <option data-es="Otro" data-en="Other">Otro</option>
           </select>
         </div>
         <div class="form-group">
@@ -539,11 +555,17 @@
     <div class="confirm-screen">
       <div>
         <img src="shared/assets/logo-simbolo-blanco.png" alt="Gamantri" class="confirm-logo" />
-        <p class="label" style="text-align:center;margin-bottom:16px">Mensaje recibido</p>
-        <h2 class="confirm-title">Gracias</h2>
-        <p class="confirm-copy">Recibimos tu pedido. Nos comunicaremos contigo a la brevedad para coordinar la producción de tu obra.</p>
+        <p class="label" style="text-align:center;margin-bottom:16px"
+           data-es="Mensaje recibido" data-en="Message received">Mensaje recibido</p>
+        <h2 class="confirm-title" data-es="Gracias" data-en="Thank you">Gracias</h2>
+        <p class="confirm-copy"
+           data-es="Recibimos tu pedido. Nos comunicaremos contigo a la brevedad para coordinar la producción de tu obra."
+           data-en="We received your order. We'll be in touch shortly to coordinate the production of your work.">
+          Recibimos tu pedido. Nos comunicaremos contigo a la brevedad para coordinar la producción de tu obra.
+        </p>
         <button class="btn-outline" onclick="closeOverlay('overlay-ok-obras')"
-                style="font-family:'Jura',sans-serif;font-size:11px;letter-spacing:0.2em;text-transform:uppercase">
+                style="font-family:'Jura',sans-serif;font-size:11px;letter-spacing:0.2em;text-transform:uppercase"
+                data-es="Cerrar" data-en="Close">
           Cerrar
         </button>
       </div>
@@ -556,11 +578,17 @@
     <div class="confirm-screen">
       <div>
         <img src="shared/assets/logo-simbolo-blanco.png" alt="Gamantri" class="confirm-logo" />
-        <p class="label" style="text-align:center;margin-bottom:16px">Mensaje recibido</p>
-        <h2 class="confirm-title">Gracias</h2>
-        <p class="confirm-copy">Recibimos tu propuesta. Nos comunicaremos contigo a la brevedad para coordinar los detalles del proyecto.</p>
+        <p class="label" style="text-align:center;margin-bottom:16px"
+           data-es="Mensaje recibido" data-en="Message received">Mensaje recibido</p>
+        <h2 class="confirm-title" data-es="Gracias" data-en="Thank you">Gracias</h2>
+        <p class="confirm-copy"
+           data-es="Recibimos tu propuesta. Nos comunicaremos contigo a la brevedad para coordinar los detalles del proyecto."
+           data-en="We received your proposal. We'll be in touch shortly to coordinate the project details.">
+          Recibimos tu propuesta. Nos comunicaremos contigo a la brevedad para coordinar los detalles del proyecto.
+        </p>
         <button class="btn-outline" onclick="closeOverlay('overlay-ok-servicios')"
-                style="font-family:'Jura',sans-serif;font-size:11px;letter-spacing:0.2em;text-transform:uppercase">
+                style="font-family:'Jura',sans-serif;font-size:11px;letter-spacing:0.2em;text-transform:uppercase"
+                data-es="Cerrar" data-en="Close">
           Cerrar
         </button>
       </div>

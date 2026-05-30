@@ -40,7 +40,7 @@
 .cursos-hero-content {
   position: relative; z-index: 2; max-width: 640px;
 }
-.cursos-hero-content .label { margin-bottom: 20px; display: block; }
+.cursos-hero-content .label { margin-bottom: 20px; display: block; color: var(--text); }
 .cursos-hero-content h1 {
   font-family: 'Play', sans-serif;
   font-size: clamp(32px, 5vw, 58px);
@@ -53,7 +53,7 @@
 }
 .cursos-hero-sub {
   font-size: 15px; letter-spacing: 0.2em; text-transform: uppercase;
-  color: var(--muted); margin-bottom: 36px;
+  color: var(--accent); margin-bottom: 36px;
 }
 .cursos-scroll-hint {
   position: absolute; right: 56px; bottom: 80px;

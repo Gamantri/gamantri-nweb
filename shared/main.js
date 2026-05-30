@@ -206,7 +206,9 @@ function toggleObras() {
   const grid = document.querySelector('.obras-grid');
   const btn = document.getElementById('btn-ver-mas');
   const expanded = grid.classList.toggle('expanded');
-  btn.textContent = expanded ? 'VER MENOS <<<' : 'VER MÁS OBRAS >>>';
+  btn.textContent = expanded
+    ? (lang === 'en' ? 'SEE LESS <<<' : 'VER MENOS <<<')
+    : (lang === 'en' ? 'SEE MORE WORKS >>>' : 'VER MÁS OBRAS >>>');
 }
 
 // ── FOOTER FOTO MODAL (FT-02) ──
@@ -452,6 +454,12 @@ function setLang(l) {
     el.textContent = el.getAttribute(`data-${l}`);
   });
   document.documentElement.lang = l;
+  // Refrescar botón ver más/menos si obras están expandidas
+  const grid = document.querySelector('.obras-grid');
+  const btn  = document.getElementById('btn-ver-mas');
+  if (grid && btn && grid.classList.contains('expanded')) {
+    btn.textContent = l === 'en' ? 'SEE LESS <<<' : 'VER MENOS <<<';
+  }
 }
 // Aplicar idioma guardado al cargar
 document.addEventListener('DOMContentLoaded', () => {
