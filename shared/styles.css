@@ -1,4 +1,10 @@
 @font-face {
+  font-family: 'Griffiths';
+  src: url('assets/fonts/Griffiths/Griffiths.otf') format('opentype');
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
   font-family: 'Play';
   src: url('assets/fonts/Play/Play-Regular.ttf') format('truetype');
   font-weight: 400;
@@ -213,9 +219,13 @@ header.scrolled {
 .obra-card:hover .obra-img-hover { opacity: 1; }
 .obra-card:hover .obra-img-base  { opacity: 0; }
 
-/* Index obras: default sepia suave, hover en color */
-#obras .obra-img-base  { filter: grayscale(0.75) sepia(0.25); }
-#obras .obra-card:hover .obra-img-hover { filter: none; }
+/* Index obras: default monocromático con tono naranja pálido cálido */
+#obras .obra-img-base {
+  filter: grayscale(1) sepia(0.45) hue-rotate(340deg) saturate(0.55) brightness(0.9);
+}
+/* Hover: misma imagen n-O-Mu-F en full color, sin filtro */
+#obras .obra-card:hover .obra-img-base  { opacity: 0; }
+#obras .obra-card:hover .obra-img-hover { opacity: 1; filter: none; }
 
 .obra-label {
   position: absolute;
@@ -258,13 +268,13 @@ header.scrolled {
 }
 .btn-obra-personalizada:hover { background: rgba(201,79,31,0.10); }
 
-/* CTA Colección Exclusiva — doble borde animado */
+/* CTA Colección Exclusiva — doble borde animado, Griffiths */
 .btn-coleccion-exclusiva {
   display: inline-flex;
   align-items: center; gap: 14px;
   background: transparent; color: var(--text);
-  font-family: 'Jura', sans-serif;
-  font-size: 13px; font-weight: 600; letter-spacing: 0.25em; text-transform: uppercase;
+  font-family: 'Griffiths', 'Play', sans-serif;
+  font-size: 15px; font-weight: 400; letter-spacing: 0.18em; text-transform: uppercase;
   padding: 14px 28px;
   text-decoration: none;
   position: relative;
@@ -275,13 +285,11 @@ header.scrolled {
   outline-offset: 5px;
   /* Borde interior */
   border: 1px solid rgba(242,237,232,0.35);
-  transition: background 0.4s, outline-color 0.4s, border-color 0.4s;
   opacity: 0;  /* empieza invisible — JS hace fade-in al scroll */
-  transform: translateY(6px);
-  transition: opacity 0.7s ease, transform 0.7s ease, background 0.35s, outline-color 0.35s;
+  transition: opacity 0.7s ease, background 0.35s, outline-color 0.35s, border-color 0.35s;
 }
 .btn-coleccion-exclusiva.oex-cta-visible {
-  opacity: 1; transform: translateY(0);
+  opacity: 1;
 }
 .btn-coleccion-exclusiva:hover {
   background: rgba(242,237,232,0.07);
@@ -549,7 +557,7 @@ footer {
   flex-direction: column;
   align-items: center;
   gap: 6px;
-  color: var(--muted);
+  color: var(--text);
   font-family: 'Jura', sans-serif;
   font-size: 10px;
   letter-spacing: 0.18em;
@@ -826,6 +834,8 @@ footer {
 }
 
 @media (max-width: 768px) {
+  /* LC1: tagline hero en mobile ocupa dos líneas */
+  .hero-tagline { max-width: 160px; white-space: normal; }
   .obras-grid { grid-template-columns: 1fr; }
   .obras-hero { min-height: 380px; }
   .obras-hero-img { background-position: 70% center; }

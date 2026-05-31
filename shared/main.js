@@ -461,33 +461,42 @@ function scrollToSection(selector) {
 }
 function scrollToTop() { window.scrollTo({ top: 0, behavior: 'smooth' }); }
 
-// ── CTA Colección Exclusiva — fade-in borde + typewriter texto ──
+// ── CTA Colección Exclusiva — fade-in borde + typewriter sin desplazamiento ──
 document.addEventListener('DOMContentLoaded', () => {
   const ctaBtn  = document.getElementById('btn-oex-cta');
   const ctaText = ctaBtn ? ctaBtn.querySelector('.oex-cta-text') : null;
+  const ctaLogo = ctaBtn ? ctaBtn.querySelector('.oex-cta-logo') : null;
   if (!ctaBtn || !ctaText) return;
+
+  // El logo empieza oculto — aparece después del typewriter
+  if (ctaLogo) { ctaLogo.style.opacity = '0'; ctaLogo.style.transition = 'opacity 0.5s ease'; }
+
+  // Reservar el ancho para que el botón no cambie de tamaño al escribirse
+  const fullText = ctaText.textContent.trim();
+  ctaText.style.minWidth = ctaText.getBoundingClientRect().width + 'px';
 
   const obs = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         obs.disconnect();
-        // 1. Fade-in del recuadro doble
-        setTimeout(() => ctaBtn.classList.add('oex-cta-visible'), 80);
-        // 2. Typewriter del texto (arranca 140ms después del fade-in)
+        // 1. Fade-in del recuadro doble (sin movimiento)
+        setTimeout(() => ctaBtn.classList.add('oex-cta-visible'), 100);
+        // 2. Typewriter letra por letra (arranca con el fade-in)
         setTimeout(() => {
-          const fullText = ctaText.textContent.trim();
           ctaText.textContent = '';
           let i = 0;
-          const speed = 52; // ms por carácter
+          const speed = 55; // ms por carácter
           const timer = setInterval(() => {
             if (i < fullText.length) {
               ctaText.textContent += fullText[i];
               i++;
             } else {
               clearInterval(timer);
+              // 3. Logo aparece al terminar el texto
+              if (ctaLogo) ctaLogo.style.opacity = '0.7';
             }
           }, speed);
-        }, 220);
+        }, 120);
       }
     });
   }, { threshold: 0.35 });

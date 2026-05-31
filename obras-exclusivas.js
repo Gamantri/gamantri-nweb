@@ -231,11 +231,24 @@ function openOexObra(i) {
   overlay.classList.add('open');
   document.body.style.overflow = 'hidden';
   setLang(lang);
+  // LC8: mostrar scroll hint
+  const hint = document.getElementById('oex-scroll-hint');
+  if (hint) {
+    hint.classList.remove('fade-out');
+    hint.classList.add('visible');
+    overlay.addEventListener('scroll', function hideOexHint() {
+      hint.classList.add('fade-out');
+      setTimeout(() => hint.classList.remove('visible', 'fade-out'), 400);
+      overlay.removeEventListener('scroll', hideOexHint);
+    }, { once: true });
+  }
 }
 
 function closeOexOverlay() {
   document.getElementById('oex-overlay-obra').classList.remove('open');
   document.body.style.overflow = '';
+  const hint = document.getElementById('oex-scroll-hint');
+  if (hint) hint.classList.remove('visible', 'fade-out');
 }
 
 document.addEventListener('keydown', e => {
@@ -272,8 +285,8 @@ function playOexSound() {
   const audio = document.getElementById('oex-sound');
   if (!audio) return;
   const FADE_IN_MS  = 1200;
-  const HOLD_MS     = 14300;  // 1.2 + 14.3 + 2.5 = 18s
-  const FADE_OUT_MS = 2500;
+  const HOLD_MS     = 11800;  // 1.2 + 11.8 + 5.0 = 18s — LC9: fade-out 5s
+  const FADE_OUT_MS = 5000;
   const MAX_VOL     = 0.55;
   audio.volume = 0;
   const p = audio.play();

@@ -32,6 +32,8 @@
 }
 .oex-centered { text-align: center; }
 
+/* ── Griffiths — registrada desde shared/styles.css ── */
+
 /* ══════════════════════════════════════
    HEADER
 ══════════════════════════════════════ */
@@ -85,12 +87,12 @@
 }
 .oex-title-main {
   display: block;
-  font-family: 'Play', sans-serif;        /* fuente provisional — se actualizará */
+  font-family: 'Griffiths', 'Play', serif;
   font-size: clamp(18px, 2.4vw, 32px);
   font-weight: 400;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: #E8E4DF;
+  color: rgba(232, 228, 223, 0.80);       /* blanco al 80% */
   margin-bottom: 0;
 }
 
@@ -106,9 +108,10 @@
 }
 .oex-hero-sub {
   font-family: 'Jura', sans-serif;
-  font-size: 22px;           /* +100% vs anterior 11px */
+  font-size: 14px;           /* 22px × 65% ≈ 14px */
   letter-spacing: 0.18em; text-transform: uppercase;
   color: #4E4C48;
+  margin-top: 18px;          /* espacio entre título y esta línea */
   margin-bottom: 44px; display: block;
   line-height: 1.4;
 }
@@ -134,7 +137,7 @@
 }
 .oex-portada-img {
   position: absolute; inset: -25% 0;
-  background: url('shared/assets/images/obras/0-O-P.jpg') center 40% / cover no-repeat;
+  background: url('shared/assets/images/obras/0-O-P-HR.jpg') center 40% / cover no-repeat;
   filter: grayscale(100%) contrast(1.05);
   will-change: transform;
 }
@@ -174,7 +177,7 @@
 .oex-mockup-frame img {
   width: 100%; height: auto;
   display: block;
-  filter: grayscale(100%) contrast(1.05);
+  /* LC7: en color */
 }
 
 /* ══════════════════════════════════════
@@ -285,8 +288,8 @@
 /* Sub-intro: gris medio */
 .oex-form-intro {
   font-family: 'Jura', sans-serif;
-  font-size: 14px; line-height: 1.9;
-  color: var(--oex-gray2);   /* gris medio — menos peso que el título */
+  font-size: 21px; line-height: 1.9;  /* LC10: 14px × 150% = 21px */
+  color: var(--oex-gray2);
   margin-bottom: 48px;
 }
 
@@ -328,6 +331,11 @@
   color: var(--text); margin-bottom: 12px;
 }
 .oex-gracias p { font-size: 15px; color: var(--oex-gray1); }
+
+/* ── LC8: scroll hint naranja en overlay obras exclusivas ── */
+.oex-scroll-hint {
+  color: var(--accent) !important;
+}
 
 /* ── Fix 2: botón cerrar siempre visible en overlay obras ── */
 #oex-overlay-obra .overlay-close-wrap {
