@@ -212,12 +212,14 @@
 }
 .oex-step:hover { background: rgba(0,0,0,0.04); }
 
-/* Paso 01 — recuadro completo, ligeramente más oscuro */
+/* Paso 01 — fijo, sin hover */
 .oex-step:first-child {
   border: 1px solid #b8b5ae;
   background: rgba(0,0,0,0.06);
+  cursor: default;
 }
-.oex-step:first-child:hover { background: rgba(0,0,0,0.10); }
+.oex-step:first-child:hover { background: rgba(0,0,0,0.06); }
+.oex-step:first-child:hover .oex-step-body { opacity: 1; }
 
 /* Imagen de hover — cubre todo el step */
 .oex-step-img {
