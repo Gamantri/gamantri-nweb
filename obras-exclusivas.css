@@ -352,8 +352,7 @@
   flex-direction: row;
   align-items: stretch;
   border: 1px solid rgba(100,96,90,0.80);
-  background: rgba(210,207,200,0.55);  /* fondo ligeramente diferente al contexto */
-  backdrop-filter: blur(2px);
+  background: #D8D4CE;   /* opaco — mismo tono cálido que la sección, ligeramente más oscuro */
   z-index: 10;
   overflow: hidden;
   transition: opacity 0.22s ease;

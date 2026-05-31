@@ -351,7 +351,7 @@ function initPasoExpand() {
       const left     = (paso === 5) ? leftBase - stepW : leftBase;
 
       panel.style.left   = left + 'px';
-      panel.style.top    = (stepRect.top - containerRect.top) + 'px';
+      panel.style.top    = '0';           /* siempre arriba del grid de pasos */
       panel.style.width  = panelW + 'px';
       panel.style.height = stepH + 'px';
       panel.classList.add('active');
