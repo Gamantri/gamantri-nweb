@@ -313,11 +313,63 @@ function playOexSound() {
   }).catch(() => {});
 }
 
+// ── PANEL EXPANDIBLE — pasos 02-05 ──
+function initPasoExpand() {
+  const stepsEl   = document.querySelector('.oex-steps');
+  const panel     = document.getElementById('oex-paso-expand');
+  const panelImg  = panel.querySelector('.oex-paso-expand-img');
+  const panelNum  = panel.querySelector('.oex-paso-expand-num');
+  const panelTit  = panel.querySelector('.oex-paso-expand-title');
+  const panelDesc = panel.querySelector('.oex-paso-expand-desc');
+  if (!stepsEl || !panel) return;
+
+  const clickables = stepsEl.querySelectorAll('.oex-step-clickable');
+
+  clickables.forEach(step => {
+    step.addEventListener('click', () => {
+      const paso  = parseInt(step.dataset.paso);  // 2-5
+      const img   = step.dataset.img;
+      const num   = step.dataset.num;
+      const title = step.querySelector('.oex-step-title').textContent.trim();
+      const desc  = step.querySelector('.oex-step-desc').textContent.trim();
+
+      // Poblar panel
+      panelImg.src  = img;
+      panelNum.textContent  = num;
+      panelTit.textContent  = title;
+      panelDesc.textContent = desc;
+
+      // Calcular posición dentro del contenedor .oex-steps
+      const containerRect = stepsEl.getBoundingClientRect();
+      const stepRect      = step.getBoundingClientRect();
+      const stepW         = stepRect.width;
+      const stepH         = stepRect.height;
+      const panelW        = stepW * 2;
+
+      // Paso 05 expande hacia la izquierda (cubre 04+05)
+      const leftBase = stepRect.left - containerRect.left;
+      const left     = (paso === 5) ? leftBase - stepW : leftBase;
+
+      panel.style.left   = left + 'px';
+      panel.style.top    = (stepRect.top - containerRect.top) + 'px';
+      panel.style.width  = panelW + 'px';
+      panel.style.height = stepH + 'px';
+      panel.classList.add('active');
+    });
+  });
+
+  // Desaparecer al salir del panel
+  panel.addEventListener('mouseleave', () => {
+    panel.classList.remove('active');
+  });
+}
+
 // ── INIT ──
 document.addEventListener('DOMContentLoaded', () => {
   buildGrid();
   setLang(lang);
   playOexSound();
+  initPasoExpand();
 });
 
 // ── GSAP REVEALS + PARALLAX ──

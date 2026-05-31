@@ -334,6 +334,77 @@
 }
 .oex-gracias p { font-size: 15px; color: var(--oex-gray1); }
 
+/* ── PANEL EXPANDIBLE — pasos 02-05 ── */
+#oex-proceso { position: relative; }   /* ancla para el panel absoluto */
+
+.oex-steps { position: relative; }
+
+/* Pasos clickeables: cursor pointer + hover sutil */
+.oex-step-clickable { cursor: pointer; }
+.oex-step-clickable:hover { background: rgba(0,0,0,0.06); }
+.oex-step-clickable:hover .oex-step-body { opacity: 1; } /* anular fade */
+
+/* Panel expandible */
+.oex-paso-expand {
+  position: absolute;
+  top: 0;
+  display: none;              /* hidden por defecto; JS toggle .active */
+  flex-direction: row;
+  align-items: stretch;
+  border: 1px solid rgba(100,96,90,0.80);
+  background: rgba(210,207,200,0.55);  /* fondo ligeramente diferente al contexto */
+  backdrop-filter: blur(2px);
+  z-index: 10;
+  overflow: hidden;
+  transition: opacity 0.22s ease;
+  opacity: 0;
+  pointer-events: none;
+}
+.oex-paso-expand.active {
+  display: flex;
+  opacity: 1;
+  pointer-events: all;
+}
+
+.oex-paso-expand-img {
+  width: 58%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  flex-shrink: 0;
+  filter: grayscale(100%) contrast(1.05);
+}
+
+.oex-paso-expand-info {
+  flex: 1;
+  padding: 32px 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 10px;
+}
+.oex-paso-expand-num {
+  font-family: 'Play', sans-serif;
+  font-size: 42px;
+  font-weight: 400;
+  color: #9a9690;
+  line-height: 1;
+}
+.oex-paso-expand-title {
+  font-family: 'Play', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #2a2a26;
+  margin-top: 4px;
+}
+.oex-paso-expand-desc {
+  font-family: 'Jura', sans-serif;
+  font-size: 12px;
+  line-height: 1.8;
+  color: #6a6762;
+  margin-top: 6px;
+}
+
 /* ── LC8: scroll hint naranja en overlay obras exclusivas ── */
 .oex-scroll-hint {
   color: var(--accent) !important;
