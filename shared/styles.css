@@ -289,7 +289,7 @@ header.scrolled {
   outline-color: rgba(242,237,232,0.35);
 }
 .oex-cta-logo {
-  height: 18px; opacity: 0.7;
+  height: 13px; opacity: 0.65;   /* misma altura que el texto del botón */
   transition: opacity 0.3s;
 }
 .btn-coleccion-exclusiva:hover .oex-cta-logo { opacity: 1; }

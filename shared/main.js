@@ -461,18 +461,36 @@ function scrollToSection(selector) {
 }
 function scrollToTop() { window.scrollTo({ top: 0, behavior: 'smooth' }); }
 
-// ── CTA Colección Exclusiva — fade-in al entrar en viewport ──
+// ── CTA Colección Exclusiva — fade-in borde + typewriter texto ──
 document.addEventListener('DOMContentLoaded', () => {
-  const ctaBtn = document.getElementById('btn-oex-cta');
-  if (!ctaBtn) return;
+  const ctaBtn  = document.getElementById('btn-oex-cta');
+  const ctaText = ctaBtn ? ctaBtn.querySelector('.oex-cta-text') : null;
+  if (!ctaBtn || !ctaText) return;
+
   const obs = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        setTimeout(() => ctaBtn.classList.add('oex-cta-visible'), 120);
         obs.disconnect();
+        // 1. Fade-in del recuadro doble
+        setTimeout(() => ctaBtn.classList.add('oex-cta-visible'), 80);
+        // 2. Typewriter del texto (arranca 140ms después del fade-in)
+        setTimeout(() => {
+          const fullText = ctaText.textContent.trim();
+          ctaText.textContent = '';
+          let i = 0;
+          const speed = 52; // ms por carácter
+          const timer = setInterval(() => {
+            if (i < fullText.length) {
+              ctaText.textContent += fullText[i];
+              i++;
+            } else {
+              clearInterval(timer);
+            }
+          }, speed);
+        }, 220);
       }
     });
-  }, { threshold: 0.4 });
+  }, { threshold: 0.35 });
   obs.observe(ctaBtn);
 });
 
