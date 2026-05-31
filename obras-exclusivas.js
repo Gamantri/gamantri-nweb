@@ -267,10 +267,44 @@ async function submitOexForm(e) {
   }
 }
 
+// ── AUDIO HERO OBRAS (~18 seg) ──
+function playOexSound() {
+  const audio = document.getElementById('oex-sound');
+  if (!audio) return;
+  const FADE_IN_MS  = 1200;
+  const HOLD_MS     = 14300;  // 1.2 + 14.3 + 2.5 = 18s
+  const FADE_OUT_MS = 2500;
+  const MAX_VOL     = 0.55;
+  audio.volume = 0;
+  const p = audio.play();
+  if (!p) return;
+  p.then(() => {
+    const t0 = performance.now();
+    function fadeIn(now) {
+      const t = Math.min((now - t0) / FADE_IN_MS, 1);
+      audio.volume = t * MAX_VOL;
+      if (t < 1) requestAnimationFrame(fadeIn);
+    }
+    requestAnimationFrame(fadeIn);
+    setTimeout(() => {
+      const t1 = performance.now();
+      const v0 = audio.volume;
+      function fadeOut(now) {
+        const t = Math.min((now - t1) / FADE_OUT_MS, 1);
+        audio.volume = v0 * (1 - t);
+        if (t < 1) requestAnimationFrame(fadeOut);
+        else { audio.pause(); audio.currentTime = 0; }
+      }
+      requestAnimationFrame(fadeOut);
+    }, HOLD_MS);
+  }).catch(() => {});
+}
+
 // ── INIT ──
 document.addEventListener('DOMContentLoaded', () => {
   buildGrid();
   setLang(lang);
+  playOexSound();
 });
 
 // ── GSAP REVEALS + PARALLAX ──

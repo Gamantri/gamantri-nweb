@@ -69,31 +69,48 @@
   margin-bottom: 20px;
 }
 
-/* Jerarquía tipográfica del título hero */
+/* Jerarquía tipográfica del título hero
+   Fine Art B&N → encima, más pequeño pero con peso visual propio
+   COLECCIÓN EXCLUSIVA → debajo, el plato fuerte
+*/
+.oex-title-sub {
+  display: block;
+  font-family: 'Jura', sans-serif;
+  font-size: clamp(18px, 2.1vw, 27px);   /* +50% vs anterior 12→18px */
+  font-weight: 400;
+  letter-spacing: 0.22em;
+  color: #6E6B66;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
 .oex-title-main {
   display: block;
-  font-family: 'Play', sans-serif;
+  font-family: 'Play', sans-serif;        /* fuente provisional — se actualizará */
   font-size: clamp(18px, 2.4vw, 32px);
   font-weight: 400;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: #E8E4DF;            /* casi blanco sobre gris 90% */
-  margin-bottom: 10px;
+  color: #E8E4DF;
+  margin-bottom: 0;
 }
-.oex-title-sub {
-  display: block;
+
+/* "Actualmente en galería" — mismo estilo que .oex-title-sub actualizado */
+.oex-obras-header .oex-section-title {
   font-family: 'Jura', sans-serif;
-  font-size: clamp(12px, 1.4vw, 18px);
+  font-size: clamp(18px, 2.1vw, 27px);
   font-weight: 400;
-  letter-spacing: 0.18em;
-  color: #6E6B66;            /* gris medio — menor jerarquía */
+  letter-spacing: 0.22em;
   text-transform: uppercase;
+  color: #6E6B66;
+  margin-bottom: 0;
 }
 .oex-hero-sub {
   font-family: 'Jura', sans-serif;
-  font-size: 11px; letter-spacing: 0.32em; text-transform: uppercase;
-  color: #4E4C48;            /* gris oscuro sobre #141414 */
+  font-size: 22px;           /* +100% vs anterior 11px */
+  letter-spacing: 0.18em; text-transform: uppercase;
+  color: #4E4C48;
   margin-bottom: 44px; display: block;
+  line-height: 1.4;
 }
 .btn-oex {
   display: inline-block;

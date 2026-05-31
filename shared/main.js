@@ -461,6 +461,21 @@ function scrollToSection(selector) {
 }
 function scrollToTop() { window.scrollTo({ top: 0, behavior: 'smooth' }); }
 
+// ── CTA Colección Exclusiva — fade-in al entrar en viewport ──
+document.addEventListener('DOMContentLoaded', () => {
+  const ctaBtn = document.getElementById('btn-oex-cta');
+  if (!ctaBtn) return;
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        setTimeout(() => ctaBtn.classList.add('oex-cta-visible'), 120);
+        obs.disconnect();
+      }
+    });
+  }, { threshold: 0.4 });
+  obs.observe(ctaBtn);
+});
+
 // ── IDIOMA ──
 let lang = localStorage.getItem('gamantri-lang') || 'es';
 function setLang(l) {

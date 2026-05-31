@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Font Preview — COLECCIÓN EXCLUSIVA</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@300;400&family=Cormorant+Garamond:wght@300;400&family=Playfair+Display+SC:wght@400&display=swap" rel="stylesheet" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: #141414;
+      color: #E8E4DF;
+      font-family: sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0;
+      padding: 48px 24px;
+    }
+    .option {
+      width: 100%;
+      max-width: 900px;
+      padding: 72px 56px;
+      border-bottom: 1px solid rgba(242,237,232,0.08);
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .option:last-child { border-bottom: none; }
+    .option-num {
+      font-family: 'Jura', monospace;
+      font-size: 11px;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: #C94F1F;
+    }
+    .option-name {
+      font-size: 11px;
+      letter-spacing: 0.2em;
+      color: rgba(242,237,232,0.35);
+      text-transform: uppercase;
+      font-family: monospace;
+    }
+    .preview-sub {
+      font-family: 'Jura', monospace;
+      font-size: 13px;
+      letter-spacing: 0.18em;
+      color: #6E6B66;
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+    /* Opción 1 — Cinzel */
+    .opt1 .main { font-family: 'Cinzel', serif; font-size: clamp(28px, 4vw, 52px); font-weight: 300; letter-spacing: 0.12em; }
+    /* Opción 2 — Cormorant Garamond */
+    .opt2 .main { font-family: 'Cormorant Garamond', serif; font-size: clamp(32px, 5vw, 64px); font-weight: 300; letter-spacing: 0.08em; font-variant: small-caps; }
+    /* Opción 3 — Playfair Display SC */
+    .opt3 .main { font-family: 'Playfair Display SC', serif; font-size: clamp(24px, 3.5vw, 44px); font-weight: 400; letter-spacing: 0.06em; }
+    .context {
+      margin-top: 20px;
+      padding: 24px 28px;
+      border: 1px solid rgba(242,237,232,0.07);
+      background: rgba(242,237,232,0.02);
+    }
+    .context-label {
+      font-size: 10px; letter-spacing: 0.25em; color: rgba(242,237,232,0.3);
+      text-transform: uppercase; margin-bottom: 12px; font-family: monospace;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="option opt1">
+    <span class="option-num">Opción 1</span>
+    <p class="option-name">Cinzel — Romano clásico, inscripciones imperiales</p>
+    <p class="preview-sub">Fine Art B&N</p>
+    <p class="main">COLECCIÓN EXCLUSIVA</p>
+    <div class="context">
+      <p class="context-label">En contexto — Hero completo:</p>
+      <p class="preview-sub" style="margin-bottom:8px">Fine Art B&N</p>
+      <p class="main" style="font-size:clamp(20px,2.4vw,32px)">COLECCIÓN EXCLUSIVA</p>
+    </div>
+  </div>
+
+  <div class="option opt2">
+    <span class="option-num">Opción 2</span>
+    <p class="option-name">Cormorant Garamond — Elegancia académica, estilo Salgado</p>
+    <p class="preview-sub">Fine Art B&N</p>
+    <p class="main">Colección Exclusiva</p>
+    <div class="context">
+      <p class="context-label">En contexto — Hero completo:</p>
+      <p class="preview-sub" style="margin-bottom:8px">Fine Art B&N</p>
+      <p class="main" style="font-size:clamp(20px,2.4vw,32px)">Colección Exclusiva</p>
+    </div>
+  </div>
+
+  <div class="option opt3">
+    <span class="option-num">Opción 3</span>
+    <p class="option-name">Playfair Display SC — Editorial, alto contraste, lujo contemporáneo</p>
+    <p class="preview-sub">Fine Art B&N</p>
+    <p class="main">COLECCIÓN EXCLUSIVA</p>
+    <div class="context">
+      <p class="context-label">En contexto — Hero completo:</p>
+      <p class="preview-sub" style="margin-bottom:8px">Fine Art B&N</p>
+      <p class="main" style="font-size:clamp(20px,2.4vw,32px)">COLECCIÓN EXCLUSIVA</p>
+    </div>
+  </div>
+
+</body>
+</html>

@@ -213,6 +213,10 @@ header.scrolled {
 .obra-card:hover .obra-img-hover { opacity: 1; }
 .obra-card:hover .obra-img-base  { opacity: 0; }
 
+/* Index obras: default sepia suave, hover en color */
+#obras .obra-img-base  { filter: grayscale(0.75) sepia(0.25); }
+#obras .obra-card:hover .obra-img-hover { filter: none; }
+
 .obra-label {
   position: absolute;
   bottom: 0; left: 0; width: 100%;
@@ -233,7 +237,7 @@ header.scrolled {
 /* A3: fila de botones obras */
 .obras-footer-row {
   display: flex; justify-content: space-between; align-items: center;
-  padding: 40px 56px;
+  padding: 56px 56px 80px;   /* +50% espacio vertical para que respiren */
   background: var(--base);
 }
 .btn-ver-mas {
@@ -254,16 +258,41 @@ header.scrolled {
 }
 .btn-obra-personalizada:hover { background: rgba(201,79,31,0.10); }
 
+/* CTA Colección Exclusiva — doble borde animado */
 .btn-coleccion-exclusiva {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center; gap: 14px;
   background: transparent; color: var(--text);
   font-family: 'Jura', sans-serif;
-  font-size: 14px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase;
-  padding: 14px 24px;
-  border: 1px solid rgba(242,237,232,0.3); cursor: pointer; text-decoration: none;
-  transition: border-color 0.3s, background 0.3s; white-space: nowrap;
+  font-size: 13px; font-weight: 600; letter-spacing: 0.25em; text-transform: uppercase;
+  padding: 14px 28px;
+  text-decoration: none;
+  position: relative;
+  white-space: nowrap;
+  cursor: pointer;
+  /* Borde exterior */
+  outline: 1px solid rgba(242,237,232,0.18);
+  outline-offset: 5px;
+  /* Borde interior */
+  border: 1px solid rgba(242,237,232,0.35);
+  transition: background 0.4s, outline-color 0.4s, border-color 0.4s;
+  opacity: 0;  /* empieza invisible — JS hace fade-in al scroll */
+  transform: translateY(6px);
+  transition: opacity 0.7s ease, transform 0.7s ease, background 0.35s, outline-color 0.35s;
 }
-.btn-coleccion-exclusiva:hover { border-color: var(--text); background: rgba(242,237,232,0.06); }
+.btn-coleccion-exclusiva.oex-cta-visible {
+  opacity: 1; transform: translateY(0);
+}
+.btn-coleccion-exclusiva:hover {
+  background: rgba(242,237,232,0.07);
+  border-color: rgba(242,237,232,0.65);
+  outline-color: rgba(242,237,232,0.35);
+}
+.oex-cta-logo {
+  height: 18px; opacity: 0.7;
+  transition: opacity 0.3s;
+}
+.btn-coleccion-exclusiva:hover .oex-cta-logo { opacity: 1; }
 
 /* ══════════════════════════════════════
    SECCIÓN B — CURSOS
