@@ -34,9 +34,10 @@
   <section id="oex-hero-panel">
     <div class="oex-hero-panel-content">
       <img class="oex-hero-logo" src="shared/assets/logo-simbolo-blanco.png" alt="Gamantri" />
-      <h1 class="oex-hero-panel-title reveal"
-          data-es="Colección Exclusiva<br>Fine Art B&amp;N"
-          data-en="Exclusive Collection<br>Fine Art B&amp;W">Colección Exclusiva<br>Fine Art B&amp;N</h1>
+      <h1 class="oex-hero-panel-title reveal">
+        <span class="oex-title-main" data-es="COLECCIÓN EXCLUSIVA" data-en="EXCLUSIVE COLLECTION">COLECCIÓN EXCLUSIVA</span>
+        <span class="oex-title-sub" data-es="Fine Art B&amp;N" data-en="Fine Art B&amp;W">Fine Art B&amp;N</span>
+      </h1>
       <p class="oex-hero-sub reveal reveal-d1"
          data-es="Ediciones únicas · Impresión Fine Art · Envío internacional"
          data-en="Single editions · Fine Art printing · International shipping">
@@ -90,13 +91,13 @@
           <div class="oex-step-img">
             <img src="shared/assets/images/obras/13-O-Mu-F.jpg" alt="Proceso" loading="lazy" />
           </div>
-          <div class="oex-step-body">
+          <div class="oex-step-body oex-step-01">
             <span class="oex-step-num">01</span>
-            <h3 class="oex-step-title" data-es="Pedido" data-en="Order">Pedido</h3>
+            <h3 class="oex-step-title" data-es="Contacto" data-en="Contact">Contacto</h3>
             <p class="oex-step-desc"
-               data-es="Seleccione la obra, el tamaño y el tipo de enmarcado. Le asesoramos en cada decisión."
-               data-en="Select the work, size and framing type. We guide you through every decision.">
-              Seleccione la obra, el tamaño y el tipo de enmarcado. Le asesoramos en cada decisión.
+               data-es="Elige su obra y contáctese con nosotros. Le asesoramos en el resto del proceso."
+               data-en="Choose your work and get in touch. We guide you through the entire process.">
+              Elige su obra y contáctese con nosotros. Le asesoramos en el resto del proceso.
             </p>
           </div>
         </div>
@@ -177,10 +178,6 @@
       <!-- generado por obras-exclusivas.js -->
     </div>
 
-    <div class="obras-footer-row">
-      <button class="btn-obra-personalizada" onclick="document.getElementById('oex-contacto').scrollIntoView({behavior:'smooth'})"
-              data-es="CONSULTAR OBRA >>>" data-en="INQUIRE >>>">CONSULTAR OBRA >>></button>
-    </div>
   </section>
 
   <!-- Overlay obra exclusiva — igual al del index -->
@@ -274,9 +271,9 @@
         <div class="form-group">
           <label class="form-label" data-es="Mensaje" data-en="Message">Mensaje</label>
           <textarea class="form-textarea" name="mensaje" rows="4"
-                    data-placeholder-es="Espacio, dimensiones aproximadas, presupuesto..."
-                    data-placeholder-en="Space, approximate dimensions, budget..."
-                    placeholder="Espacio, dimensiones aproximadas, presupuesto..."></textarea>
+                    data-placeholder-es="Descripción general, dimensiones aproximadas..."
+                    data-placeholder-en="General description, approximate dimensions..."
+                    placeholder="Descripción general, dimensiones aproximadas..."></textarea>
         </div>
         <button class="btn-oex-submit" type="submit"
                 data-es="Enviar consulta →" data-en="Send inquiry →">Enviar consulta →</button>

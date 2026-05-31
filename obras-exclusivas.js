@@ -48,7 +48,7 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
 const obrasExclusivas = [
   {
     titulo: 'Llaima en Nubes',
-    imgFoto: 'shared/assets/images/obras/4-O-Mu-F.jpg',
+    imgFoto: 'shared/assets/images/obras/6-O-O.jpg',
     imgZoom: 'shared/assets/images/obras/5-O-Mu-Z.jpg',
     imgFull: 'shared/assets/images/obras/4-O-Mu-F.jpg',
     descripcion: 'Episodio único y poético de un volcán icónico, que luego de muchas visitas se mostró de una manera irrepetible: vestido de nubes por tan solo unos breves minutos.',
@@ -65,7 +65,7 @@ const obrasExclusivas = [
   },
   {
     titulo: 'Nodriza',
-    imgFoto: 'shared/assets/images/obras/13-O-Mu-F.jpg',
+    imgFoto: 'shared/assets/images/obras/15-O-O.jpg',
     imgZoom: 'shared/assets/images/obras/14-O-Mu-Z.jpg',
     imgFull: 'shared/assets/images/obras/13-O-Mu-F.jpg',
     descripcion: 'Entre las magias meteorológicas de las montañas aparecen las nubes lenticulares. La magnitud y perfección de esta sobre el blanco puro del Volcán Llaima se muestra como una nave nodriza acechando.',
@@ -82,7 +82,7 @@ const obrasExclusivas = [
   },
   {
     titulo: 'Caminos',
-    imgFoto: 'shared/assets/images/obras/16-O-Mu-F.jpg',
+    imgFoto: 'shared/assets/images/obras/18-O-O.jpg',
     imgZoom: 'shared/assets/images/obras/17-O-Mu-Z.jpg',
     imgFull: 'shared/assets/images/obras/16-O-Mu-F.jpg',
     descripcion: 'En la máxima expresión del minimalismo en la naturaleza aparece seguido un paisaje de nieve. Cuando se suman nubes blancas bajas y apenas unos senderos que nos muestran ínfimos, se hace poesía.',
@@ -99,7 +99,7 @@ const obrasExclusivas = [
   },
   {
     titulo: 'Penitentes',
-    imgFoto: 'shared/assets/images/obras/22-O-Mu-F.jpg',
+    imgFoto: 'shared/assets/images/obras/24-O-O.jpg',
     imgZoom: 'shared/assets/images/obras/23-O-Mu-Z.jpg',
     imgFull: 'shared/assets/images/obras/22-O-Mu-F.jpg',
     descripcion: 'El cerro El Plomo, el más alto de la región de Santiago, con su historia Inca y su cumbre de 5424 msnm. Esta imagen muestra unos penitentes casi diseñados en su campamento base, el Federación.',
@@ -117,7 +117,7 @@ const obrasExclusivas = [
   // ── Slots 5–9: repeticiones placeholder (reemplazar con imágenes definitivas) ──
   {
     titulo: 'Llaima en Nubes II',
-    imgFoto: 'shared/assets/images/obras/4-O-Mu-F.jpg',
+    imgFoto: 'shared/assets/images/obras/6-O-O.jpg',
     imgZoom: 'shared/assets/images/obras/5-O-Mu-Z.jpg',
     imgFull: 'shared/assets/images/obras/4-O-Mu-F.jpg',
     descripcion: 'Episodio único y poético de un volcán icónico.',
@@ -130,7 +130,7 @@ const obrasExclusivas = [
   },
   {
     titulo: 'Nodriza II',
-    imgFoto: 'shared/assets/images/obras/13-O-Mu-F.jpg',
+    imgFoto: 'shared/assets/images/obras/15-O-O.jpg',
     imgZoom: 'shared/assets/images/obras/14-O-Mu-Z.jpg',
     imgFull: 'shared/assets/images/obras/13-O-Mu-F.jpg',
     descripcion: 'La magnitud y perfección de esta nube lenticular sobre el Volcán Llaima.',
@@ -143,7 +143,7 @@ const obrasExclusivas = [
   },
   {
     titulo: 'Caminos II',
-    imgFoto: 'shared/assets/images/obras/16-O-Mu-F.jpg',
+    imgFoto: 'shared/assets/images/obras/18-O-O.jpg',
     imgZoom: 'shared/assets/images/obras/17-O-Mu-Z.jpg',
     imgFull: 'shared/assets/images/obras/16-O-Mu-F.jpg',
     descripcion: 'Minimalismo puro. Un paisaje de nieve, nubes bajas y senderos ínfimos.',
@@ -156,7 +156,7 @@ const obrasExclusivas = [
   },
   {
     titulo: 'Penitentes II',
-    imgFoto: 'shared/assets/images/obras/22-O-Mu-F.jpg',
+    imgFoto: 'shared/assets/images/obras/24-O-O.jpg',
     imgZoom: 'shared/assets/images/obras/23-O-Mu-Z.jpg',
     imgFull: 'shared/assets/images/obras/22-O-Mu-F.jpg',
     descripcion: 'El cerro El Plomo y sus penitentes en el campamento base Federación.',
@@ -169,7 +169,7 @@ const obrasExclusivas = [
   },
   {
     titulo: 'Llaima en Nubes III',
-    imgFoto: 'shared/assets/images/obras/4-O-Mu-F.jpg',
+    imgFoto: 'shared/assets/images/obras/6-O-O.jpg',
     imgZoom: 'shared/assets/images/obras/5-O-Mu-Z.jpg',
     imgFull: 'shared/assets/images/obras/4-O-Mu-F.jpg',
     descripcion: 'Un volcán icónico vestido de nubes por tan solo unos breves minutos.',

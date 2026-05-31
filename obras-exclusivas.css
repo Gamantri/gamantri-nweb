@@ -52,32 +52,48 @@
    ① HERO PANEL — centrado, solo símbolo
 ══════════════════════════════════════ */
 #oex-hero-panel {
-  min-height: 100vh;
+  min-height: 72vh;          /* más delgado — la portada se "asoma" */
   display: flex; align-items: center; justify-content: center;
   text-align: center;
-  padding: 120px 48px 80px;
-  background: var(--base);
+  padding: 100px 48px 56px;
+  background: #141414;       /* gris 90% — ligeramente más claro que negro */
 }
 .oex-hero-panel-content {
   display: flex; flex-direction: column; align-items: center;
 }
 .oex-hero-logo {
-  height: 64px;          /* símbolo cuadrado — buena proporción */
-  margin-bottom: 40px;
+  height: 96px;              /* 50% más grande que antes (64→96) */
+  margin-bottom: 36px;
 }
 .oex-hero-panel-title {
+  margin-bottom: 20px;
+}
+
+/* Jerarquía tipográfica del título hero */
+.oex-title-main {
+  display: block;
   font-family: 'Play', sans-serif;
-  font-size: clamp(22px, 3vw, 38px);   /* más pequeño que el original */
-  font-weight: 400; line-height: 1.25;
-  color: var(--text);
-  margin-bottom: 24px;
-  letter-spacing: 0.02em;
+  font-size: clamp(18px, 2.4vw, 32px);
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #E8E4DF;            /* casi blanco sobre gris 90% */
+  margin-bottom: 10px;
+}
+.oex-title-sub {
+  display: block;
+  font-family: 'Jura', sans-serif;
+  font-size: clamp(12px, 1.4vw, 18px);
+  font-weight: 400;
+  letter-spacing: 0.18em;
+  color: #6E6B66;            /* gris medio — menor jerarquía */
+  text-transform: uppercase;
 }
 .oex-hero-sub {
   font-family: 'Jura', sans-serif;
-  font-size: 12px; letter-spacing: 0.32em; text-transform: uppercase;
-  color: var(--oex-gray2);
-  margin-bottom: 52px; display: block;
+  font-size: 11px; letter-spacing: 0.32em; text-transform: uppercase;
+  color: #4E4C48;            /* gris oscuro sobre #141414 */
+  margin-bottom: 44px; display: block;
 }
 .btn-oex {
   display: inline-block;
@@ -149,15 +165,15 @@
 ══════════════════════════════════════ */
 #oex-proceso {
   padding: 96px 72px;
-  background: #ECEAE6;   /* gris cálido claro */
-  border-top: 1px solid #d0cec9;
-  border-bottom: 1px solid #d0cec9;
+  background: #E2DFD9;   /* gris cálido 85% blanco */
+  border-top: 1px solid #c8c5be;
+  border-bottom: 1px solid #c8c5be;
 }
 .oex-proceso-inner { max-width: 1200px; margin: 0 auto; }
 
 /* Override labels en sección clara */
-#oex-proceso .label { color: #6a6a66 !important; }
-#oex-proceso .oex-section-title { color: #1a1a18; }
+#oex-proceso .label { color: #7a7770 !important; }
+#oex-proceso .oex-section-title { color: #1a1916; }
 
 .oex-steps {
   display: grid;
@@ -170,11 +186,18 @@
 .oex-step {
   position: relative;
   overflow: hidden;
-  border-left: 1px solid #d0cec9;
+  border-left: 1px solid #c8c5be;
   cursor: default;
   transition: background 0.3s;
 }
 .oex-step:hover { background: rgba(0,0,0,0.04); }
+
+/* Paso 01 — recuadro completo, ligeramente más oscuro */
+.oex-step:first-child {
+  border: 1px solid #b8b5ae;
+  background: rgba(0,0,0,0.06);
+}
+.oex-step:first-child:hover { background: rgba(0,0,0,0.10); }
 
 /* Imagen de hover — cubre todo el step */
 .oex-step-img {
@@ -288,6 +311,23 @@
   color: var(--text); margin-bottom: 12px;
 }
 .oex-gracias p { font-size: 15px; color: var(--oex-gray1); }
+
+/* ── Fix 2: botón cerrar siempre visible en overlay obras ── */
+#oex-overlay-obra .overlay-close-wrap {
+  position: sticky;
+  top: 0;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 40px;
+  z-index: 400;
+  pointer-events: none;
+}
+#oex-overlay-obra .overlay-close {
+  position: static;
+  pointer-events: all;
+}
 
 /* ── FOOTER ── */
 .oex-footer {
