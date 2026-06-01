@@ -273,6 +273,10 @@
 .oex-obras-header .oex-section-title { margin-bottom: 0; }
 
 /* Grid B&W: base=foto original sin filtro (ya es B&N), hover=Mu-Z en color */
+.oex-grid-bw {
+  gap: 4px;
+  padding: 0 8px;
+}
 .oex-grid-bw .obra-img-wrap  { aspect-ratio: 16 / 9; }
 .oex-grid-bw .obra-img-base  { filter: none; }
 .oex-grid-bw .obra-img-hover { filter: none; }
