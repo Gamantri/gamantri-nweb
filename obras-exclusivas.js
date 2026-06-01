@@ -49,8 +49,8 @@ const obrasExclusivas = [
   {
     titulo: 'Llaima en Nubes',
     imgFoto: 'shared/assets/images/obras/E-Ga/O-O (1).jpg',
-    imgZoom: 'shared/assets/images/obras/5-O-Mu-Z.jpg',
-    imgFull: 'shared/assets/images/obras/4-O-Mu-F.jpg',
+    imgZoom: 'shared/assets/images/obras/E-Ga/O-Mu-Z (1).jpg',
+    imgFull: 'shared/assets/images/obras/E-Ga/O-Mu-F (1).jpg',
     descripcion: 'Episodio único y poético de un volcán icónico, que luego de muchas visitas se mostró de una manera irrepetible: vestido de nubes por tan solo unos breves minutos.',
     descripcion_en: 'A unique and poetic episode of an iconic volcano, which after many visits revealed itself in an unrepeatable way — dressed in clouds for just a few brief minutes.',
     series: [
@@ -66,8 +66,8 @@ const obrasExclusivas = [
   {
     titulo: 'Nodriza',
     imgFoto: 'shared/assets/images/obras/E-Ga/O-O (2).jpg',
-    imgZoom: 'shared/assets/images/obras/14-O-Mu-Z.jpg',
-    imgFull: 'shared/assets/images/obras/13-O-Mu-F.jpg',
+    imgZoom: 'shared/assets/images/obras/E-Ga/O-Mu-Z (2).jpg',
+    imgFull: 'shared/assets/images/obras/E-Ga/O-Mu-F (2).jpg',
     descripcion: 'Entre las magias meteorológicas de las montañas aparecen las nubes lenticulares. La magnitud y perfección de esta sobre el blanco puro del Volcán Llaima se muestra como una nave nodriza acechando.',
     descripcion_en: 'Among the meteorological wonders of the mountains appear lenticular clouds. The magnitude and perfection of this one hovering over the pure white of Llaima Volcano resembles a mothership looming overhead.',
     series: [
@@ -83,8 +83,8 @@ const obrasExclusivas = [
   {
     titulo: 'Caminos',
     imgFoto: 'shared/assets/images/obras/E-Ga/O-O (3).jpg',
-    imgZoom: 'shared/assets/images/obras/17-O-Mu-Z.jpg',
-    imgFull: 'shared/assets/images/obras/16-O-Mu-F.jpg',
+    imgZoom: 'shared/assets/images/obras/E-Ga/O-Mu-Z (3).jpg',
+    imgFull: 'shared/assets/images/obras/E-Ga/O-Mu-F (3).jpg',
     descripcion: 'En la máxima expresión del minimalismo en la naturaleza aparece seguido un paisaje de nieve. Cuando se suman nubes blancas bajas y apenas unos senderos que nos muestran ínfimos, se hace poesía.',
     descripcion_en: 'In the highest expression of minimalism in nature, a snow landscape often appears. When low white clouds drift in and only a few trails remind us of our smallness, it becomes poetry.',
     series: [
@@ -100,8 +100,8 @@ const obrasExclusivas = [
   {
     titulo: 'Penitentes',
     imgFoto: 'shared/assets/images/obras/E-Ga/O-O (4).jpg',
-    imgZoom: 'shared/assets/images/obras/23-O-Mu-Z.jpg',
-    imgFull: 'shared/assets/images/obras/22-O-Mu-F.jpg',
+    imgZoom: 'shared/assets/images/obras/E-Ga/O-Mu-Z (4).jpg',
+    imgFull: 'shared/assets/images/obras/E-Ga/O-Mu-F (4).jpg',
     descripcion: 'El cerro El Plomo, el más alto de la región de Santiago, con su historia Inca y su cumbre de 5424 msnm. Esta imagen muestra unos penitentes casi diseñados en su campamento base, el Federación.',
     descripcion_en: 'Cerro El Plomo, the highest peak in the Santiago region, with its Inca history and 5,424 m summit. This image shows the nearly sculpted penitentes at its base camp, the Federación.',
     series: [
@@ -118,8 +118,8 @@ const obrasExclusivas = [
   {
     titulo: 'Llaima en Nubes II',
     imgFoto: 'shared/assets/images/obras/E-Ga/O-O (5).jpg',
-    imgZoom: 'shared/assets/images/obras/5-O-Mu-Z.jpg',
-    imgFull: 'shared/assets/images/obras/4-O-Mu-F.jpg',
+    imgZoom: 'shared/assets/images/obras/E-Ga/O-Mu-Z (5).jpg',
+    imgFull: 'shared/assets/images/obras/E-Ga/O-Mu-F (5).jpg',
     descripcion: 'Episodio único y poético de un volcán icónico.',
     descripcion_en: 'A unique and poetic episode of an iconic volcano.',
     series: [{ precio: '680 USD', copia: '2/3', vendida: false, destacada: true }],
@@ -131,8 +131,8 @@ const obrasExclusivas = [
   {
     titulo: 'Nodriza II',
     imgFoto: 'shared/assets/images/obras/E-Ga/O-O (6).jpg',
-    imgZoom: 'shared/assets/images/obras/14-O-Mu-Z.jpg',
-    imgFull: 'shared/assets/images/obras/13-O-Mu-F.jpg',
+    imgZoom: 'shared/assets/images/obras/E-Ga/O-Mu-Z (6).jpg',
+    imgFull: 'shared/assets/images/obras/E-Ga/O-Mu-F (6).jpg',
     descripcion: 'La magnitud y perfección de esta nube lenticular sobre el Volcán Llaima.',
     descripcion_en: 'The magnitude and perfection of this lenticular cloud over Llaima Volcano.',
     series: [{ precio: '320 USD', copia: '1/3', vendida: false, destacada: true }],
@@ -144,8 +144,8 @@ const obrasExclusivas = [
   {
     titulo: 'Caminos II',
     imgFoto: 'shared/assets/images/obras/E-Ga/O-O (7).jpg',
-    imgZoom: 'shared/assets/images/obras/17-O-Mu-Z.jpg',
-    imgFull: 'shared/assets/images/obras/16-O-Mu-F.jpg',
+    imgZoom: 'shared/assets/images/obras/E-Ga/O-Mu-Z (7).jpg',
+    imgFull: 'shared/assets/images/obras/E-Ga/O-Mu-F (7).jpg',
     descripcion: 'Minimalismo puro. Un paisaje de nieve, nubes bajas y senderos ínfimos.',
     descripcion_en: 'Pure minimalism. A snow landscape, low clouds and faint trails.',
     series: [{ precio: '450 USD', copia: '1/3', vendida: false, destacada: true }],
@@ -157,8 +157,8 @@ const obrasExclusivas = [
   {
     titulo: 'Penitentes II',
     imgFoto: 'shared/assets/images/obras/E-Ga/O-O (8).jpg',
-    imgZoom: 'shared/assets/images/obras/23-O-Mu-Z.jpg',
-    imgFull: 'shared/assets/images/obras/22-O-Mu-F.jpg',
+    imgZoom: 'shared/assets/images/obras/E-Ga/O-Mu-Z (8).jpg',
+    imgFull: 'shared/assets/images/obras/E-Ga/O-Mu-F (8).jpg',
     descripcion: 'El cerro El Plomo y sus penitentes en el campamento base Federación.',
     descripcion_en: 'Cerro El Plomo and its penitentes at the Federación base camp.',
     series: [{ precio: '350 USD', copia: '1/3', vendida: false, destacada: true }],
@@ -170,8 +170,8 @@ const obrasExclusivas = [
   {
     titulo: 'Llaima en Nubes III',
     imgFoto: 'shared/assets/images/obras/E-Ga/O-O (9).jpg',
-    imgZoom: 'shared/assets/images/obras/5-O-Mu-Z.jpg',
-    imgFull: 'shared/assets/images/obras/4-O-Mu-F.jpg',
+    imgZoom: 'shared/assets/images/obras/E-Ga/O-Mu-Z (9).jpg',
+    imgFull: 'shared/assets/images/obras/E-Ga/O-Mu-F (9).jpg',
     descripcion: 'Un volcán icónico vestido de nubes por tan solo unos breves minutos.',
     descripcion_en: 'An iconic volcano dressed in clouds for just a few brief minutes.',
     series: [{ precio: '1.100 USD', copia: '3/3', vendida: false, destacada: true }],
