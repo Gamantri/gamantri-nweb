@@ -227,7 +227,8 @@ header.scrolled {
   margin-top: calc(var(--marco) * 4);
 }
 
-/* Index obras: sin filtro — Mu-Z en color como portada */
+/* Index obras: portada con saturación reducida 40% */
+#obras .obra-img-base { filter: saturate(60%); }
 #obras .obra-card:hover .obra-img-base  { opacity: 0; }
 #obras .obra-card:hover .obra-img-hover { opacity: 1; }
 
