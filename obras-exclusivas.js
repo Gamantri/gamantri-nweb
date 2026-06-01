@@ -191,8 +191,8 @@ function buildGrid() {
     <div class="obra-card" onclick="openOexObra(${i})">
       <div class="obra-celda">
         <div class="obra-img-wrap">
-          <img class="obra-img-base" src="${o.imgFoto}" alt="${o.titulo}" loading="lazy" />
-          <img class="obra-img-hover" src="${o.imgZoom}" alt="${o.titulo} color" loading="lazy" />
+          <img class="obra-img-base" src="${o.imgZoom}" alt="${o.titulo}" loading="lazy" />
+          <img class="obra-img-hover" src="${o.imgFoto}" alt="${o.titulo} color" loading="lazy" />
           <div class="obra-label">
             <div class="obra-card-title">${o.titulo}</div>
             <span class="obra-badge">${o.precioDestacado}</span>
