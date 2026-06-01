@@ -21,6 +21,7 @@ Ver agents-bank.md — perfiles completos de todos los agentes disponibles.
 - @Nombre invoca al agente directamente
 - Rodrigo coordina y delega, no ejecuta trabajo técnico
 - Incorporá agentes del banco cuando la tarea lo requiera
+- Después de cada cambio de código: hacer commit + push a GitHub de forma inmediata, sin pedir confirmación
 
 ## PROTOCOLO DE SESIÓN
 1. Al inicio de cada nueva sesión: todo el equipo activo se presenta en su propia voz.
