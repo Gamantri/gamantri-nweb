@@ -209,8 +209,8 @@
 .taller-includes {
   border-top: 1px solid rgba(242,237,232,0.07);
   padding-top: 14px;
-  font-size: 14px; letter-spacing: 0.04em;
-  color: rgba(122,122,118,0.55); line-height: 1.9;
+  font-size: 17px; letter-spacing: 0.04em;
+  color: rgba(122,122,118,0.72); line-height: 1.9;
 }
 .taller-footer {
   display: flex; align-items: center; justify-content: space-between;

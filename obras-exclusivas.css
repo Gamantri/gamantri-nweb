@@ -467,6 +467,9 @@
   .oex-steps { grid-template-columns: repeat(3, 1fr); }
   .oex-manifiesto-inner { gap: 48px; }
 }
+/* oex-step-mob-img: hidden on desktop, shown on mobile */
+.oex-step-mob-img { display: none; }
+
 @media (max-width: 768px) {
   #oex-header { padding: 20px 24px; }
   #oex-hero-panel { padding: 100px 28px 64px; }
@@ -478,6 +481,13 @@
   .oex-step { border-left: none; border-top: 1px solid #d0cec9; }
   .oex-footer { flex-direction: column; gap: 16px; padding: 28px 24px; text-align: center; }
   #oex-obras .obras-footer-row { padding: 24px; }
+  .oex-paso-expand { display: none !important; }
+  .oex-step-mob-img {
+    display: block;
+    width: 100%; aspect-ratio: 4/3;
+    object-fit: cover;
+    filter: grayscale(100%) contrast(1.05);
+  }
 }
 @media (max-width: 480px) {
   #oex-obras .obras-grid { grid-template-columns: 1fr; }
