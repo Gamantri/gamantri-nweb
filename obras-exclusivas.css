@@ -276,8 +276,8 @@
 /* Marco = 2.5% del ancho de card (~33vw). Gap interno = 2× marco. Laterales = 4× marco. */
 .oex-grid-bw {
   --marco: calc(0.025 * (100vw / 3));
-  gap: calc(var(--marco) * 2);
-  padding: 0 calc(var(--marco) * 4);
+  gap: calc(var(--marco) * 4);
+  padding: 0 calc(var(--marco) * 8);
 }
 .oex-grid-bw .obra-img-wrap  { aspect-ratio: 16 / 9; }
 .oex-grid-bw .obra-img-base  { filter: none; }
