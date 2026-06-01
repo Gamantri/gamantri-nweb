@@ -484,8 +484,7 @@
   .oex-paso-expand { display: none !important; }
   .oex-step-mob-img {
     display: block;
-    width: 100%; aspect-ratio: 4/3;
-    object-fit: cover;
+    width: 100%; height: auto;
     filter: grayscale(100%) contrast(1.05);
   }
 }
