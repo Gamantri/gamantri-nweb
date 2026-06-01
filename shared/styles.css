@@ -224,6 +224,7 @@ header.scrolled {
   --marco: calc(0.025 * (100vw / 3));
   gap: calc(var(--marco) * 4);
   padding: 0 calc(var(--marco) * 8);
+  margin-top: calc(var(--marco) * 4);
 }
 
 /* Index obras: default monocromático con tono naranja pálido cálido */
