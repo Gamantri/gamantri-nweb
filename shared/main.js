@@ -23,7 +23,7 @@ function closeMobileMenu() {
 // ── DATOS OBRAS ──
 const obras = [
   {
-    titulo: 'La Cárcel',
+    titulo: 'Iluminado',
     imgFoto: 'shared/assets/images/obras/I-Ga/O-O (1).jpg',
     imgZoom: 'shared/assets/images/obras/I-Ga/O-Mu-Z (1).jpg',
     imgFull: 'shared/assets/images/obras/I-Ga/O-Mu-F (1).jpg',

@@ -46,18 +46,23 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
 // Posiciones TBD: 1, 3, 5, 8, 9
 // ══════════════════════════════════════
 const obrasExclusivas = [
-  // ── Pos 1 — TBD ──
+  // ── Pos 1 — Iluminado ──
   {
-    titulo: '—',
+    titulo: 'Iluminado',
     imgFoto: 'shared/assets/images/obras/E-Ga/O-O (1).jpg',
     imgZoom: 'shared/assets/images/obras/E-Ga/O-Mu-Z (1).jpg',
     imgFull: 'shared/assets/images/obras/E-Ga/O-Mu-F (1).jpg',
-    descripcion: '',
-    descripcion_en: '',
-    series: [{ precio: '—', copia: '1/3', vendida: false, destacada: true }],
+    descripcion: 'Entre las majestuosas vistas de la Cordillera Blanca de Perú, se asoma en medio de un día nublado, el majestuoso Huascarán. Su pico sur en la foto, aprovechando una ventana en cielo para quedar Iluminado.',
+    descripcion_en: 'Among the majestic views of the Cordillera Blanca in Peru, the mighty Huascarán emerges through an overcast day. Its south peak caught in the frame, making the most of a window in the sky to stand fully Illuminated.',
+    series: [
+      { precio: '540 USD', copia: '1/3', vendida: false, destacada: true },
+      { precio: '850 USD', copia: '2/3', vendida: false },
+      { precio: '1.250 USD', copia: '3/3', vendida: false },
+    ],
     piezas: 'Unidad', piezas_en: 'Single print',
-    referencia: '—', referencia_en: '—',
-    precioDestacado: '—',
+    referencia: '60×90 cm, marco de aluminio, con paspartú',
+    referencia_en: '60×90 cm, aluminum frame, with mat',
+    precioDestacado: '$540 USD',
   },
   // ── Pos 2 — Llaima en Nubes ──
   {
@@ -73,22 +78,27 @@ const obrasExclusivas = [
       { precio: '1.100 USD', copia: '3/3', vendida: false },
     ],
     piezas: 'Unidad', piezas_en: 'Single print',
-    referencia: '60×90 cm, marco de aluminio, con paspartú',
-    referencia_en: '60×90 cm, aluminum frame, with mat',
+    referencia: '70×100 cm, marco de madera box, con paspartú',
+    referencia_en: '70×100 cm, box wood frame, with mat',
     precioDestacado: '$680 USD',
   },
-  // ── Pos 3 — TBD ──
+  // ── Pos 3 — Huascarán ──
   {
-    titulo: '—',
+    titulo: 'Huascarán',
     imgFoto: 'shared/assets/images/obras/E-Ga/O-O (3).jpg',
     imgZoom: 'shared/assets/images/obras/E-Ga/O-Mu-Z (3).jpg',
     imgFull: 'shared/assets/images/obras/E-Ga/O-Mu-F (3).jpg',
-    descripcion: '',
-    descripcion_en: '',
-    series: [{ precio: '—', copia: '1/3', vendida: false, destacada: true }],
+    descripcion: 'La vista desde el campamento glaciar del Chopicalqui, que muestra a la izquierda el Huandoy, el segundo más alto del parque, luego el Caraz central y el Pisco oeste, un skyline de sueños...',
+    descripcion_en: 'The view from the glacial camp of Chopicalqui, showing on the left Huandoy — the second highest peak in the park — then central Caraz and western Pisco, a dream skyline...',
+    series: [
+      { precio: '380 USD', copia: '1/3', vendida: false, destacada: true },
+      { precio: '450 USD', copia: '2/3', vendida: false },
+      { precio: '620 USD', copia: '3/3', vendida: false },
+    ],
     piezas: 'Unidad', piezas_en: 'Single print',
-    referencia: '—', referencia_en: '—',
-    precioDestacado: '—',
+    referencia: '80×140 cm, marco de aluminio, con paspartú',
+    referencia_en: '80×140 cm, aluminum frame, with mat',
+    precioDestacado: '$380 USD',
   },
   // ── Pos 4 — Nodriza ──
   {
@@ -99,27 +109,32 @@ const obrasExclusivas = [
     descripcion: 'Entre las magias meteorológicas de las montañas aparecen las nubes lenticulares. La magnitud y perfección de esta sobre el blanco puro del Volcán Llaima se muestra como una nave nodriza acechando.',
     descripcion_en: 'Among the meteorological wonders of the mountains appear lenticular clouds. The magnitude and perfection of this one hovering over the pure white of Llaima Volcano resembles a mothership looming overhead.',
     series: [
-      { precio: '320 USD', copia: '1/3', vendida: false, destacada: true },
-      { precio: '580 USD', copia: '2/3', vendida: false },
-      { precio: '950 USD', copia: '3/3', vendida: false },
+      { precio: '480 USD', copia: '1/3', vendida: false, destacada: true },
+      { precio: '720 USD', copia: '2/3', vendida: false },
+      { precio: '1.100 USD', copia: '3/3', vendida: false },
     ],
     piezas: 'Unidad', piezas_en: 'Single print',
     referencia: '50×80 cm, marco de acero, con paspartú',
     referencia_en: '50×80 cm, steel frame, with mat',
-    precioDestacado: '$320 USD',
+    precioDestacado: '$480 USD',
   },
-  // ── Pos 5 — TBD ──
+  // ── Pos 5 — El Cóndor y la Luna ──
   {
-    titulo: '—',
+    titulo: 'El Cóndor y la Luna',
     imgFoto: 'shared/assets/images/obras/E-Ga/O-O (5).jpg',
     imgZoom: 'shared/assets/images/obras/E-Ga/O-Mu-Z (5).jpg',
     imgFull: 'shared/assets/images/obras/E-Ga/O-Mu-F (5).jpg',
-    descripcion: '',
-    descripcion_en: '',
-    series: [{ precio: '—', copia: '1/3', vendida: false, destacada: true }],
+    descripcion: 'Sin edición destructiva, sin IA. Simplemente un disparo de la cámara en un momento mágico en que una familia de cóndores volaba por encima de los cerros del Alfalfal en una tarde con la luna filtrada entre las nubes...',
+    descripcion_en: 'No destructive editing, no AI. Simply a single camera shot in a magical moment as a family of condors soared above the hills of Alfalfal on an afternoon with the moon filtering through the clouds...',
+    series: [
+      { precio: '650 USD', copia: '1/3', vendida: false },
+      { precio: '820 USD', copia: '2/3', vendida: false, destacada: true },
+      { precio: '1.100 USD', copia: '3/3', vendida: false },
+    ],
     piezas: 'Unidad', piezas_en: 'Single print',
-    referencia: '—', referencia_en: '—',
-    precioDestacado: '—',
+    referencia: '80×140 cm, marco de aluminio, con paspartú',
+    referencia_en: '80×140 cm, aluminum frame, with mat',
+    precioDestacado: '$920 USD',
   },
   // ── Pos 6 — Penitentes ──
   {
@@ -135,8 +150,8 @@ const obrasExclusivas = [
       { precio: '920 USD', copia: '3/3', vendida: false },
     ],
     piezas: 'Unidad', piezas_en: 'Single print',
-    referencia: '50×90 cm, marco de aluminio, con paspartú',
-    referencia_en: '50×90 cm, aluminum frame, with mat',
+    referencia: '72×112 cm, Pro canvas, marco de madera, sin paspartú',
+    referencia_en: '72×112 cm, Pro canvas, wooden frame, no mat',
     precioDestacado: '$350 USD',
   },
   // ── Pos 7 — Caminos ──
@@ -157,31 +172,41 @@ const obrasExclusivas = [
     referencia_en: '80×110 cm, aluminum frame, with mat',
     precioDestacado: '$450 USD',
   },
-  // ── Pos 8 — TBD ──
+  // ── Pos 8 — Caminata Lunar ──
   {
-    titulo: '—',
+    titulo: 'Caminata Lunar',
     imgFoto: 'shared/assets/images/obras/E-Ga/O-O (8).jpg',
     imgZoom: 'shared/assets/images/obras/E-Ga/O-Mu-Z (8).jpg',
     imgFull: 'shared/assets/images/obras/E-Ga/O-Mu-F (8).jpg',
-    descripcion: '',
-    descripcion_en: '',
-    series: [{ precio: '—', copia: '1/3', vendida: false, destacada: true }],
+    descripcion: 'Descendiendo del ataque de cumbre del Chopicalqui, en la Cordillera Blanca, Perú. Las cordadas bajando exhaustas a paso lento y controlado, como de astronautas en la luna.',
+    descripcion_en: 'Descending from the summit push of Chopicalqui, in the Cordillera Blanca, Peru. The roped teams making their way down — exhausted, slow and controlled — like astronauts on the moon.',
+    series: [
+      { precio: '540 USD', copia: '1/3', vendida: false, destacada: true },
+      { precio: '680 USD', copia: '2/3', vendida: false },
+      { precio: '920 USD', copia: '3/3', vendida: false },
+    ],
     piezas: 'Unidad', piezas_en: 'Single print',
-    referencia: '—', referencia_en: '—',
-    precioDestacado: '—',
+    referencia: '60×90 cm, marco de madera, paspartú delgado',
+    referencia_en: '60×90 cm, wooden frame, slim mat',
+    precioDestacado: '$540 USD',
   },
-  // ── Pos 9 — TBD ──
+  // ── Pos 9 — Horizontes ──
   {
-    titulo: '—',
+    titulo: 'Horizontes',
     imgFoto: 'shared/assets/images/obras/E-Ga/O-O (9).jpg',
     imgZoom: 'shared/assets/images/obras/E-Ga/O-Mu-Z (9).jpg',
     imgFull: 'shared/assets/images/obras/E-Ga/O-Mu-F (9).jpg',
-    descripcion: '',
-    descripcion_en: '',
-    series: [{ precio: '—', copia: '1/3', vendida: false, destacada: true }],
+    descripcion: 'A la bajada del volcán Llaima, en una mañana cubierta de nubes, todo parece perderse en la inmensidad blanca. Solo por diferencia de intensidad en el blanco, se pueden distinguir los horizontes, que parecieran de otro planeta...',
+    descripcion_en: 'On the descent from Llaima Volcano, on a morning buried in cloud, everything seems to dissolve into white immensity. Only by differences in the intensity of white can the horizons be distinguished — as if from another planet...',
+    series: [
+      { precio: '380 USD', copia: '1/3', vendida: false, destacada: true },
+      { precio: '540 USD', copia: '2/3', vendida: false },
+      { precio: '720 USD', copia: '3/3', vendida: false },
+    ],
     piezas: 'Unidad', piezas_en: 'Single print',
-    referencia: '—', referencia_en: '—',
-    precioDestacado: '—',
+    referencia: '90×120 cm, marco de aluminio, paspartú delgado',
+    referencia_en: '90×120 cm, aluminum frame, slim mat',
+    precioDestacado: '$380 USD',
   },
 ];
 
