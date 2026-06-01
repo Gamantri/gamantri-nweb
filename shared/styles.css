@@ -227,13 +227,9 @@ header.scrolled {
   margin-top: calc(var(--marco) * 4);
 }
 
-/* Index obras: default monocromático con tono naranja pálido cálido */
-#obras .obra-img-base {
-  filter: grayscale(1) sepia(0.45) hue-rotate(340deg) saturate(0.55) brightness(0.9);
-}
-/* Hover: misma imagen n-O-Mu-F en full color, sin filtro */
+/* Index obras: sin filtro — Mu-Z en color como portada */
 #obras .obra-card:hover .obra-img-base  { opacity: 0; }
-#obras .obra-card:hover .obra-img-hover { opacity: 1; filter: none; }
+#obras .obra-card:hover .obra-img-hover { opacity: 1; }
 
 .obra-label {
   position: absolute;
