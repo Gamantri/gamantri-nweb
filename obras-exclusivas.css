@@ -269,8 +269,13 @@
   padding: 96px 0 0;
   border-top: 1px solid var(--oex-line);
 }
-.oex-obras-header { padding: 0 56px 48px; }
-.oex-obras-header .oex-section-title { margin-bottom: 0; }
+.oex-obras-header {
+  padding: 0 calc(0.025 * (100vw / 3) * 8) 48px;
+}
+.oex-obras-header .oex-section-title {
+  margin-bottom: 0;
+  font-size: calc(clamp(18px, 2.1vw, 27px) * 0.75);
+}
 
 /* Grid B&W: base=foto original sin filtro (ya es B&N), hover=Mu-Z en color */
 /* Marco = 2.5% del ancho de card (~33vw). Gap interno = 2× marco. Laterales = 4× marco. */
