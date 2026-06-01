@@ -811,6 +811,15 @@ footer {
 }
 .mobile-menu a:hover, .mobile-menu button:hover { color: var(--accent); }
 .mobile-menu .mobile-lang { margin-top: 40px; }
+.mobile-menu-close {
+  position: absolute; top: 24px; right: 24px;
+  font-size: 32px; line-height: 1;
+  color: var(--text) !important; background: none !important;
+  border: none !important; cursor: pointer;
+  padding: 4px 10px;
+  transition: color 0.3s;
+}
+.mobile-menu-close:hover { color: var(--accent) !important; }
 
 /* ── Responsive ── */
 @media (max-width: 900px) {

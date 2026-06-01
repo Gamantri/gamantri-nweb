@@ -77,9 +77,9 @@ const obras = [
   },
   {
     titulo: 'Era Leo',
-    imgFoto: 'shared/assets/images/obras/I-Ga/O-O (3).jpg',
-    imgZoom: 'shared/assets/images/obras/I-Ga/O-Mu-Z (3).jpg',
-    imgFull: 'shared/assets/images/obras/I-Ga/O-Mu-F (3).jpg',
+    imgFoto: 'shared/assets/images/obras/I-Ga/O-O (4).jpg',
+    imgZoom: 'shared/assets/images/obras/I-Ga/O-Mu-Z (4).jpg',
+    imgFull: 'shared/assets/images/obras/I-Ga/O-Mu-F (4).jpg',
     descripcion: 'Leo Cea con 11 años colgando del paso más difícil de Era Vella, en Margalef, Catalunya. Simboliza un momento único de la escalada mundial: el encadene del 9a (5.14d) más joven de la historia. Noviembre de 2024.',
     descripcion_en: 'Leo Cea at 11 years old hanging on the crux of Era Vella in Margalef, Catalonia. It captures a unique moment in world climbing history — the youngest 9a (5.14d) ascent ever recorded. November 2024.',
     series: [
@@ -130,9 +130,9 @@ const obras = [
   },
   {
     titulo: 'El Último Tango',
-    imgFoto: 'shared/assets/images/obras/I-Ga/O-O (4).jpg',
-    imgZoom: 'shared/assets/images/obras/I-Ga/O-Mu-Z (4).jpg',
-    imgFull: 'shared/assets/images/obras/I-Ga/O-Mu-F (4).jpg',
+    imgFoto: 'shared/assets/images/obras/I-Ga/O-O (3).jpg',
+    imgZoom: 'shared/assets/images/obras/I-Ga/O-Mu-Z (3).jpg',
+    imgFull: 'shared/assets/images/obras/I-Ga/O-Mu-F (3).jpg',
     descripcion: 'Entre las paredes de la mina en el Cajón del Maipo aparece este icónico multilargo. Captura del primer ascenso masculino, de dos de los mejores escaladores de Chile, Ronny Escobar y Benja Vargas para el Documental homónimo.',
     descripcion_en: 'Between the walls of the mine in Cajón del Maipo stands this iconic multi-pitch route. A capture of the first male ascent by two of Chile\'s best climbers, Ronny Escobar and Benja Vargas, for the documentary of the same name.',
     series: [
