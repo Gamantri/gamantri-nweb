@@ -489,7 +489,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (ctaLogo) { ctaLogo.style.opacity = '0'; ctaLogo.style.transition = 'opacity 0.5s ease'; }
 
   // Reservar el ancho para que el botón no cambie de tamaño al escribirse
-  const fullText = ctaText.textContent.trim();
+  const fullText = ctaText.getAttribute('data-' + lang) || ctaText.textContent.trim();
   ctaText.style.minWidth = ctaText.getBoundingClientRect().width + 'px';
 
   const obs = new IntersectionObserver((entries) => {
