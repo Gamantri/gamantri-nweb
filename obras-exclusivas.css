@@ -272,9 +272,16 @@
 .oex-obras-header { padding: 0 56px 48px; }
 .oex-obras-header .oex-section-title { margin-bottom: 0; }
 
-/* Grid B&W: base=O-Mu-Z en gris, hover=O-Mu-F en color */
-.oex-grid-bw .obra-img-base  { filter: grayscale(100%) contrast(1.05); }
-.oex-grid-bw .obra-img-hover { filter: none; }  /* color en hover */
+/* Grid B&W: base=foto original sin filtro (ya es B&N), hover=Mu-Z en color */
+.oex-grid-bw .obra-img-wrap  { aspect-ratio: 16 / 9; }
+.oex-grid-bw .obra-img-base  { filter: none; }
+.oex-grid-bw .obra-img-hover { filter: none; }
+
+/* CO: imágenes en overlay obras exclusivas */
+#oex-overlay-obra .obra-modal-foto-item { height: auto; object-fit: cover; width: 100%; display: block; }
+#oex-foto-sola  { aspect-ratio: 16 / 9; }
+#oex-foto-zoom  { aspect-ratio: 16 / 9; }
+#oex-foto-full  { aspect-ratio: 3 / 2; }
 
 /* ══════════════════════════════════════
    ⑥ FORMULARIO — jerarquía en grises
