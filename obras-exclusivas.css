@@ -283,6 +283,7 @@
   --marco: calc(0.025 * (100vw / 3));
   gap: calc(var(--marco) * 4);
   padding: 0 calc(var(--marco) * 8);
+  margin-bottom: calc(var(--marco) * 4);
 }
 .oex-grid-bw .obra-img-wrap  { aspect-ratio: 16 / 9; }
 .oex-grid-bw .obra-img-base  { filter: none; }
@@ -300,6 +301,7 @@
 #oex-contacto {
   padding: 96px 72px;
   border-top: 1px solid var(--oex-line);
+  background: #212121;
 }
 .oex-form-wrap { max-width: 800px; margin: 0 auto; }
 

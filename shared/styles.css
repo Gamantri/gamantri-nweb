@@ -279,7 +279,7 @@ header.scrolled {
 /* CTA Colección Exclusiva — doble borde animado, Griffiths */
 .btn-coleccion-exclusiva {
   display: inline-flex;
-  align-items: center; gap: 14px;
+  align-items: center; gap: 6px;
   background: transparent; color: var(--text);
   font-family: 'Griffiths', 'Play', sans-serif;
   font-size: 15px; font-weight: 400; letter-spacing: 0.18em; text-transform: uppercase;
