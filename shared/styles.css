@@ -219,6 +219,13 @@ header.scrolled {
 .obra-card:hover .obra-img-hover { opacity: 1; }
 .obra-card:hover .obra-img-base  { opacity: 0; }
 
+/* Index obras: separaciones proporcionales al marco — mismo sistema que E-Ga */
+#obras .obras-grid {
+  --marco: calc(0.025 * (100vw / 3));
+  gap: calc(var(--marco) * 4);
+  padding: 0 calc(var(--marco) * 8);
+}
+
 /* Index obras: default monocromático con tono naranja pálido cálido */
 #obras .obra-img-base {
   filter: grayscale(1) sepia(0.45) hue-rotate(340deg) saturate(0.55) brightness(0.9);
