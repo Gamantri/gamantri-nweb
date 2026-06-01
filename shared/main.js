@@ -24,9 +24,9 @@ function closeMobileMenu() {
 const obras = [
   {
     titulo: 'La Cárcel',
-    imgFoto: 'shared/assets/images/obras/3-O-O.jpg',
-    imgZoom: 'shared/assets/images/obras/2-O-Mu-Z.jpg',
-    imgFull: 'shared/assets/images/obras/1-O-Mu-F.jpg',
+    imgFoto: 'shared/assets/images/obras/I-Ga/O-O (1).jpg',
+    imgZoom: 'shared/assets/images/obras/I-Ga/O-Mu-Z (1).jpg',
+    imgFull: 'shared/assets/images/obras/I-Ga/O-Mu-F (1).jpg',
     descripcion: 'Como si la naturaleza tuviera un segmento diseñado y construido por el hombre. La cárcel muestra un sector de columnas perfectas de basalto en el Valle de los Cóndores en Chile, uno de los sectores de escalada más imponentes del mundo.',
     descripcion_en: 'As if nature had a segment designed and built by man. La Cárcel reveals a sector of perfect basalt columns in Valle de los Cóndores, Chile — one of the most imposing climbing destinations in the world.',
     series: [
@@ -60,9 +60,9 @@ const obras = [
   },
   {
     titulo: 'Los Cuatro Elementos',
-    imgFoto: 'shared/assets/images/obras/9-O-O.jpg',
-    imgZoom: 'shared/assets/images/obras/8-O-Mu-Z.jpg',
-    imgFull: 'shared/assets/images/obras/7-O-Mu-F.jpg',
+    imgFoto: 'shared/assets/images/obras/I-Ga/O-O (2).jpg',
+    imgZoom: 'shared/assets/images/obras/I-Ga/O-Mu-Z (2).jpg',
+    imgFull: 'shared/assets/images/obras/I-Ga/O-Mu-F (2).jpg',
     descripcion: 'Un recorrido a lo largo de la cordillera chilena. Cuatro imágenes tomadas a distintas horas del día en diferentes regiones del país, simbolizando los cuatro elementos. El fuego del norte, el agua de los volcanes araucanos, la tierra en Cochamó, y el aire con los vientos patagónicos de Aysén.',
     descripcion_en: 'A journey along the Chilean Andes. Four images taken at different hours of the day across different regions of the country, symbolizing the four elements — fire from the north, water from the Araucanian volcanoes, earth in Cochamó, and wind with the Patagonian gales of Aysén.',
     series: [
@@ -77,9 +77,9 @@ const obras = [
   },
   {
     titulo: 'Era Leo',
-    imgFoto: 'shared/assets/images/obras/12-O-O.jpg',
-    imgZoom: 'shared/assets/images/obras/11-O-Mu-Z.jpg',
-    imgFull: 'shared/assets/images/obras/10-O-Mu-F.jpg',
+    imgFoto: 'shared/assets/images/obras/I-Ga/O-O (3).jpg',
+    imgZoom: 'shared/assets/images/obras/I-Ga/O-Mu-Z (3).jpg',
+    imgFull: 'shared/assets/images/obras/I-Ga/O-Mu-F (3).jpg',
     descripcion: 'Leo Cea con 11 años colgando del paso más difícil de Era Vella, en Margalef, Catalunya. Simboliza un momento único de la escalada mundial: el encadene del 9a (5.14d) más joven de la historia. Noviembre de 2024.',
     descripcion_en: 'Leo Cea at 11 years old hanging on the crux of Era Vella in Margalef, Catalonia. It captures a unique moment in world climbing history — the youngest 9a (5.14d) ascent ever recorded. November 2024.',
     series: [
@@ -130,9 +130,9 @@ const obras = [
   },
   {
     titulo: 'El Último Tango',
-    imgFoto: 'shared/assets/images/obras/21-O-O.jpg',
-    imgZoom: 'shared/assets/images/obras/20-O-Mu-Z.jpg',
-    imgFull: 'shared/assets/images/obras/19-O-Mu-F.jpg',
+    imgFoto: 'shared/assets/images/obras/I-Ga/O-O (4).jpg',
+    imgZoom: 'shared/assets/images/obras/I-Ga/O-Mu-Z (4).jpg',
+    imgFull: 'shared/assets/images/obras/I-Ga/O-Mu-F (4).jpg',
     descripcion: 'Entre las paredes de la mina en el Cajón del Maipo aparece este icónico multilargo. Captura del primer ascenso masculino, de dos de los mejores escaladores de Chile, Ronny Escobar y Benja Vargas para el Documental homónimo.',
     descripcion_en: 'Between the walls of the mine in Cajón del Maipo stands this iconic multi-pitch route. A capture of the first male ascent by two of Chile\'s best climbers, Ronny Escobar and Benja Vargas, for the documentary of the same name.',
     series: [
@@ -164,9 +164,26 @@ const obras = [
   },
   {
     titulo: 'Bloque Chileno',
-    imgFoto: 'shared/assets/images/obras/27-O-O.jpg',
-    imgZoom: 'shared/assets/images/obras/26-O-Mu-Z.jpg',
-    imgFull: 'shared/assets/images/obras/25-O-Mu-F.jpg',
+    imgFoto: 'shared/assets/images/obras/I-Ga/O-O (6).jpg',
+    imgZoom: 'shared/assets/images/obras/I-Ga/O-Mu-Z (6).jpg',
+    imgFull: 'shared/assets/images/obras/I-Ga/O-Mu-F (6).jpg',
+    descripcion: 'Composición meticulosamente diseñada de 4 sectores icónicos de Chile (Cajón del Maipo, Valle de los Cóndores, Cerro Castillo y Cochamó) en una formación armónica que unifica a las rocas y a los escaladores en una diagonal ascendente.',
+    descripcion_en: 'A meticulously designed composition of 4 iconic Chilean sectors (Cajón del Maipo, Valle de los Cóndores, Cerro Castillo and Cochamó) in a harmonious formation that unifies rocks and climbers in an ascending diagonal.',
+    series: [
+      { precio: '480 USD', copia: '1/3', vendida: false, destacada: true },
+      { precio: '760 USD', copia: '2/3', vendida: false },
+      { precio: '1.250 USD', copia: '3/3', vendida: false },
+    ],
+    piezas: 'Cuatro individuales', piezas_en: 'Four individual',
+    referencia: '40×60 cm cada pieza, marco de madera, con paspartú',
+    referencia_en: '40×60 cm each piece, wooden frame, with mat',
+    precioDestacado: '$480 USD',
+  },
+  {
+    titulo: 'Universo',
+    imgFoto: 'shared/assets/images/obras/I-Ga/O-O (5).jpg',
+    imgZoom: 'shared/assets/images/obras/I-Ga/O-Mu-Z (5).jpg',
+    imgFull: 'shared/assets/images/obras/I-Ga/O-Mu-F (5).jpg',
     descripcion: 'Composición meticulosamente diseñada de 4 sectores icónicos de Chile (Cajón del Maipo, Valle de los Cóndores, Cerro Castillo y Cochamó) en una formación armónica que unifica a las rocas y a los escaladores en una diagonal ascendente.',
     descripcion_en: 'A meticulously designed composition of 4 iconic Chilean sectors (Cajón del Maipo, Valle de los Cóndores, Cerro Castillo and Cochamó) in a harmonious formation that unifies rocks and climbers in an ascending diagonal.',
     series: [
