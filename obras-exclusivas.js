@@ -127,14 +127,14 @@ const obrasExclusivas = [
     descripcion: 'Sin edición destructiva, sin IA. Simplemente un disparo de la cámara en un momento mágico en que una familia de cóndores volaba por encima de los cerros del Alfalfal en una tarde con la luna filtrada entre las nubes...',
     descripcion_en: 'No destructive editing, no AI. Simply a single camera shot in a magical moment as a family of condors soared above the hills of Alfalfal on an afternoon with the moon filtering through the clouds...',
     series: [
-      { precio: '650 USD', copia: '1/3', vendida: false },
-      { precio: '820 USD', copia: '2/3', vendida: false, destacada: true },
+      { precio: '650 USD', copia: '1/3', vendida: false, destacada: true },
+      { precio: '820 USD', copia: '2/3', vendida: false },
       { precio: '1.100 USD', copia: '3/3', vendida: false },
     ],
     piezas: 'Unidad', piezas_en: 'Single print',
     referencia: '80×140 cm, marco de aluminio, con paspartú',
     referencia_en: '80×140 cm, aluminum frame, with mat',
-    precioDestacado: '$920 USD',
+    precioDestacado: '$650 USD',
   },
   // ── Pos 6 — Penitentes ──
   {
