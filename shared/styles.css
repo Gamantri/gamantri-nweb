@@ -227,8 +227,8 @@ header.scrolled {
   margin-top: calc(var(--marco) * 4);
 }
 
-/* Index obras: portada con saturación reducida 40% */
-#obras .obra-img-base { filter: saturate(60%); }
+/* Index obras: portada B&N (versión 6) */
+#obras .obra-img-base { filter: saturate(0%); }
 #obras .obra-card:hover .obra-img-base  { opacity: 0; }
 #obras .obra-card:hover .obra-img-hover { opacity: 1; }
 
