@@ -447,9 +447,9 @@ header.scrolled {
   mask-image: linear-gradient(to right, transparent, black 12%, black 88%, transparent);
 }
 .marquee-inner {
-  display: flex; gap: 72px; align-items: center;
+  display: flex; gap: 50px; align-items: center;
   width: max-content;
-  animation: marquee 55s linear infinite;
+  animation: marquee 44s linear infinite;
 }
 .marquee-inner:hover { animation-play-state: paused; }
 @keyframes marquee {
