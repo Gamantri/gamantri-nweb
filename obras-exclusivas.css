@@ -487,6 +487,14 @@
     width: 100%; height: auto;
     filter: grayscale(100%) contrast(1.05);
   }
+  /* mob-E-Pr: desactivar hover/click oscuro en pasos 02-05, solo 01 queda fijo oscuro */
+  .oex-step:hover { background: transparent; }
+  .oex-step:hover .oex-step-img { opacity: 0; }
+  .oex-step:hover .oex-step-body { opacity: 1; }
+  .oex-step-clickable:hover { background: transparent; }
+  /* Paso 01 mantiene su fondo oscuro fijo */
+  .oex-step:first-child,
+  .oex-step:first-child:hover { background: rgba(0,0,0,0.06); }
 }
 @media (max-width: 480px) {
   #oex-obras .obras-grid { grid-template-columns: 1fr; }

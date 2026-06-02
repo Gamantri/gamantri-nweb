@@ -862,4 +862,7 @@ footer {
   .hamburger { display: flex; }
   .mobile-menu { display: flex; }
   .nav-links { display: none !important; }
+  /* mob-I-Ga-CO: cruz de cierre en blanco puro en mobile */
+  .overlay-close { color: #ffffff; }
+  .overlay-close:hover { color: #ffffff; }
 }
