@@ -443,6 +443,12 @@ function playHeroSound() {
   });
 }
 
+// ── SAFETY TIMEOUT: si window.load no dispara en 4.5s (mobile lento / video grande),
+//    completar el loader de todas formas para no dejar al usuario clavado en 88%
+setTimeout(() => {
+  if (window._completeLoader) window._completeLoader();
+}, 4500);
+
 window.addEventListener('load', () => {
   const REVEAL_MS = 2000;
   const wait = Math.max(0, REVEAL_MS - performance.now());
