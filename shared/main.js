@@ -526,6 +526,34 @@ document.addEventListener('DOMContentLoaded', () => {
   obs.observe(ctaBtn);
 });
 
+// ── FORMULARIOS OVERLAY (Encargo + Briefing) ──
+async function submitOverlayForm(form, overlayId, successOverlayId) {
+  const btn = form.querySelector('[type="submit"]');
+  const originalText = btn.textContent;
+  btn.textContent = lang === 'en' ? 'Sending...' : 'Enviando...';
+  btn.disabled = true;
+
+  try {
+    const data = new FormData(form);
+    const res  = await fetch('https://api.web3forms.com/submit', {
+      method: 'POST', body: data
+    });
+    const json = await res.json();
+    if (json.success) {
+      closeOverlay(overlayId);
+      openOverlay(successOverlayId);
+      form.reset();
+    } else {
+      alert(lang === 'en' ? 'Error sending. Please try again.' : 'Error al enviar. Intenta nuevamente.');
+    }
+  } catch {
+    alert(lang === 'en' ? 'Connection error. Please try again.' : 'Error de conexión. Intenta nuevamente.');
+  } finally {
+    btn.textContent = originalText;
+    btn.disabled = false;
+  }
+}
+
 // ── IDIOMA ──
 let lang = localStorage.getItem('gamantri-lang') || 'es';
 function setLang(l) {
