@@ -1,0 +1,8 @@
+RewriteEngine On
+
+# Si la URL pedida no es un archivo/carpeta real, pero existe con .html, servirla igual.
+# Esto hace que gamantri.com/cursos funcione exactamente igual que gamantri.com/cursos.html
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteRule ^(.*)$ $1.html [L]
