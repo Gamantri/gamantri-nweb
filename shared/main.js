@@ -77,9 +77,9 @@ const obras = [
   },
   {
     titulo: "Leo's Colors",
-    imgFoto: 'shared/assets/images/obras/I-Ga/O-O (4).jpg',
-    imgZoom: 'shared/assets/images/obras/I-Ga/O-Mu-Z (4).jpg',
-    imgFull: 'shared/assets/images/obras/I-Ga/O-Mu-F (4).jpg',
+    imgFoto: 'shared/assets/images/obras/I-Ga/O-O (4).jpg?v=2',
+    imgZoom: 'shared/assets/images/obras/I-Ga/O-Mu-Z (4).jpg?v=2',
+    imgFull: 'shared/assets/images/obras/I-Ga/O-Mu-F (4).jpg?v=2',
     descripcion: 'Leo Cea en Víctimas Perez, uno de los 9a más duros del mundo, según los escaladores más fuertes. A sus 13 años Leo encadena esta icónica vía en un día de pésimas condiciones, al final de un viaje corto a Margalef.',
     descripcion_en: 'Leo Cea on Víctimas Perez, one of the hardest 9as in the world according to the strongest climbers. At 13, Leo sends this iconic route on a terrible weather day, at the end of a short trip to Margalef.',
     series: [
