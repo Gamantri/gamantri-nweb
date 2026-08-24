@@ -73,14 +73,14 @@ const obrasExclusivas = [
     descripcion: 'Episodio único y poético de un volcán icónico, que luego de muchas visitas se mostró de una manera irrepetible: vestido de nubes por tan solo unos breves minutos.',
     descripcion_en: 'A unique and poetic episode of an iconic volcano, which after many visits revealed itself in an unrepeatable way — dressed in clouds for just a few brief minutes.',
     series: [
-      { precio: '350 USD', copia: '1/3', vendida: true },
-      { precio: '680 USD', copia: '2/3', vendida: false, destacada: true },
+      { precio: '450 USD', copia: '1/3', vendida: false, destacada: true },
+      { precio: '680 USD', copia: '2/3', vendida: false },
       { precio: '1.100 USD', copia: '3/3', vendida: false },
     ],
     piezas: 'Unidad', piezas_en: 'Single print',
     referencia: '70×100 cm, marco de madera box, con paspartú',
     referencia_en: '70×100 cm, box wood frame, with mat',
-    precioDestacado: '$680 USD',
+    precioDestacado: '$450 USD',
   },
   // ── Pos 3 — Huascarán ──
   {
